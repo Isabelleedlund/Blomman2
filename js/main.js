@@ -47,6 +47,7 @@ function printProducts(){
             dialogButton.addEventListener("click", function(){
                 //presentDescription(i);
             }); 
+        let productDescription = document.createElement("div");
         let addToCartButton = this.document.createElement("button");
             addToCartButton.setAttribute("type", "button");
             addToCartButton.className = "btn btn-dark";
