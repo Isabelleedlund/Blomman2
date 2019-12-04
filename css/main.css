@@ -1,5 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+body {
+  background-color: #ffffff; }
+  body footer {
+    margin-top: 20px;
+    border-top: 1px solid lightgrey;
+    padding: 40px 0;
+    box-shadow: 10px 10px grey; }
+    body footer .footer-widget .title {
+      color: #FF5E6B;
+      font-weight: 700;
+      font-size: 16px; }
+    body footer .footer-widget h5 {
+      margin-top: 10px;
+      margin-bottom: 5px; }
+    body footer .footer-widget .contact-link {
+      display: inline-block;
+      width: 100%;
+      color: #656565; }
+    body footer .footer-widget ul {
+      padding: 0;
+      margin: 0; }
+      body footer .footer-widget ul li {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        list-style: none;
+        color: #656565; }
+    body footer .footer-widget .days {
+      color: #FF5E6B; }
+    body footer .footer-widget a {
+      color: #656565; }
+      body footer .footer-widget a:hover {
+        color: #FF5E6B; }
+    body footer .footer-widget .images-gallery ul {
+      padding-left: 0; }
+      body footer .footer-widget .images-gallery ul li {
+        list-style: none;
+        float: left;
+        margin: 0 3% 2% 0;
+        position: relative; }
+        body footer .footer-widget .images-gallery ul li:nth-child(3n) {
+          margin: 0 0 1%; }
+        body footer .footer-widget .images-gallery ul li .someimg {
+          width: 30px; }
+
 h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
@@ -86,10 +130,6 @@ body {
   text-align: center;
   margin-top: 20px;
   height: 60px; }
-
-img {
-  width: 200px;
-  padding: 15px; }
 
 #descriptionbutton {
   background-color: #FF5E6B;
