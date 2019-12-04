@@ -96,7 +96,7 @@ function addToCart(event) {
 };
 
 function presentDescription(event) {
-    //alert(event.data.show.description);
+    alert(event.data.show.description);
     
 };
 
