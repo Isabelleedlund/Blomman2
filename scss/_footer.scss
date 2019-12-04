@@ -1,13 +1,13 @@
-body {
-    background-color: $bg-color;
+
     footer{
-        margin-top: 20px;
         border-top: 1px solid lightgrey;
-        padding: 40px 0;
-        box-shadow: 10px 10px grey;
+        margin-top: 40px;
 
         .footer-widget{
+            margin-top: 40px;
+            margin-bottom: 40px;
             .title {
+
             color: $main-color;
             font-weight: 700;
             font-size: 16px;
@@ -59,4 +59,3 @@ body {
 }
     }
 }
-    }
