@@ -7,13 +7,18 @@ let products = [
     {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
 ];
 
-let cart = JSON.parse(localStorage.getItem("products")) || [];
+let newProduct = {};
+
+
+let cart = JSON.parse(localStorage.getItem("item")) || [];
 
 function printProducts() {
     $.each(products, function(i, product) {
         // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
   
-        let cardDiv = $("<div>").addClass("product-card col-6 col-md-4 col-lg-3");
+        let cardDiv = $("<div>")
+                            .addClass("product-card col-6 col-md-4 col-lg-3 accordion")
+                            .attr("id", "carddiv");
             
         let productCard = $("<div>")
                             .addClass("card h-100 d-flex flex-column")
@@ -21,14 +26,14 @@ function printProducts() {
 
         let cardTitle = $("<h3>")
                             .addClass("card-title")
-                            .html(products[i].title)
+                            .html(product.title)
                             .appendTo(productCard);
             
-        let cardLink = $("<a>")
-                            .attr("href", "#")
-                            .addClass("stretched-link")
+       // let cardLink = $("<a>")
+       //                     .attr("href", "")
+        //                    .addClass("stretched-link")
                         //    .on("click", presentDescription)
-                            .appendTo(cardTitle);
+       //                     .appendTo(cardTitle);
 
         let  imgDiv = $("<div>")
                             .addClass("card-body")
@@ -37,52 +42,64 @@ function printProducts() {
 
         let productImg = $("<img>")
                             .addClass("img-fluid")
-                            .attr("src", products[i].img)
+                            .attr("src", product.img)
                             .appendTo(imgDiv);
         
         let cardFooter = $("<div>")
                             .addClass("card-footer d-flex justify-content-between")
+                            .attr("id", "cardfooter")
                             .appendTo(productCard);
 
         let productPrice = $("<span>")
                             .attr("id", "productprice")
-                            .html(products[i].price)
+                            .html(product.price + " SEK")
                             .appendTo(cardFooter);
 
         let dialogButton = $("<button>")
                             .attr("type", "button")
-                            .addClass("btn btn-info")
                             .attr("id", "descriptionbutton")
+                            .attr("data-toggle", "collapse")
+                            .attr("data-target", "#descriptiondiv")
+                            .attr("aria-expanded", "true")
+                            .attr("aria-controls", "descriptiondiv")
+                            .addClass("btn btn-info")
                             .html("Läs mer")
                             .appendTo(cardFooter)
-                            .on("click", presentDescription);
+                           // .on("click", {show: product}, presentDescription);
 
         let productDescription = $("<div>")
-                                    .addClass("")
-                                    .attr("id", "descirptiondiv")
-                                    .html(products.description);
-    
+                                    .addClass("collapse")
+                                    .attr("id", "descriptiondiv")
+                                    .attr("aria-labelledby", "cardfooter")
+                                    .attr("data-parent", "#carddiv")
+                                    .html(product.description)
+                                    .appendTo(productCard);
+
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
                                     .addClass("btn btn-dark")
                                     .attr("id", "addtocart")
                                     .html("Lägg till i varukorg")
-                                    .appendTo(productCard)
-                                    .on("click", {added: product}, addToCart);
+                                    .on("click", {added: product}, addToCart)
+                                    .appendTo(productCard);
 
         $("#productrow").append(cardDiv);    
     });    
 };
 
-function addToCart(i, event) {
-console.log(cart);
-console.log(i);
-console.log(event);
+function addToCart(event) {
+    let addedProduct = event.data.added;
+        cart.push(addedProduct);
 
+        localStorage.setItem("item", JSON.stringify(cart));
+        console.log(cart);
 };
-function presentDescription() {
-    alert("beskrivning");
-}
+
+function presentDescription(event) {
+    //alert(event.data.show.description);
+    
+};
+
 window.onload = function(i) {
     console.log(products);
     printProducts(i);
