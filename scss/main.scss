@@ -1,4 +1,8 @@
 @import 'variables.scss';
+@import 'checkout.scss';
+@import 'confirmation.scss';
+@import 'navbar.scss';
+@import 'footer.scss';
 
 // Fonts \\
 
@@ -55,23 +59,27 @@ span {
 body {
     background-color: $bg-color;
     footer{
+        margin-top: 20px;
+        border-top: 1px solid lightgrey;
         padding: 40px 0;
+        box-shadow: 10px 10px grey;
+
         .footer-widget{
             .title {
             color: $main-color;
             font-weight: 700;
             font-size: 16px;
             }
-          h5{
+        h5{
             margin-top: 10px;
             margin-bottom: 5px;
-          }
-          .contact-link{
+        }
+        .contact-link{
             display:inline-block;
             width: 100%;
             color: $font-color;
-          }
-          ul {
+        }
+        ul {
             padding: 0;
             margin: 0;
             li {
@@ -81,33 +89,84 @@ body {
                 color: $font-color;
                 }
             }
-            .days{
+        .days{
+        color: $main-color;
+        }
+        a {
+        color: $font-color;
+        &:hover{
             color: $main-color;
-          }
-          a {
-            color: $font-color;
-            &:hover{
-              color: $main-color;
-            }
-          }
+        }
+        }
     .images-gallery{
       ul{
         padding-left: 0;
         li{
-          list-style: none;
-          float: left;
-          margin: 0 3% 2% 0;
-          position: relative;
-          &:nth-child(3n) {
+            list-style: none;
+            float: left;
+            margin: 0 3% 2% 0;
+            position: relative;
+            &:nth-child(3n) {
             margin: 0 0 1%;
             }
-           .img {
-               width: 30px;
-           } 
-        }
-      }
-
-    }
+            .someimg {
+            width: 30px;
+            } 
         }
     }
 }
+    }
+}
+    }
+
+.card-title {
+  text-align: center;
+  margin-top: 20px;
+  height: 60px;
+}
+
+img {
+  width: 200px;
+  padding: 15px;
+}
+
+#descriptionbutton {
+  background-color: $main-color;
+  border-radius: 7px;
+  border-color: $main-color;
+}
+#descriptionbutton:hover {
+  background-color: $hoover;
+}
+#descriptionbutton:active {
+  background-color: $press;
+  border: 2px solid $press;
+}
+#addtocart {
+  background-color: $main-color;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-color: $main-color;
+  padding: 10px;
+}
+#addtocart:hover {
+  background-color: $hoover;
+}
+#addtocart:active {
+  background-color: $press;
+  border: 2px solid $press;
+}
+
+.product-card {
+  padding: 10px;
+}
+
+.card-footer {
+  background-color: $bg-color;
+}
+
+// .imgDiv {
+//   align-items: center;;
+// }
