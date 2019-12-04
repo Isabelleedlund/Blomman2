@@ -22,6 +22,24 @@
 
   </head>
     <body>
+      <!-- Start of Navbar -->
+   <div id="navbar">
+    <div class="container-navbar">
+        <div class="container-navbar-inner">
+            <img id="myImg" src="img/logga.jpg" alt="logga" style="width:100%;max-width:100px">
+        </div>
+        <div class="container-navbar-inner justify-right">
+          <div id="mySidenav" class="sidenav">
+            <a href="#navbar" onclick="closeNav()">Varukorg</a>
+            <a href="checkout.html">Gå till kassa<span class="badge badge-pill badge-info">1</span></a>
+        </div>
+
+        <div class="nav-open">
+            <span onclick="openNav()">&#9776;</span>
+        </div>
+     </div>
+  </div>
+      <!-- End of Navbar -->
       <div class="jumbotron jumbotron-fluid">
         <img src="img/blomma.jpg" alt="" class="img-fluid">                         
       </div>
@@ -98,6 +116,5 @@
       </div>
     </div>
   </footer>
-
  </body>
 </html>
