@@ -7,6 +7,8 @@ let products = [
     {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
 ];
 
+let test = "hello";
+
 function printProducts(){
     for (let i = 0; i < products.length; i++) {
         // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
