@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #656565; }
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #656565; }
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #656565; }
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #656565; }
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #656565; }
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px; }
+
+span {
+  font-family: "Lato", sans-serif;
+  font-size: 16px; }
+
+body {
+  background-color: #ffffff; }
+  body footer {
+    padding: 40px 0; }
+    body footer .footer-widget .title {
+      color: #FF5E6B;
+      font-weight: 700;
+      font-size: 16px; }
+    body footer .footer-widget h5 {
+      margin-top: 10px;
+      margin-bottom: 5px; }
+    body footer .footer-widget .contact-link {
+      display: inline-block;
+      width: 100%;
+      color: #656565; }
+    body footer .footer-widget ul {
+      padding: 0;
+      margin: 0; }
+      body footer .footer-widget ul li {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        list-style: none;
+        color: #656565; }
+    body footer .footer-widget .days {
+      color: #FF5E6B; }
+    body footer .footer-widget a {
+      color: #656565; }
+      body footer .footer-widget a:hover {
+        color: #FF5E6B; }
+    body footer .footer-widget .images-gallery ul {
+      padding-left: 0; }
+      body footer .footer-widget .images-gallery ul li {
+        list-style: none;
+        float: left;
+        margin: 0 3% 2% 0;
+        position: relative; }
+        body footer .footer-widget .images-gallery ul li:nth-child(3n) {
+          margin: 0 0 1%; }
+        body footer .footer-widget .images-gallery ul li .img {
+          width: 30px; }
