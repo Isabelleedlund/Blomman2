@@ -48,6 +48,7 @@ function printProducts(){
                 //presentDescription(i);
             }); 
         let productDescription = document.createElement("div");
+            productDescription.id = "";
         let addToCartButton = this.document.createElement("button");
             addToCartButton.setAttribute("type", "button");
             addToCartButton.className = "btn btn-dark";
