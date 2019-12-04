@@ -1,10 +1,10 @@
 let products = [
-    {title: "Amaryllis", price: 199, img: "IMAGES/Amaryllis.png", description: "lorem"},
-    {title: "Ardisia", price: 249, img: "IMAGES/Ardisia.png", description: "lorem ipsum"},
-    {title: "Benjaminfikus", price: 399, img: "IMAGES/Benjaminfikus.png", description: "lorem ipsum"},
-    {title: "Rosa Fönsterazalea", price: 299, img: "IMAGES/Fonsterazalea_rosa.png", description: "lorem"},
-    {title: "Fönsterazalea", price: 249, img: "IMAGES/Fonsterazalea.png", description: "lorem"},
-    {title: "Förmakspalm", price: 399, img: "IMAGES/Formakspalm.png", description: "lorem ipsum"}
+    {title: "Amaryllis", price: 199, img: "img/Amaryllis.png", description: "lorem"},
+    {title: "Ardisia", price: 249, img: "img/Ardisia.png", description: "lorem ipsum"},
+    {title: "Benjaminfikus", price: 399, img: "img/Benjaminfikus.png", description: "lorem ipsum"},
+    {title: "Rosa Fönsterazalea", price: 299, img: "img/Fonsterazalea_rosa.png", description: "lorem"},
+    {title: "Fönsterazalea", price: 249, img: "img/Fonsterazalea.png", description: "lorem"},
+    {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
 ];
 
 function printProducts(){
