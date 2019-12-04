@@ -7,6 +7,8 @@ let products = [
     {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
 ];
 
+let test = "BONJOUR";
+
 function printProducts(){
     for (let i = 0; i < products.length; i++) {
         // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
@@ -45,6 +47,8 @@ function printProducts(){
             dialogButton.addEventListener("click", function(){
                 //presentDescription(i);
             }); 
+        let productDescription = document.createElement("div");
+            productDescription.id = "";
         let addToCartButton = this.document.createElement("button");
             addToCartButton.setAttribute("type", "button");
             addToCartButton.className = "btn btn-dark";
