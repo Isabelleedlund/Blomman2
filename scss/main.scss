@@ -20,14 +20,12 @@ h2 {
     color: $font-color;
 }
 
-
 h3 {
     font-family: $font-stack;
     font-size: 30px;
     font-weight: 600;
     color: $font-color;
 }
-
 
 h4 {
     font-family: $font-stack;
@@ -48,6 +46,11 @@ p {
     font-size: 16px;
 }
 
+.p2 {
+  font-family: $sfont-stack;
+  font-size: 20px;
+}
+
 span {
     font-family: $sfont-stack;
     font-size: 16px;
@@ -58,78 +61,15 @@ span {
 
 body {
     background-color: $bg-color;
-    footer{
-        margin-top: 20px;
-        border-top: 1px solid lightgrey;
-        padding: 40px 0;
-        box-shadow: 10px 10px grey;
-
-        .footer-widget{
-            .title {
-            color: $main-color;
-            font-weight: 700;
-            font-size: 16px;
-            }
-        h5{
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-        .contact-link{
-            display:inline-block;
-            width: 100%;
-            color: $font-color;
-        }
-        ul {
-            padding: 0;
-            margin: 0;
-            li {
-                font-family: $sfont-stack;
-                font-size: 16px;
-                list-style: none;
-                color: $font-color;
-                }
-            }
-        .days{
-        color: $main-color;
-        }
-        a {
-        color: $font-color;
-        &:hover{
-            color: $main-color;
-        }
-        }
-    .images-gallery{
-      ul{
-        padding-left: 0;
-        li{
-            list-style: none;
-            float: left;
-            margin: 0 3% 2% 0;
-            position: relative;
-            &:nth-child(3n) {
-            margin: 0 0 1%;
-            }
-            .someimg {
-            width: 30px;
-            } 
-        }
-    }
-}
-    }
-}
+    color: $font-color;
     }
 
 .card-title {
   text-align: center;
   margin-top: 20px;
   height: 60px;
+  font-size: 24px;
 }
-
-// img {
-//   width: 200px;
-//   padding: 15px;
-// }
-
 #descriptionbutton {
   background-color: $main-color;
   border-radius: 7px;
@@ -167,6 +107,12 @@ body {
   background-color: $bg-color;
 }
 
-// .imgDiv {
-//   align-items: center;;
-// }
+.jumbotron {
+  background-color: $bg-color;
+  padding: 0;
+  margin: 0;
+}
+
+#imgdiv {
+  align-items: center;
+}
