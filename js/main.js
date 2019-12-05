@@ -67,6 +67,8 @@ function printProducts() {
                             .addClass("btn btn-info")
                             .html("Läs mer")
                             .appendTo(cardFooter)
+                            
+                        // when clicked productDescr will be visible    
                             .click(function() {
                                 $("#descrdiv"+i).toggle("slow");
                             });
