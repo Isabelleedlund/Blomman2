@@ -103,4 +103,34 @@ function presentDescription(event) {
 window.onload = function(i) {
     console.log(products);
     printProducts(i);
+
+    // Cart
+    let cartTitle = "VARUKORG";
+    let cartButton = $("<button>")
+                            .attr("type", "button")
+                            .attr("id", "cartButton")
+                            .addClass("btn btn-warning")
+                            .html("TILL KASSAN");
+
+    let cartFooter = "<div class='border'>" + cartButton + "</div>" ;
+    let cartContent = cartFooter;
+
+    $(function () {
+        $('#cart').popover( { 
+            placement: 'bottom', 
+            html: true, 
+            container: 'body',
+            title: cartTitle,
+            content: cartContent    
+        } ).popover( 'show' );
+      });
+    
+    
+
+    
+
+    
+
+
+
 };
