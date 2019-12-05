@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+h1 {
+  font-size: 48px;
+  font-family: Montserrat Semibold;
+  background-color: #FF5E6B;
+  text-align: center;
+  margin: 50px 0; 
+}
+
+h2 {
+  font-size: 36px;
+  font-family: Montserrat Semibold;  
+}
+
+h3 {
+  font-size: 30px;
+  font-family: Montserrat Semibold;  
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Montserrat Semibold;  
+}
+
+h5 {
+  font-size: 18px;
+  font-family: Montserrat Semibold;  
+}
+
+p1 {
+  font-size: 24px;
+  font-family: Lato Regular; 
+}
+
+p2 {
+  font-size: 20px;
+  font-family: Lato Regular; 
+}
+
+p3 {
+  font-size: 16px;
+  font-family: Lato Regular; 
+}
+
+p4 {
+  font-size: 16px;
+  font-family: Lato Regular; 
+}
+
+p5 {
+  font-size: 14px;
+  font-family: Lato Regular; 
+}
+
+span {
+  font-size: 16px;
+  font-family: Lato Regular;
+}
+
+
+
+.betala {
+  font-size: 1.5rem; 
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  border: solid 2px #4D4D4D; 
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 10%; 
+}
+
+.container1 {
+  width: 100px;
+  height: auto;
+  margin: 15px 15px 15px 35px; 
+}
+
+.container2 {
+  margin: 15px; 
+}
+
+.container3 {
+  margin: 40px 35px 0 35px;
+  width: 50%; 
+}
+
+.flex-container-between {
+  justify-content: space-between;
+  border-bottom: solid 1px; 
+}
+
+.text-right {
+  text-align: right; 
+}
+
+.form-container {
+  margin-top: 40px;
+  width: 80%;
+  margin: 0 10%; 
+}
+
+
+
+
+/* On wider screens than 600px */
+@media screen and (min-width: 600px) {
+  .column-flex {
+    width: 33.3%;
+    padding: 0 20px; }
+  .product-img {
+    opacity: 0.9; } 
+}
+
+/* On wider screens than 800px */
+@media screen and (min-width: 800px) {
+  .column-flex {
+    width: 25%; }
+  .container-flex {
+    width: 1000px; } 
+}
+
+
+.plus-minus-input {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.plus-minus-input .input-group-button .circle {
+  border-radius: 50%;
+  padding: 0.25em 0.8em;
+}

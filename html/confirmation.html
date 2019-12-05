@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Blomman- Nina, Isabelle, Balthazar, Caglar.</title>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -11,7 +11,10 @@
     crossorigin="anonymous"></script>
 
     <!-- Own jQuery script -->
-    <script type="text/javascript" src="../js/main.js"></script>
+    <!-- <script type="text/javascript" src="../js/main.js"></script> -->
+    <script type="text/javascript" src="../js/confirmation.js"></script>
+    <!-- <script type="text/javascript" src="../js/checkout.js"></script> -->
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -23,39 +26,10 @@
     </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-light bg-white">
+<nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom">
     <a class="navbar-brand" href="#">
-    <img src="../img/logga.jpg" width="80" height="80" alt="Blomman: loggan" />
+        <img src="../img/logga.jpg" height="90" alt="Blomman: loggan" />
     </a>
-    <div class="dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false" >
-            <img src="../img/shopping-cart.png" width="34" height="34" alt="Varukorg">
-        </button>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-        <form class="px-4 py-3">
-            <div class="form-group">
-                <label for="exampleDropdownFormEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-            </div>
-                <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                </div>
-            <div class="form-group">
-                <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                <label class="form-check-label" for="dropdownCheck">
-                    Remember me
-                </label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </form>
-    <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">New around here? Sign up</a>
-        <a class="dropdown-item" href="#">Forgot password?</a>
-        </div>
-    </div>
 </nav>
 <!-- Navbar End -->
 
@@ -65,18 +39,18 @@
     <div class="col-12 text-center">
         <h3>Orderbekräftelse</h3>
         <span class="p2 mb-5">
-            Tack för att du väljer att handla hos oss på Blomma!
+            Tack för att du väljer att handla hos oss på Blomma!<br>
         </span>
-        <span class="p2 mb-5">
-            Vi har mottagit din beställning med ordernummer: {1618763}. 
-        </span>
+        <span class="orderNumberCtn p2 mb-5">
+            Vi har mottagit din beställning med ordernummer: </span><br>
+            <div id="on">
+
+            </div><br>
         <span class="p2 mb-5"> 
-            Nästa gång vi hörs är ditt paket på väg till dig.
+            Nästa gång vi hörs är ditt paket på väg till dig.<br>
         </span>
     </div>
 </div>
-
-
 
 <!-- Confirmation Content End -->
 
@@ -134,9 +108,9 @@
                     <div class="footer-widget-content">
                         <div class="images-gallery">
                         <ul>
-                            <li><a href="#"><img src="../img/002-facebook_grey.png" class="someimg" alt="Facebook"/></a></li>
-                            <li><a href="#"><img src="../img/003-instagram_grey.png" class="someimg" alt="Instagram"/></a></li>
-                            <li><a href="#"><img src="../img/005-twitter_grey.png" class="someimg" alt="Twitter"/></a></li>
+                            <li><a href="#"><img src="../img/002-facebook_color.png" class="someimg" alt="Facebook"/></a></li>
+                            <li><a href="#"><img src="../img/003-instagram_color.png" class="someimg" alt="Instagram"/></a></li>
+                            <li><a href="#"><img src="../img/005-twitter_color.png" class="someimg" alt="Twitter"/></a></li>
                             </ul>
                         </div>
                     </div>
