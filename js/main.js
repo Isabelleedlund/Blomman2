@@ -55,31 +55,21 @@ function printProducts() {
                             .html(product.price + " SEK")
                             .appendTo(cardFooter);
 
+        let productDescr = $("<div>")
+                            .attr("id", "descrdiv"+i)
+                            .attr("style", "display: none")
+                            .html(product.description)
+                            .appendTo(productCard);
+
         let dialogButton = $("<button>")
                             .attr("type", "button")
                             .attr("id", "descriptionbutton")
-                        //    .attr("data-toggle", "collapse")
-                        //    .attr("data-target", "#descriptiondiv")
-                        //    .attr("aria-expanded", "true")
-                        //    .attr("aria-controls", "descriptiondiv")
                             .addClass("btn btn-info")
                             .html("Läs mer")
                             .appendTo(cardFooter)
-                            .on("click", {show: product}, presentDescription);
-
-        let productDescription = $("<div>")
-                                .addClass("collapse")
-                                .attr("id", "descriptiondiv")
-                                .attr("style", "display: none")
-                            //    .attr("aria-labelledby", "cardfooter")
-                            //    .attr("data-parent", "#carddiv")
-                                .html(product.description)
-                                .appendTo(productCard);
-
-        let productDescription2 = $("<div>")
-                                    .addClass("collapse")
-                                    .html("Hej")
-                                    .appendTo(productCard);
+                            .click(function() {
+                                $("#descrdiv"+i).toggle("slow");
+                            });
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
@@ -89,8 +79,9 @@ function printProducts() {
                                     .on("click", {added: product}, addToCart)
                                     .appendTo(productCard);
 
-        $("#productrow").append(cardDiv);    
-    });    
+        $("#productrow").append(cardDiv); 
+    });
+    
 };
 
 function addToCart(event) {
@@ -101,14 +92,6 @@ function addToCart(event) {
         console.log(cart);
 };
 
-
-function presentDescription(event, productDescription, dialogButton) {
-   console.log(event.data.show.description);                                
- 
-    $(dialogButton).click(function() {
-        $(".collapse").toggle();
-    });
-};
 
 window.onload = function(i) {
     console.log(products);
