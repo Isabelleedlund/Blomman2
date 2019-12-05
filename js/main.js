@@ -10,14 +10,14 @@ let products = [
 let newProduct = {};
 
 
-let cart = JSON.parse(localStorage.getItem("item")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function printProducts() {
     $.each(products, function(i, product) {
         // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
   
         let cardDiv = $("<div>")
-                            .addClass("product-card col-6 col-md-4 col-lg-3 accordion")
+                            .addClass("product-card col-6 col-md-4 col-lg-3")
                             .attr("id", "carddiv");
             
         let productCard = $("<div>")
@@ -57,23 +57,24 @@ function printProducts() {
 
         let dialogButton = $("<button>")
                             .attr("type", "button")
-                            .attr("id", "descriptionbutton")
-                            .attr("data-toggle", "collapse")
-                            .attr("data-target", "#descriptiondiv")
-                            .attr("aria-expanded", "true")
-                            .attr("aria-controls", "descriptiondiv")
+                        //    .attr("id", "descriptionbutton")
+                        //    .attr("data-toggle", "collapse")
+                        //    .attr("data-target", "#descriptiondiv")
+                        //    .attr("aria-expanded", "true")
+                        //    .attr("aria-controls", "descriptiondiv")
                             .addClass("btn btn-info")
                             .html("Läs mer")
                             .appendTo(cardFooter)
-                           // .on("click", {show: product}, presentDescription);
-
+                            .on("click", {show: product}, presentDescription);
+        
         let productDescription = $("<div>")
-                                    .addClass("collapse")
-                                    .attr("id", "descriptiondiv")
-                                    .attr("aria-labelledby", "cardfooter")
-                                    .attr("data-parent", "#carddiv")
-                                    .html(product.description)
-                                    .appendTo(productCard);
+                            //    .addClass("collapse")
+                                .attr("id", "descriptiondiv")
+                            //    .attr("style", "display: none")
+                            //    .attr("aria-labelledby", "cardfooter")
+                            //    .attr("data-parent", "#carddiv")
+                                .html(product.description)
+                                .appendTo(productCard);
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
@@ -91,16 +92,46 @@ function addToCart(event) {
     let addedProduct = event.data.added;
         cart.push(addedProduct);
 
-        localStorage.setItem("item", JSON.stringify(cart));
+        localStorage.setItem("cart", JSON.stringify(cart));
         console.log(cart);
 };
 
-function presentDescription(event) {
-    alert(event.data.show.description);
-    
+function presentDescription(event, productDescription) {
+    console.log(event.data.show.description);                                
+    $(productDescription).toggle();  
 };
 
 window.onload = function(i) {
     console.log(products);
     printProducts(i);
+
+    // Cart
+    let cartTitle = "VARUKORG";
+    let cartButton = $("<button>")
+                            .attr("type", "button")
+                            .attr("id", "cartButton")
+                            .addClass("btn btn-warning")
+                            .html("TILL KASSAN");
+
+    let cartFooter = "<div class='border'>" + cartButton + "</div>" ;
+    let cartContent = cartFooter;
+
+    $(function () {
+        $('#cart').popover( { 
+            placement: 'bottom', 
+            html: true, 
+            container: 'body',
+            title: cartTitle,
+            content: cartContent    
+        } ).popover( 'show' );
+      });
+    
+    
+
+    
+
+    
+
+
+
 };
