@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Kassasida</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- jQuery script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <!-- Own jQuery script -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="css/main.css"/>
+
+  </head>
+
+    <body>
+        <!-- Start of Kassa -->
+
+            <section id="checkout">
+                    <h1>KASSA</h1>
+                    <div class="flex-container">
+                        <div class="container1">
+                            <img src="img/Amaryllis.png" class="img-fluid" alt="Amaryllis">
+                        </div>
+                        <div class="container2">
+                            <h2>Amaryllis</h2>
+                            <p>Lorem ipsum</p>
+                            <p>199.90 SEK</p>
+                        </div>
+                                                <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+                        <div class="input-group plus-minus-input">
+                            <div class="input-group-button">
+                            <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </button>
+                            </div>
+                            <input class="input-group-field" type="number" name="quantity" value="1">
+                            <div class="input-group-button">
+                            <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-container">
+                        <div class="container1">
+                            <img src="img/Ardisia.png" class="img-fluid" alt="Ardisia">
+                        </div>
+                        <div class="container2">
+                            <h2>Ardisia</h2>
+                            <p>Lorem ipsum</p>
+                            <p>299.90 SEK</p>
+                        </div>
+                            <!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->
+                            <div class="input-group plus-minus-input">
+                                    <div class="input-group-button">
+                                    <button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity2">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                    </div>
+                                    <input class="input-group-field" type="number" name="quantity2" value="1">
+                                    <div class="input-group-button">
+                                    <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity2">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="flex-container flex-container-between">
+                        <div class="container3">
+                            <p class="betala">Moms</p>
+                        </div>
+                        <div class="container3 text-right">
+                            <p class="betala">199.92 SEK</p>
+                        </div>
+                    </div>
+                    <div class="flex-container flex-container-between">
+                        <div class="container3">
+                            <p class="betala">Totalt</p>
+                        </div>
+                        <div class="container3 text-right">
+                            <p class="betala">799.70 SEK</p>
+                        </div>
+                    </div>
+
+                    <div class="form-container p-3 col-12">
+                        <form action="tacksida.html" class="needs-validation" novalidate>
+                            <h4>UPPGIFTER</h4>
+                            <div class="row p-3">
+                                <div class="col-12 col-lg-7 mb-2">
+                                    <input type="text" placeholder="Förnamn"
+                                        name="username" class="form-control" required />
+                                        <div class="invalid-feedback">
+                                            <span>Du behöver fylla i ditt förnamn i fältet ovan.</span>
+                                        </div>
+                                        <div class="valid-feedback">
+                                            <span>Bra jobbat!</span>
+                                        </div>
+                                </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                    <input type="text" placeholder="Efternamn"
+                                        name="username" class="form-control" required />
+                                        <div class="invalid-feedback">
+                                            <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
+                                        </div>
+                                        <div class="valid-feedback">
+                                            <span>Bra jobbat!</span>
+                                        </div>
+                                    </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                        <input type="text" placeholder="Adress"
+                                            name="username" class="form-control" required />
+                                            <div class="invalid-feedback">
+                                                <span>Du behöver fylla i din adress i fältet ovan.</span>
+                                            </div>
+                                            <div class="valid-feedback">
+                                                <span>Bra jobbat!</span>
+                                            </div>
+                                        </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                        <input type="text" placeholder="C/O"
+                                            name="username" class="form-control" />
+                                            <div class="invalid-feedback">
+                                                <span>Du behöver fylla i C/O i fältet ovan.</span>
+                                            </div>
+                                            <div class="valid-feedback">
+                                                <span>Bra jobbat!</span>
+                                            </div>
+                                        </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                        <input type="text" placeholder="Postnummer"
+                                            name="username" class="form-control" required />
+                                            <div class="invalid-feedback">
+                                                <span>Du behöver fylla i ditt postnummer i fältet ovan.</span>
+                                            </div>
+                                            <div class="valid-feedback">
+                                                <span>Bra jobbat!</span>
+                                            </div>
+                                        </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                        <input type="text" placeholder="Ort"
+                                            name="username" class="form-control" required />
+                                            <div class="invalid-feedback">
+                                                <span>Du behöver fylla i din ort i fältet ovan.</span>
+                                            </div>
+                                            <div class="valid-feedback">
+                                                <span>Bra jobbat!</span>
+                                            </div>
+                                        </div>
+                                <div class="col-12 col-lg-7">
+                                    <input type="text" placeholder="Email"
+                                        name="username" class="form-control" required />
+                                        <div class="invalid-feedback">
+                                                <span>Du behöver fylla i din email adress i fältet ovan.</span>
+                                            </div>
+                                            <div class="valid-feedback">
+                                                <span>Bra jobbat!</span>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="row p-3 justify-content-start">
+                                <div class="col-12 col-lg-7">
+                                    <a href="confirmation.html" target="_blank">
+                                        <button type="submit" class="btn btn-dark btn-block">SLUTFÖR KÖP</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            </section>
+
+        <!-- End of Kassa -->
+
+        <script>
+        
+                    jQuery(document).ready(function(){
+                // This button will increment the value
+                $('[data-quantity="plus"]').click(function(e){
+                    // Stop acting like a button
+                    e.preventDefault();
+                    // Get the field name
+                    fieldName = $(this).attr('data-field');
+                    // Get its current value
+                    var currentVal = parseInt($('input[name='+fieldName+']').val());
+                    // If is not undefined
+                    if (!isNaN(currentVal)) {
+                        // Increment
+                        $('input[name='+fieldName+']').val(currentVal + 1);
+                    } else {
+                        // Otherwise put a 0 there
+                        $('input[name='+fieldName+']').val(1);
+                    }
+                });
+                // This button will decrement the value till 0
+                $('[data-quantity="minus"]').click(function(e) {
+                    // Stop acting like a button
+                    e.preventDefault();
+                    // Get the field name
+                    fieldName = $(this).attr('data-field');
+                    // Get its current value
+                    var currentVal = parseInt($('input[name='+fieldName+']').val());
+                    // If it isn't undefined or its greater than 0
+                    if (!isNaN(currentVal) && currentVal > 1) {
+                        // Decrement one
+                        $('input[name='+fieldName+']').val(currentVal - 1);
+                    } else {
+                        // Otherwise put a 0 there
+                        $('input[name='+fieldName+']').val(1);
+                    }
+                });
+            });
+        
+        </script>
+
+    </body>
+
+</html>
