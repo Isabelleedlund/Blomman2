@@ -44,7 +44,7 @@ function printProducts() {
                             .addClass("img-fluid")
                             .attr("src", product.img)
                             .appendTo(imgDiv);
-        
+
         let cardFooter = $("<div>")
                             .addClass("card-footer d-flex justify-content-between")
                             .attr("id", "cardfooter")
@@ -57,7 +57,7 @@ function printProducts() {
 
         let dialogButton = $("<button>")
                             .attr("type", "button")
-                        //    .attr("id", "descriptionbutton")
+                            .attr("id", "descriptionbutton")
                         //    .attr("data-toggle", "collapse")
                         //    .attr("data-target", "#descriptiondiv")
                         //    .attr("aria-expanded", "true")
@@ -66,15 +66,20 @@ function printProducts() {
                             .html("Läs mer")
                             .appendTo(cardFooter)
                             .on("click", {show: product}, presentDescription);
-        
+
         let productDescription = $("<div>")
-                            //    .addClass("collapse")
+                                .addClass("collapse")
                                 .attr("id", "descriptiondiv")
-                            //    .attr("style", "display: none")
+                                .attr("style", "display: none")
                             //    .attr("aria-labelledby", "cardfooter")
                             //    .attr("data-parent", "#carddiv")
                                 .html(product.description)
                                 .appendTo(productCard);
+
+        let productDescription2 = $("<div>")
+                                    .addClass("collapse")
+                                    .html("Hej")
+                                    .appendTo(productCard);
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
@@ -96,9 +101,13 @@ function addToCart(event) {
         console.log(cart);
 };
 
-function presentDescription(event, productDescription) {
-    console.log(event.data.show.description);                                
-    $(productDescription).toggle();  
+
+function presentDescription(event, productDescription, dialogButton) {
+   console.log(event.data.show.description);                                
+ 
+    $(dialogButton).click(function() {
+        $(".collapse").toggle();
+    });
 };
 
 window.onload = function(i) {
