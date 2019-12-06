@@ -32,59 +32,54 @@ console.log(products);
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-window.onload = function() {
+$(document).ready(function() {
+
+    // check whether the cart is empty or not and send to respective functions
+    if (cart.length === 0) {
+        console.log(cart, "cart is empty");
+        createEmptyCart();
+    } else {
+        console.log(cart, "cart is not empty");
+        createCart();        
+    }
 
     // console.log(products);
     printProducts();
-    presentCart();
-    cartWithContent();
 
-};
+});
 
 // Cart
-function presentCart() {
-    
+
+function createEmptyCart() {
     $('#cart').popover( { 
         placement: 'bottom', 
         html: true, 
         container: 'body',
         title: "VARUKORG",
-        content: ""    
+        content: "Din varukorg är tom."    
     });
+}
 
-
-// to work next sprint    
-    // function checkCart() {
-    //     if (localStorage.getItem("cart").length == null) {
-    //         cartWithoutContent();
-    //     } 
-    //     else {
-    //         cartWithContent()
-    //     }
-    // }
-
-// to work next sprint
-    // function cartWithoutContent() {
-    //     // let cartIsEmpty = $("<span>")
-    //     //                     .addClass("pt-2 pb-2")
-    //     //                     .attr("id", "cartIsEmpty")
-    //     //                     .html("Din varukorg är tom.");
-    //     return "HEJ";
-    // }
-
+function createCart() {
     
+    $('#cart')
+        .popover( { 
+        placement: 'bottom', 
+        html: true, 
+        container: 'body',
+        title: "VARUKORG",
+        content: ""
+        });
 
-
-};
-
-function cartWithContent() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    console.log("in createCart", cart);
 
     let cartItemContainer = $("<div>")
                             .addClass("container pt-2 pb-2")
                             .attr("id", "cartItemContainer");
 
     $.each(cart, function( index, value ) {
-        
+
         let cartItem = $("<div>")
                             .addClass("row pt-2 pb-3 border-bottom")
                             .attr("id", "cartItem");
@@ -109,6 +104,8 @@ function cartWithContent() {
         cartItem.append(cartItemDataContainer);
 
         cartItemContainer.append(cartItem);
+
+        console.log(cartItemContainer);
         
         $(".popover-body").append(cartItemContainer);
 
@@ -138,8 +135,8 @@ function cartWithContent() {
     cartToCheckoutButtonRow.appendTo(cartToCheckoutButtonContainer);
     cartToCheckoutButtonContainer.appendTo($(".popover-body"));
 
-}
 
+};
 
 function printProducts() {
     
@@ -213,6 +210,7 @@ function printProducts() {
 };
 
 function addToCart(event) {
+    
     let addedProduct = event.data.added;
         cart.push(addedProduct);
 
