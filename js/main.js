@@ -1,11 +1,32 @@
-let products = [
-    {title: "Amaryllis", price: 199, img: "img/Amaryllis.png", description: "lorem"},
-    {title: "Ardisia", price: 249, img: "img/Ardisia.png", description: "lorem ipsum"},
-    {title: "Benjaminfikus", price: 399, img: "img/Benjaminfikus.png", description: "lorem ipsum"},
-    {title: "Rosa Fönsterazalea", price: 299, img: "img/Fonsterazalea_rosa.png", description: "lorem"},
-    {title: "Fönsterazalea", price: 249, img: "img/Fonsterazalea.png", description: "lorem"},
-    {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
-];
+function ProductItem(t, p, img, d, id, q) {
+    this.title = t;
+    this.price = p;
+    this.img = img;
+    this.description = d;
+    this.id = id;
+    this.quantity = q;
+}
+
+let products1 = new ProductItem("Amaryllis", 199, "img/Amaryllis.png", "Fusce id nisl sapien. Nam pulvinar nisl nisl, nec aliquam dolor porttitor ac. Suspendisse in risus sodales, iaculis massa vitae, dapibus arcu. Nam ullamcorper odio tellus, nec pretium nisi ornare non. Quisque venenatis at odio.", 1, 0);
+let products2 = new ProductItem("Ardisia", 249, "img/Ardisia.png", "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vitae. ", 2, 0);
+let products3 = new ProductItem("Benjaminfikus", 399, "img/Benjaminfikus.png", "Phasellus in varius ex. Mauris a dapibus nibh, at malesuada.", 3, 0);
+let products4 = new ProductItem("Rosa Fönsterazalea", 299, "img/Fonsterazalea_rosa.png", "Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin molestie metus eget dui consectetur condimentum. Maecenas tempus pellentesque nisl id congue. Aenean at justo a tortor sodales ornare ac quis dui. Proin tempor dictum vestibulum. Maecenas aliquam dui sit amet elit accumsan, ac dapibus augue consequat. Aenean a feugiat elit. Integer a aliquam.", 4, 0);
+let products5 = new ProductItem("Fönsterazalea", 399, "img/Fonsterazalea.png", "Integer rutrum, orci sed vehicula porttitor, odio sem eleifend risus, at euismod purus mi nec augue. Pellentesque vitae justo et tortor sagittis fringilla non eu massa. Curabitur ut odio congue, ullamcorper urna at, efficitur nulla. Nunc laoreet lorem dolor. Duis.", 5, 0);
+let products6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Suspendisse at erat rhoncus, venenatis nisi lobortis, sagittis arcu. Aliquam sodales congue finibus. Aliquam erat volutpat. Maecenas faucibus malesuada ipsum, quis faucibus orci sagittis a. Phasellus sed vestibulum nisl, eu sodales tortor. Vivamus varius nulla velit, eget auctor est tempor vitae. Mauris ultricies gravida augue non blandit. Maecenas sed vestibulum leo. Morbi euismod ex ex, nec tempor odio dapibus vel.", 6, 0);
+
+let products = [];
+products.push(products1, products2, products3, products4, products5, products6);
+
+console.log(products);
+
+// let products = [
+//     {title: "Amaryllis", price: 199, img: "img/Amaryllis.png", description: "lorem"},
+//     {title: "Ardisia", price: 249, img: "img/Ardisia.png", description: "lorem ipsum"},
+//     {title: "Benjaminfikus", price: 399, img: "img/Benjaminfikus.png", description: "lorem ipsum"},
+//     {title: "Rosa Fönsterazalea", price: 299, img: "img/Fonsterazalea_rosa.png", description: "lorem"},
+//     {title: "Fönsterazalea", price: 249, img: "img/Fonsterazalea.png", description: "lorem"},
+//     {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
+// ];
 
 // let newProduct = {};
 
