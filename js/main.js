@@ -9,7 +9,6 @@ let products = [
 
 let newProduct = {};
 
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function printProducts() {
@@ -67,7 +66,7 @@ function printProducts() {
                             .addClass("btn btn-info")
                             .html("Läs mer")
                             .appendTo(cardFooter)
-                            
+
                         // when clicked productDescr will be visible    
                             .click(function() {
                                 $("#descrdiv"+i).toggle("slow");
