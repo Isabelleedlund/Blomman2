@@ -6,15 +6,20 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
     function printOrder(){
         $.each(cart, function(i, product) {
             let orderRow = $("<div>")
-                        .addClass("col-12")
-                        .addClass("d-flex")
-                        .attr("id", "orderrow")
-                        .appendTo("#orderctn");
+                            .addClass("row")
+                            .attr("id", "orderrow")
+                            .appendTo("#orderctn");
+
+            let prodRow = $("<div>")
+                            .addClass("col-12")
+                            .addClass("d-flex")
+                            .attr("id", "productrow")
+                            .appendTo("#orderrow");
 
             let orderimg = $("<img>")
-                        .attr("src", "../"+product.img)
-                        .addClass("col-2")
-                        .appendTo("#orderrow");
+                            .attr("src", "../"+product.img)
+                            .addClass("col-2")
+                            .appendTo("#orderrow");
             
             let prodTitle = $("<p>") 
                             .addClass("col-4")
@@ -22,15 +27,15 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
                             .appendTo("#orderrow");
 
             let prodQuant = $("<p>")        
-                                .addClass("col-2")
-                                .html(1)
-                                .appendTo("#orderrow");
+                            .addClass("col-2")
+                            .html(1)
+                            .appendTo("#orderrow");
 
             let prodPrice = $("<span>")
                             .addClass("col-2")
                             .html(product.price+" SEK") 
                             .appendTo("#orderrow");
-                            
+
             let totPrice = $("<span>")
                             .addClass("col-2")
                             .html("subtotalen")
