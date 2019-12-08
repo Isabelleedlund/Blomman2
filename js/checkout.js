@@ -40,6 +40,18 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
     printOrder();
 };
 
+// $(document).ready(".buybtn").click(function() {
+//     alert('button clicked');
+// });
+
+
+
+
+// let buyButton = $(".buybtn")
+//                 .click(function(){
+//                 alert ("handlar for .click() called.")
+//             })
+
 // /*
 // /* Set rates + misc */
 // var taxRate = 0.25;

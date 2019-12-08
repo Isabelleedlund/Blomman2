@@ -12,7 +12,6 @@
 
     <!-- Own jQuery script -->
     <!-- <script type="text/javascript" src="../js/main.js"></script> -->
-    <script type="text/javascript" src="../js/confirmation.js"></script>
     <!-- <script type="text/javascript" src="../js/checkout.js"></script> -->
 
 
@@ -33,16 +32,18 @@
 </nav>
 <!-- Navbar End -->
 
-<!-- Confirmation Content -->
+<!-- Confirmation Content - Shown if user clicks "Slutför köp" in checkout Page -->
 
-<div class="container">
+
+
+<div class="container show">
     <div class="col-12 text-center">
         <h3>Orderbekräftelse</h3>
         <span class="p2 mb-5">
             Tack för att du väljer att handla hos oss på Blomma!<br>
         </span>
         <span class="orderNumberCtn p2 mb-5">
-            Vi har mottagit din beställning med ordernummer: </span><br>
+            Vi har mottagit din beställning med ordernummer: </span><br><br>
             <div id="on">
 
             </div><br>
@@ -63,10 +64,10 @@
                     <h5>Besöksadress</h5> 
                     <div class="footer-widget-content">
                         <ul>
-                            <li class="title">Butikens namn</li>
-                            <li>Butikens adress</li>
-                            <li>Butikens postadress</li>
-                            <li><a href="mailto:adress@butik.se" class="contact-link">Hej@butikensnamn.se</a></li>
+                            <li class="title">BLOMMAN</li>
+                            <li>Tulegatan 41</li>
+                            <li>113 53 Stockholm</li>
+                            <li><a href="mailto:adress@butik.se" class="contact-link">Hej@blomman.se</a></li>
                             <li><a href="tel:0121234" class="contact-link">08-400 67 892</a></li>
                         </ul>
                     </div>
@@ -108,9 +109,9 @@
                     <div class="footer-widget-content">
                         <div class="images-gallery">
                         <ul>
-                            <li><a href="#"><img src="../img/002-facebook_color.png" class="someimg" alt="Facebook"/></a></li>
-                            <li><a href="#"><img src="../img/003-instagram_color.png" class="someimg" alt="Instagram"/></a></li>
-                            <li><a href="#"><img src="../img/005-twitter_color.png" class="someimg" alt="Twitter"/></a></li>
+                            <li><a href="#"><img src="../img/002-facebook_grey.png" class="someimg" id="imgfb" alt="Facebook"/></a></li>
+                            <li><a href="#"><img src="../img/003-instagram_grey.png" class="someimg" id="imgig" alt="Instagram"/></a></li>
+                            <li><a href="#"><img src="../img/005-twitter_grey.png" class="someimg" id="imgtwi" alt="Twitter"/></a></li>
                             </ul>
                         </div>
                     </div>
@@ -120,5 +121,9 @@
             </div>
         </footer>
 <!-- Footer End -->
+<script type="text/javascript" src="../js/confirmation.js"></script>
+<script type="text/javascript" src="../js/checkout.js"></script>
+
+
     </body>
 </html>	

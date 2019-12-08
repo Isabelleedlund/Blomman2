@@ -52,8 +52,7 @@ span {
 
 .img-fluid {
   width: 100%;
-  height: auto;
-  border: solid 2px #4D4D4D; }
+  height: auto; }
 
 .flex-container {
   display: flex;
