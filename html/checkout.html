@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Kassasida</title>
+    <title>Blomman.se - Kassa</title>
     <!-- Required meta tags -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -12,7 +12,6 @@
 
     <!-- Own jQuery script -->
     <script type="text/javascript" src="../js/checkout.js"></script>
-    <script type="text/javascript" src="../js/confirmation.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
@@ -23,23 +22,25 @@
 	  
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  </head>
+    </head>
+<body>
 
-    <body>
-        <!-- Start of Kassa -->
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom">
+    <a class="navbar-brand" href="#">
+        <img src="../img/logga.jpg" height="90" alt="Blomman: loggan" />
+    </a>
+</nav>
+<!-- Navbar End -->
 
-    
-        <section id="checkout">
 
-          <h1>KASSA</h1>
-          <div class="container" id="orderctn">
-              
-          </div>
-            
-
-  </div>
-
-		  <h1>UPPGIFTER</h1>
+<!-- Content Start -->
+<section id="checkout">
+    <h1>KASSA</h1>
+        <div class="container" id="orderctn">   
+    </div>
+        </div> <!--Behövs denna div? -->
+            <h1>UPPGIFTER</h1>
                 <div class="form-container p-3 col-12">
                     <form action="tacksida.html" class="needs-validation" novalidate>
                         <div class="row p-3">
@@ -49,41 +50,41 @@
                                     <div class="invalid-feedback">
                                         <span>Du behöver fylla i ditt förnamn i fältet ovan.</span>
                                     </div>
-                                    <div class="valid-feedback">
-                                        <span>Bra jobbat!</span>
-                                    </div>
+                                <div class="valid-feedback">
+                                    <span>Bra jobbat!</span>
+                                </div>
                             </div>
-                            <div class="col-12 col-lg-7 mb-2">
-                                <input type="text" placeholder="Efternamn"
-                                    name="username" class="form-control" required />
-                                    <div class="invalid-feedback">
-                                        <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
-                                    </div>
+                                <div class="col-12 col-lg-7 mb-2">
+                                    <input type="text" placeholder="Efternamn"
+                                        name="username" class="form-control" required />
+                                        <div class="invalid-feedback">
+                                            <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
+                                        </div>
                                     <div class="valid-feedback">
                                         <span>Bra jobbat!</span>
                                     </div>
                                 </div>
-                            <div class="col-12 col-lg-7 mb-2">
+                                <div class="col-12 col-lg-7 mb-2">
                                     <input type="text" placeholder="Adress"
                                         name="username" class="form-control" required />
                                         <div class="invalid-feedback">
                                             <span>Du behöver fylla i din adress i fältet ovan.</span>
                                         </div>
-                                        <div class="valid-feedback">
-                                            <span>Bra jobbat!</span>
-                                        </div>
+                                    <div class="valid-feedback">
+                                        <span>Bra jobbat!</span>
                                     </div>
-                            <div class="col-12 col-lg-7 mb-2">
+                                </div>
+                                <div class="col-12 col-lg-7 mb-2">
                                     <input type="text" placeholder="C/O"
                                         name="username" class="form-control" />
                                         <div class="invalid-feedback">
                                             <span>Du behöver fylla i C/O i fältet ovan.</span>
                                         </div>
-                                        <div class="valid-feedback">
-                                            <span>Bra jobbat!</span>
-                                        </div>
+                                    <div class="valid-feedback">
+                                        <span>Bra jobbat!</span>
                                     </div>
-                            <div class="col-12 col-lg-7 mb-2">
+                                </div>
+                                <div class="col-12 col-lg-7 mb-2">
                                     <input type="text" placeholder="Postnummer"
                                         name="username" class="form-control" required />
                                         <div class="invalid-feedback">
@@ -93,12 +94,12 @@
                                             <span>Bra jobbat!</span>
                                         </div>
                                     </div>
-                            <div class="col-12 col-lg-7 mb-2">
+                                <div class="col-12 col-lg-7 mb-2">
                                     <input type="text" placeholder="Ort"
                                         name="username" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            <span>Du behöver fylla i din ort i fältet ovan.</span>
-                                        </div>
+                                    <div class="invalid-feedback">
+                                        <span>Du behöver fylla i din ort i fältet ovan.</span>
+                                    </div>
                                         <div class="valid-feedback">
                                             <span>Bra jobbat!</span>
                                         </div>
@@ -107,34 +108,105 @@
                                 <input type="text" placeholder="Email"
                                     name="username" class="form-control" required />
                                     <div class="invalid-feedback">
-                                            <span>Du behöver fylla i din email adress i fältet ovan.</span>
+                                        <span>Du behöver fylla i din email adress i fältet ovan.</span>
                                     </div>
-                                    <div class="valid-feedback">
-                                        <span>Bra jobbat!</span>
-                                    </div>
+                                <div class="valid-feedback">
+                                    <span>Bra jobbat!</span>
+                                </div>
                             </div>
                         </div>
                     </form>
-                  
-            </div>
-            <h1>SLUTFÖR KÖP</h1>
-            <div class="container2">
-                <p3>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p3>
-                <br>
-                <br>
-                <p3>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p3>
-            </div>
-            </div>
-            <div class="row p-3 justify-content-start">
-                <div class="col-12 col-lg-7">
-                    <a href="confirmation.html" target="_blank">
-                        <button type="submit" class="buybtn btn btn-dark btn-block">SLUTFÖR KÖP</button>
-                    <!-- </a> -->
-                </div>
-            </div>  
-        </section>
+                </div> <!--Behövs denna div? -->
+    <h1>
+        BEKRÄFTA KÖP
+    </h1>
+    <div class="container2">
+        <p3>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p3>
+        <br><br>
+        <p3>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p3>
+    </div>
+    </div> <!--Behövs denna div? -->
+    <div class="row p-3 justify-content-start">
+        <div class="col-12 col-lg-7">
+            <a href="confirmation.html" target="_blank">
+                <button type="submit" class="buybtn btn btn-dark btn-block">BESTÄLL</button>
+            <!-- </a> --> <!--Behövs inte denna a tag? -->
+        </div>
+    </div>  
+</section>
 
-        <!-- End of Kassa -->
+<!-- Content End -->
+
+<!-- Footer Start -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="footer-widget">
+                <h5>Besöksadress</h5> 
+                <div class="footer-widget-content">
+                    <ul>
+                        <li class="title">BLOMMAN</li>
+                        <li>Tulegatan 41</li>
+                        <li>113 53 Stockholm</li>
+                        <li><a href="mailto:adress@butik.se" class="contact-link">Hej@blomman.se</a></li>
+                        <li><a href="tel:0121234" class="contact-link">08-400 67 892</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="footer-widget">
+            <h5>Öppettider</h5>
+            <div class="footer-widget-content">
+                <div class="open-time">
+                    <ul class="opening-time">
+                        <li><span><strong class="days">Måndag:</strong> 10:00 - 19:00</span></li>
+                        <li><span><strong class="days">Tisdag:</strong> 10:00 - 19:00</span></li>
+                        <li><span><strong class="days">Onsdag:</strong> 10:00 - 19:00</span></li>
+                        <li><span><strong class="days">Torsdag:</strong> 10:00 - 19:00</span></li>
+                        <li><span><strong class="days">Fredag:</strong>  10:00 - 19:00</span></li>
+                        <li><span><strong class="days">Lördag:</strong> 10:00 - 17:00</span></li>
+                        <li><span><strong class="days">Söndag:</strong> 10:00 - 15:00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2">
+            <div class="footer-widget">
+                <h5>Villkor</h5>
+                <div class="footer-widget-content">
+                    <ul>
+                    <li><a href="#">Köpvillkor</a></li>
+                    <li><a href="#">Användarvillkor</a></li>
+                    <li><a href="#">Cookie Villkor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-2">
+                <div class="footer-widget">
+                    <h5>Följ oss:</h5>
+                    <div class="footer-widget-content">
+                        <div class="images-gallery">
+                            <ul>
+                                <li><a href="#"><img src="../img/002-facebook_grey.png" class="someimg" id="imgfb" alt="Facebook"/></a></li>
+                                <li><a href="#"><img src="../img/003-instagram_grey.png" class="someimg" id="imgig" alt="Instagram"/></a></li>
+                                <li><a href="#"><img src="../img/005-twitter_grey.png" class="someimg" id="imgtwi" alt="Twitter"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+<script type="text/javascript" src="../js/confirmation.js"></script>
+<script type="text/javascript" src="../js/checkout.js"></script>
+
+
    </body>
 
 </html>
