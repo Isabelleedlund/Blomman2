@@ -17,8 +17,6 @@ let products6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Sus
 let products = [];
 products.push(products1, products2, products3, products4, products5, products6);
 
-console.log(products);
-
 // let products = [
 //     {title: "Amaryllis", price: 199, img: "img/Amaryllis.png", description: "lorem"},
 //     {title: "Ardisia", price: 249, img: "img/Ardisia.png", description: "lorem ipsum"},
@@ -30,111 +28,142 @@ console.log(products);
 
 // let newProduct = {};
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
 
 $(document).ready(function() {
 
-    // check whether the cart is empty or not and send to respective functions
-    if (cart.length === 0) {
-        console.log(cart, "cart is empty");
-        createEmptyCart();
-    } else {
-        console.log(cart, "cart is not empty");
-        createCart();        
-    }
+    createCart();
 
-    // console.log(products);
     printProducts();
 
 });
 
 // Cart
-
-function createEmptyCart() {
-    $('#cart').popover( { 
-        placement: 'bottom', 
-        html: true, 
-        container: 'body',
-        title: "VARUKORG",
-        content: "Din varukorg är tom."    
-    });
-}
-
 function createCart() {
-    
-    $('#cart')
-        .popover( { 
-        placement: 'bottom', 
-        html: true, 
-        container: 'body',
-        title: "VARUKORG",
-        content: ""
+
+    // get the actual value of LS cart
+    let cart = JSON.parse(localStorage.getItem("cart"));
+
+    // reset cart
+    $('#cart').popover('dispose');
+
+    // create cart header/title
+    let cartTitleContainer = $("<div>")
+        .attr("id", "myCartTitle")
+        .on("click", function () {
+            $("#cart").popover('hide');
         });
 
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    console.log("in createCart", cart);
+    let cartTitleSpan = $("<span>")
+        .html("VARUKORG");
 
-    let cartItemContainer = $("<div>")
-                            .addClass("container pt-2 pb-2")
-                            .attr("id", "cartItemContainer");
+    let cartCloseButton = $("<button>")
+        .attr("type", "button")
+        .addClass("close")
+        .attr("aria-label", "Close");
 
-    $.each(cart, function( index, value ) {
+    let cartCloseButtonSpan = $("<span>")
+        .attr("aria-hidden", "true")
+        .html("&times;");
 
-        let cartItem = $("<div>")
-                            .addClass("row pt-2 pb-3 border-bottom")
-                            .attr("id", "cartItem");
+    cartCloseButtonSpan.appendTo(cartCloseButton);
+    
+    cartTitleSpan.appendTo(cartTitleContainer);
+    cartCloseButton.appendTo(cartTitleContainer);
 
-        let cartItemImgContainer = $("<div>")
-                            .addClass("col-5")
-                            .attr("id", "cartItemImgContainer");
-
-        let cartItemDataContainer = $("<div>")
-                            .addClass("col-7")
-                            .attr("id", "cartItemDataContainer")
-                            .html(value.title + "<br />" + value.price + " SEK");
+    // check whether the LS cart is empty or not
+    if (cart.length === 0) {
         
-        let cartItemImg = $("<img>")
-                            .attr("src", value.img)
-                            .addClass("img-fluid")
-                            .attr("id", "cartItemImg")
-                            .attr("alt", value.description);
-            
-        cartItemImgContainer.append(cartItemImg);
-        cartItem.append(cartItemImgContainer);
-        cartItem.append(cartItemDataContainer);
-
-        cartItemContainer.append(cartItem);
-
-        console.log(cartItemContainer);
+        // console.log(cart, "LS cart is empty");
         
-        $(".popover-body").append(cartItemContainer);
+        // create empty cart with a message
+        $('#cart').popover( { 
+            placement: 'bottom', 
+            container: 'body',
+            html: true,
+            title: cartTitleContainer,
+            content: "Din varukorg är tom."
+        });
 
-    });
+    } 
+    else {
+        
+        // console.log("cart is not empty");    
+        
+        // create cart body      
+        let cartContainer = $("<div>")
+            .attr("id", "cartContainer");
 
+        let cartItemContainer = $("<div>")
+            .addClass("container pt-2 pb-2")
+            .attr("id", "cartItemContainer");
 
-    let cartToCheckoutButtonContainer = $("<div>")
-                                    .addClass("container")
-                                    .attr("id", "cartToCheckoutButtonContainer");
+        // cart body > cart items list
+        $.each(cart, function( index, value ) {
+            let cartItem = $("<div>")
+                .addClass("row pt-2 pb-3 border-bottom")
+                .attr("id", "cartItem");
 
-    let cartToCheckoutButtonRow = $("<div>")
-                                    .addClass("row")
-                                    .attr("id", "cartToCheckoutButtonRow");
+            let cartItemImgContainer = $("<div>")
+                .addClass("col-5")
+                .attr("id", "cartItemImgContainer");
 
-    let cartToCheckoutButtonCol = $("<div>")
-                            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
-                            .attr("id", "cartToCheckoutButtonCol");
+            let cartItemDataContainer = $("<div>")
+                .addClass("col-7")
+                .attr("id", "cartItemDataContainer")
+                .html(value.title + "<br />" + value.price + " SEK");
 
-    let toCheckoutButton = $("<button>")
-                            .attr("type", "button")
-                            .attr("id", "toCheckoutButton")
-                            .addClass("btn btn-info")
-                            .html("Till Kassan");
+            let cartItemImg = $("<img>")
+                .attr("src", value.img)
+                .addClass("img-fluid")
+                .attr("id", "cartItemImg")
+                .attr("alt", value.description);
 
-    toCheckoutButton.appendTo(cartToCheckoutButtonCol);
-    cartToCheckoutButtonCol.appendTo(cartToCheckoutButtonRow);
-    cartToCheckoutButtonRow.appendTo(cartToCheckoutButtonContainer);
-    cartToCheckoutButtonContainer.appendTo($(".popover-body"));
+            cartItemImgContainer.append(cartItemImg);
+            cartItem.append(cartItemImgContainer);
+            cartItem.append(cartItemDataContainer);
 
+            cartItemContainer.append(cartItem);
+            cartContainer.append(cartItemContainer);
+        });
+
+        // cart body > cart "Place order" button
+        let cartToCheckoutButtonContainer = $("<div>")
+            .addClass("container")
+            .attr("id", "cartToCheckoutButtonContainer");
+
+        let cartToCheckoutButtonRow = $("<div>")
+            .addClass("row")
+            .attr("id", "cartToCheckoutButtonRow");
+
+        let cartToCheckoutButtonCol = $("<div>")
+            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
+            .attr("id", "cartToCheckoutButtonCol");
+
+        let toCheckoutButton = $("<button>")
+            .attr("type", "button")
+            .attr("id", "toCheckoutButton")
+            .addClass("btn btn-info")
+            .html("Till Kassan");
+
+        toCheckoutButton.appendTo(cartToCheckoutButtonCol);
+        cartToCheckoutButtonCol.appendTo(cartToCheckoutButtonRow);
+        cartToCheckoutButtonRow.appendTo(cartToCheckoutButtonContainer);
+        cartToCheckoutButtonContainer.appendTo(cartContainer);
+
+        // enable cart Popover
+        $('#cart')
+            .popover( { 
+                placement: 'bottom', 
+                html: true, 
+                container: 'body',
+                title: cartTitleContainer,
+                content: cartContainer
+            });
+
+        }
 
 };
 
@@ -200,7 +229,7 @@ function printProducts() {
                                     .addClass("btn btn-dark")
                                     .attr("id", "addtocart")
                                     .html("Lägg till i varukorg")
-                                    .on("click", {added: product}, addToCart)
+                                    .on("click", { added: product }, addToCart)
                                     .appendTo(productCard);
 
         $("#productrow").append(cardDiv);
@@ -210,12 +239,13 @@ function printProducts() {
 };
 
 function addToCart(event) {
-    
-    let addedProduct = event.data.added;
-        cart.push(addedProduct);
 
-        localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(cart);
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.push(event.data.added);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    createCart();
+
 };
 
 

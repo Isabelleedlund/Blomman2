@@ -297,6 +297,12 @@ label {
   .totals .totals-item .totals-value {
     width: 40%; } }
 
+.popover .popover-header #myCartTitle span {
+  font-size: 1.2rem; }
+
+.popover .popover-header #myCartTitle button span {
+  font-size: 25px; }
+
 footer {
   border-top: 1px solid lightgrey;
   margin-top: 40px; }
