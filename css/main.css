@@ -199,6 +199,9 @@ label {
   width: 21%;
   text-align: right; }
 
+.totals .totals-item-total {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium"; }
+
 .checkout {
   float: right;
   border: 0;
