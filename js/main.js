@@ -7,27 +7,35 @@ function ProductItem(t, p, img, d, id, q) {
     this.quantity = q;
 }
 
-let products1 = new ProductItem("Amaryllis", 199, "img/Amaryllis.png", "Fusce id nisl sapien. Nam pulvinar nisl nisl, nec aliquam dolor porttitor ac. Suspendisse in risus sodales, iaculis massa vitae, dapibus arcu. Nam ullamcorper odio tellus, nec pretium nisi ornare non. Quisque venenatis at odio.", 1, 0);
-let products2 = new ProductItem("Ardisia", 249, "img/Ardisia.png", "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vitae. ", 2, 0);
-let products3 = new ProductItem("Benjaminfikus", 399, "img/Benjaminfikus.png", "Phasellus in varius ex. Mauris a dapibus nibh, at malesuada.", 3, 0);
-let products4 = new ProductItem("Rosa Fönsterazalea", 299, "img/Fonsterazalea_rosa.png", "Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin molestie metus eget dui consectetur condimentum. Maecenas tempus pellentesque nisl id congue. Aenean at justo a tortor sodales ornare ac quis dui. Proin tempor dictum vestibulum. Maecenas aliquam dui sit amet elit accumsan, ac dapibus augue consequat. Aenean a feugiat elit. Integer a aliquam.", 4, 0);
-let products5 = new ProductItem("Fönsterazalea", 399, "img/Fonsterazalea.png", "Integer rutrum, orci sed vehicula porttitor, odio sem eleifend risus, at euismod purus mi nec augue. Pellentesque vitae justo et tortor sagittis fringilla non eu massa. Curabitur ut odio congue, ullamcorper urna at, efficitur nulla. Nunc laoreet lorem dolor. Duis.", 5, 0);
-let products6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Suspendisse at erat rhoncus, venenatis nisi lobortis, sagittis arcu. Aliquam sodales congue finibus. Aliquam erat volutpat. Maecenas faucibus malesuada ipsum, quis faucibus orci sagittis a. Phasellus sed vestibulum nisl, eu sodales tortor. Vivamus varius nulla velit, eget auctor est tempor vitae. Mauris ultricies gravida augue non blandit. Maecenas sed vestibulum leo. Morbi euismod ex ex, nec tempor odio dapibus vel.", 6, 0);
+let product1 = new ProductItem("Amaryllis", 79, "img/amaryllis.png", "Stora (18-19cm) rosa blommor blommor på korta stabila stjälkar.", 1, 0);
+let product2 = new ProductItem("Ardisia", 249, "img/Ardisia.png", "De vackra bären som kommer i olika nivåer gör denna växt mycket dekorativ.", 2, 0);
+let product3 = new ProductItem("Benjaminfikus", 399, "img/Benjaminfikus.png", "Benjaminfikus är en tät och buskig växt med blanka blad som finns i olika färger och storlekar beroende på sort.", 3, 0);
+let product4 = new ProductItem("Rosa Fönsterazalea", 49, "img/Fonsterazalea_rosa.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 4, 0);
+let product5 = new ProductItem("Fönsterazalea", 79, "img/Fonsterazalea.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 5, 0);
+let product6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Fin, lite större krukväxt som är mycket tålig och kan bli gammal.", 6, 0);
+let product7 = new ProductItem("Gullranka Liten", 59, "img/Gullranka_liten.png", "En klassisk växt som är både tålig och lättplacerad.", 7, 0);
+let product8 = new ProductItem("Gullranka Stor", 79, "img/Gullranka.png", "En klassisk växt som är både tålig och lättplacerad.", 8, 0);
+let product9 = new ProductItem("Julros", 199, "img/julros.png", "Njut av julrosen inne under vintern och plantera ut den till våren.", 9, 0);
+let product10 = new ProductItem("Monstera", 2990, "img/monstera.png", "Mycket lättskött växt med stora, vackra, flikiga blad.", 10, 0);
+let product11 = new ProductItem("Novemberkaktus", 59, "img/novemberkaktus.png", "Från Brasiliens djungel kommer denna växt som med sina fantastiska färger lyser upp i höstmörkret.", 11, 0);
+let product12 = new ProductItem("Papuasköld", 199, "img/papuaskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 12, 0);
+let product13 = new ProductItem("Paraplyaralia", 79, "img/Paraplyaralia.png", "Mycket lättskött och tålig växt!", 13, 0);
+let product14 = new ProductItem("Princettia", 49, "img/Princettia.png", "En kraftig och tålig växt med karamellrosa stjärnor och mörkt gröna blad.", 14, 0);
+let product15 = new ProductItem("Rosenkalla", 149, "img/Rosenkalla.png", "Elegant växt med luftrenande egenskaper.", 15, 0);
+let product16 = new ProductItem("Rumsgran", 179, "img/Rumsgran.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 16, 0);
+let product17 = new ProductItem("Svärmorstunga", 129, "img/Svarmors_tunga.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 17, 0);
+let product18 = new ProductItem("Vågbladskalatera", 79, "img/Vagbladskalatea.png", "Tät växt med fina blad som har vågiga kanter och rödlila undersida.", 18, 0);
+let product19 = new ProductItem("Zamiakalla Raven", 279, "img/Zamiakalla.png", "En av de mest tåliga och lättskötta krukväxterna!", 20, 0);
+let product20 = new ProductItem("Zebrasköld", 299, "img/Zebraskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 20, 0);
 
+// To show 8 products on site 
 let products = [];
-products.push(products1, products2, products3, products4, products5, products6);
+products.push(product1, product2, product3, products4, product5, product6, product7, product8);
 
-// let products = [
-//     {title: "Amaryllis", price: 199, img: "img/Amaryllis.png", description: "lorem"},
-//     {title: "Ardisia", price: 249, img: "img/Ardisia.png", description: "lorem ipsum"},
-//     {title: "Benjaminfikus", price: 399, img: "img/Benjaminfikus.png", description: "lorem ipsum"},
-//     {title: "Rosa Fönsterazalea", price: 299, img: "img/Fonsterazalea_rosa.png", description: "lorem"},
-//     {title: "Fönsterazalea", price: 249, img: "img/Fonsterazalea.png", description: "lorem"},
-//     {title: "Förmakspalm", price: 399, img: "img/Formakspalm.png", description: "lorem ipsum"}
-// ];
+// To show all 20 products on site 
+// let products = [];
+// products.push(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product20);
 
-// let newProduct = {};
- 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
