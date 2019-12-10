@@ -27,7 +27,7 @@ products.push(products1, products2, products3, products4, products5, products6);
 // ];
 
 // let newProduct = {};
-
+ 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
