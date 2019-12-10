@@ -127,7 +127,6 @@
     text-align: right;
   }
   
-  
   .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
   .group:after,
   .shopping-cart:after,
@@ -228,7 +227,10 @@
     width: 21%;
     text-align: right;
   }
-
+  .totals .totals-item-total {
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  }
+  
   .checkout {
     float: right;
     border: 0;
