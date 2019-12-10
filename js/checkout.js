@@ -24,7 +24,7 @@ window.onload = function() {
                             .appendTo("#orderrow" + i);
             
             let prodTitle = $("<p>") 
-                            .addClass("col-2")
+                            .addClass("col-3")
                             .html(product.title)
                             .appendTo("#orderrow" + i);
 
@@ -44,14 +44,14 @@ window.onload = function() {
                             .appendTo("#orderrow" + i);
 
             let del = $("<p>")        
-                            .addClass("col-2")
+                            .addClass("col-1")
                             .appendTo("#orderrow" + i);
                             
             let deleteButton = $("<button>")
                             .addClass("btn btn-small btn-info")
                             .attr("id", "delbutton")
                             .attr("type", "button")
-                            .html("Ta bort")
+                            .html("<i class='fas fa-trash-alt'></i>")
                             .appendTo(del)
                             .click(function() {
                                 deleteItem(i);
@@ -63,8 +63,8 @@ window.onload = function() {
 };
 
 function deleteItem (i) {
-    cart.splice(i , 1);
     $("#orderrow" + i).remove();
+    cart.splice(i , 1);
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
