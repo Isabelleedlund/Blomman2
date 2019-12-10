@@ -1,63 +1,5 @@
 @charset "UTF-8";
 
-h1 {
-  font-size: 48px;
-  font-family: Montserrat Semibold;
-  background-color: #FF5E6B;
-  text-align: center;
-  margin: 50px 0; 
-}
-
-h2 {
-  font-size: 36px;
-  font-family: Montserrat Semibold;  
-}
-
-h3 {
-  font-size: 30px;
-  font-family: Montserrat Semibold;  
-}
-
-h4 {
-  font-size: 24px;
-  font-family: Montserrat Semibold;  
-}
-
-h5 {
-  font-size: 18px;
-  font-family: Montserrat Semibold;  
-}
-
-p1 {
-  font-size: 24px;
-  font-family: Lato Regular; 
-}
-
-p2 {
-  font-size: 20px;
-  font-family: Lato Regular; 
-}
-
-p3 {
-  font-size: 16px;
-  font-family: Lato Regular; 
-}
-
-p4 {
-  font-size: 16px;
-  font-family: Lato Regular; 
-}
-
-p5 {
-  font-size: 14px;
-  font-family: Lato Regular; 
-}
-
-span {
-  font-size: 16px;
-  font-family: Lato Regular;
-}
-
 
 
 .betala {
@@ -212,13 +154,9 @@ span {
   
   body {
     padding: 0px 30px 30px 20px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 100;
   }
-  
-  h1 {
-    font-weight: 100;
-  }
+
   
   label {
     color: #aaa;
@@ -252,7 +190,6 @@ span {
   }
   .product .product-details .product-title {
     margin-right: 20px;
-    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
   }
   .product .product-details .product-description {
     margin: 5px 20px 5px 0;
@@ -266,7 +203,6 @@ span {
     padding: 4px 8px;
     background-color: #ff5e6b;
     color: #fff;
-    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
     font-size: 12px;
     border-radius: 3px;
   }
@@ -292,10 +228,7 @@ span {
     width: 21%;
     text-align: right;
   }
-  .totals .totals-item-total {
-    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
-  }
-  
+
   .checkout {
     float: right;
     border: 0;
@@ -388,38 +321,3 @@ span {
   }
 
 
-
-// FONTS & SIZES \\
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-stack;
-  color: $font-color;
-  font-weight: 600;
-}
-
-p, span {
-  font-family: $sfont-stack;
-  color: $font-color;
-  font-size: 16px;
-}
-
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-h4 {
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 18px;
-}
