@@ -14,7 +14,7 @@ let product4 = new ProductItem("Rosa Fönsterazalea", 49, "img/Fonsterazalea_ros
 let product5 = new ProductItem("Fönsterazalea", 79, "img/Fonsterazalea.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 5, 0);
 let product6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Fin, lite större krukväxt som är mycket tålig och kan bli gammal.", 6, 0);
 let product7 = new ProductItem("Gullranka Liten", 59, "img/Gullranka_liten.png", "En klassisk växt som är både tålig och lättplacerad.", 7, 0);
-let product8 = new ProductItem("Gullranka Stor", 79, "img/Gullranka.png", "En klassisk växt som är både tålig och lättplacerad.", 8, 0);
+let product8 = new ProductItem("Gullranka Stor", 349, "img/Gullranka.png", "En klassisk växt som är både tålig och lättplacerad.", 8, 0);
 let product9 = new ProductItem("Julros", 199, "img/julros.png", "Njut av julrosen inne under vintern och plantera ut den till våren.", 9, 0);
 let product10 = new ProductItem("Monstera", 2990, "img/monstera.png", "Mycket lättskött växt med stora, vackra, flikiga blad.", 10, 0);
 let product11 = new ProductItem("Novemberkaktus", 59, "img/novemberkaktus.png", "Från Brasiliens djungel kommer denna växt som med sina fantastiska färger lyser upp i höstmörkret.", 11, 0);
@@ -30,7 +30,7 @@ let product20 = new ProductItem("Zebrasköld", 299, "img/Zebraskold.png", "Mörk
 
 // To show 8 products on site 
 let products = [];
-products.push(product1, product2, product3, products4, product5, product6, product7, product8);
+products.push(product1, product2, product3, product4, product5, product6, product7, product8);
 
 // To show all 20 products on site 
 // let products = [];

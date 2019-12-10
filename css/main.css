@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #656565;
+  font-weight: 600; }
+
+p, span {
+  font-family: "Lato", sans-serif;
+  color: #656565;
+  font-size: 16px; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 18px; }
+
 h1 {
   font-size: 48px;
   font-family: Montserrat Semibold;
@@ -293,6 +318,39 @@ label {
   .totals .totals-item .totals-value {
     width: 40%; } }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #656565;
+  font-weight: 600; }
+
+p, span {
+  font-family: "Lato", sans-serif;
+  color: #656565;
+  font-size: 16px; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 18px; }
+
+h3 {
+  margin-top: 40px; }
+
+#on {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  color: #FF5E6B; }
+
 .popover .popover-header #myCartTitle span {
   font-size: 1.2rem; }
 
@@ -339,46 +397,6 @@ footer {
           margin: 0 0 1%; }
         footer .footer-widget .images-gallery ul li .someimg {
           width: 30px; }
-
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  color: #656565; }
-
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #656565; }
-
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  color: #656565; }
-
-h4 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
-  color: #656565; }
-
-h5 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #656565; }
-
-p {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #656565; }
-
-span {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #656565; }
 
 body {
   background-color: #ffffff; }

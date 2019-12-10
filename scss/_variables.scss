@@ -17,54 +17,36 @@ $main-color2: #FFCE1C;
 $main-color3: #2FC8B4;
 $bg-color: #ffffff;
 
-// // Fonts \\
+// FONTS & SIZES \\
 
-// h1 {
-//     font-family: $font-stack;
-//     font-size: 48px;
-//     font-weight: 600;
-//     color: $font-color;
-// }
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack;
+    color: $font-color;
+    font-weight: 600;
+  }
 
-// h2 {
-//     font-family: $font-stack;
-//     font-size: 36px;
-//     font-weight: 600;
-//     color: $font-color;
-// }
+p, span {
+    font-family: $sfont-stack;
+    color: $font-color;
+    font-size: 16px;
+}
 
-// h3 {
-//     font-family: $font-stack;
-//     font-size: 30px;
-//     font-weight: 600;
-//     color: $font-color;
-// }
+h1 {
+    font-size: 48px;
+}
 
-// h4 {
-//     font-family: $font-stack;
-//     font-size: 24px;
-//     font-weight: 600;
-//     color: $font-color;
-// }
+h2 {
+    font-size: 36px;
+}
 
-// h5 {
-//     font-family: $font-stack;
-//     font-size: 18px;
-//     font-weight: 600;
-//     color: $font-color;
-// }
+h3 {
+    font-size: 30px;
+}
 
-// p {
-//     font-family: $sfont-stack;
-//     font-size: 16px;
-// }
+h4 {
+    font-size: 24px;
+}
 
-// .p2 {
-//   font-family: $sfont-stack;
-//   font-size: 20px;
-// }
-
-// span {
-//     font-family: $sfont-stack;
-//     font-size: 16px;
-// }
+h5 {
+    font-size: 18px;
+}
