@@ -38,8 +38,6 @@ products.push(product1, product2, product3, products4, product5, product6, produ
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
-
 $(document).ready(function() {
 
     createCart();
