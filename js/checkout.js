@@ -1,49 +1,73 @@
+let quant=3;
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 window.onload = function() {
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     function printOrder(){
         $.each(cart, function(i, product) {
             let orderRow = $("<div>")
                             .addClass("row")
-                            .attr("id", "orderrow")
+                            .attr("id", "orderrow" + i)
                             .appendTo("#orderctn");
 
             let prodRow = $("<div>")
                             .addClass("col-12")
                             .addClass("d-flex")
                             .attr("id", "productrow")
-                            .appendTo("#orderrow");
+                            .appendTo("#orderrow" + i);
 
             let orderimg = $("<img>")
                             .attr("src", "../"+product.img)
                             .addClass("col-2")
-                            .appendTo("#orderrow");
+                            .appendTo("#orderrow" + i);
             
             let prodTitle = $("<p>") 
-                            .addClass("col-4")
+                            .addClass("col-3")
                             .html(product.title)
-                            .appendTo("#orderrow");
+                            .appendTo("#orderrow" + i);
 
             let prodQuant = $("<p>")        
                             .addClass("col-2")
-                            .html(1)
-                            .appendTo("#orderrow");
+                            .html(quant)
+                            .appendTo("#orderrow" + i);
 
             let prodPrice = $("<span>")
                             .addClass("col-2")
                             .html(product.price+" SEK") 
-                            .appendTo("#orderrow");
+                            .appendTo("#orderrow" + i);
 
             let totPrice = $("<span>")
                             .addClass("col-2")
-                            .html("subtotalen")
-                            .appendTo("#orderrow");
-            });
+                            .html(quant*product.price)
+                            .appendTo("#orderrow" + i);
+
+            let del = $("<p>")        
+                            .addClass("col-1")
+                            .appendTo("#orderrow" + i);
+                            
+            let deleteButton = $("<button>")
+                            .addClass("btn btn-small btn-info")
+                            .attr("id", "delbutton")
+                            .attr("type", "button")
+                            .html("<i class='fas fa-trash-alt'></i>")
+                            .appendTo(del)
+                            .click(function() {
+                                deleteItem(i);
+                            });
+                         
+            });     
     };
     printOrder();
 };
+
+function deleteItem (i) {
+    $("#orderrow" + i).remove();
+    cart.splice(i , 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 
 
 // Footer Start \\
