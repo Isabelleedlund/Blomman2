@@ -25,53 +25,6 @@ h4 {
 h5 {
   font-size: 18px; }
 
-h1 {
-  font-size: 48px;
-  font-family: Montserrat Semibold;
-  background-color: #FF5E6B;
-  text-align: center;
-  margin: 50px 0; }
-
-h2 {
-  font-size: 36px;
-  font-family: Montserrat Semibold; }
-
-h3 {
-  font-size: 30px;
-  font-family: Montserrat Semibold; }
-
-h4 {
-  font-size: 24px;
-  font-family: Montserrat Semibold; }
-
-h5 {
-  font-size: 18px;
-  font-family: Montserrat Semibold; }
-
-p1 {
-  font-size: 24px;
-  font-family: Lato Regular; }
-
-p2 {
-  font-size: 20px;
-  font-family: Lato Regular; }
-
-p3 {
-  font-size: 16px;
-  font-family: Lato Regular; }
-
-p4 {
-  font-size: 16px;
-  font-family: Lato Regular; }
-
-p5 {
-  font-size: 14px;
-  font-family: Lato Regular; }
-
-span {
-  font-size: 16px;
-  font-family: Lato Regular; }
-
 .betala {
   font-size: 1.5rem; }
 
@@ -183,14 +136,6 @@ span {
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$'; }
 
-body {
-  padding: 0px 30px 30px 20px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100; }
-
-h1 {
-  font-weight: 100; }
-
 label {
   color: #aaa; }
 
@@ -217,8 +162,7 @@ label {
   width: 100px; }
 
 .product .product-details .product-title {
-  margin-right: 20px;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium"; }
+  margin-right: 20px; }
 
 .product .product-details .product-description {
   margin: 5px 20px 5px 0;
@@ -232,7 +176,6 @@ label {
   padding: 4px 8px;
   background-color: #ff5e6b;
   color: #fff;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
   font-size: 12px;
   border-radius: 3px; }
 
@@ -255,9 +198,6 @@ label {
   float: right;
   width: 21%;
   text-align: right; }
-
-.totals .totals-item-total {
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium"; }
 
 .checkout {
   float: right;
@@ -318,32 +258,7 @@ label {
   .totals .totals-item .totals-value {
     width: 40%; } }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  color: #656565;
-  font-weight: 600; }
-
-p, span {
-  font-family: "Lato", sans-serif;
-  color: #656565;
-  font-size: 16px; }
-
-h1 {
-  font-size: 48px; }
-
-h2 {
-  font-size: 36px; }
-
-h3 {
-  font-size: 30px; }
-
-h4 {
-  font-size: 24px; }
-
-h5 {
-  font-size: 18px; }
-
-h3 {
+.orderConfirm {
   margin-top: 40px; }
 
 #on {
