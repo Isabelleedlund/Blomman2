@@ -146,12 +146,15 @@ function createCart() {
 
             let cartItemTrash = $("<span>")
                 .on("click", function () { 
-                    let removedItem = cart.splice( index , 1 );
-                    console.log(cart);
+                    cart.splice( index , 1 );
                     localStorage.setItem("cart", JSON.stringify(cart));                    
-                    console.log(removedItem);
+                    $(this).parents("#cartItem").remove();
+                    
+                    // here is a problem: how to get the right position? seems that the cart is not loaded or that it's position is not updated completely. See popover doc?
+                    // https://popper.js.org/popper-documentation.html#Popper.scheduleUpdate
+                    createCart();
+                    $('#cart').popover('show');
 
-                    // remove parent of this remove()
 
                 })
                 .append("X");
@@ -214,7 +217,7 @@ function createCart() {
                 container: 'body',
                 title: cartTitleContainer,
                 content: cartMainContainer
-            });
+            }).popover('update');
 
         }
 
