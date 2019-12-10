@@ -35,122 +35,118 @@
 
 
 <!-- Content Start -->
-<section id="checkout">
-    <h1>KASSA</h1>
-    <div class="container" id="orderctn">
-        <div class= "row">
-            <h2 class="col-2">Produkt</h2>
-            <h2 class="col-2"></h2>
-            <h2 class="col-2">Antal</h2>
-            <h2 class="col-2">Pris</h2>
-            <h2 class="col-2">Total</h2>
+    <section id="checkout">
+        <h1>KASSA</h1>
+        <div class="container" id="orderctn">
+            <div class= "row">
+                <h2 class="col-2">Produkt</h2>
+                <h2 class="col-2"></h2>
+                <h2 class="col-2">Antal</h2>
+                <h2 class="col-2">Pris</h2>
+                <h2 class="col-2">Total</h2>
+            </div>
         </div>
-    </div>
-    <div class="container" id="sum">
-        <div class= "row justify-content-end" id="vat">
-        <p class="col-2">Moms</p>
-        <p class="col-2">Moms Total</p>
+        <div class="container" id="sum">
+            <div class= "row justify-content-end" id="vat">
+            <p class="col-2">Moms</p>
+            <p class="col-2">Moms Total</p>
+            </div>
+            <div class= "row justify-content-end" id="vat">
+            <p class="col-2">Totalt</p>
+            <p class="col-2">Total pris</p>
+            </div> 
         </div>
-        <div class= "row justify-content-end" id="vat">
-        <p class="col-2">Totalt</p>
-        <p class="col-2">Total pris</p>
-        </div> 
-    </div>
-        </div> <!--Behövs denna div? -->
-            <h1>UPPGIFTER</h1>
-                <div class="form-container p-3 col-12">
-                    <form action="tacksida.html" class="needs-validation" novalidate>
-                        <div class="row p-3">
-                            <div class="col-12 col-lg-7 mb-2">
-                                <input type="text" placeholder="Förnamn"
-                                    name="username" class="form-control" required />
-                                    <div class="invalid-feedback">
-                                        <span>Du behöver fylla i ditt förnamn i fältet ovan.</span>
-                                    </div>
-                                <div class="valid-feedback">
-                                    <span>Bra jobbat!</span>
-                                </div>
-                            </div>
-                                <div class="col-12 col-lg-7 mb-2">
-                                    <input type="text" placeholder="Efternamn"
-                                        name="username" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
-                                        </div>
-                                    <div class="valid-feedback">
-                                        <span>Bra jobbat!</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7 mb-2">
-                                    <input type="text" placeholder="Adress"
-                                        name="username" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            <span>Du behöver fylla i din adress i fältet ovan.</span>
-                                        </div>
-                                    <div class="valid-feedback">
-                                        <span>Bra jobbat!</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7 mb-2">
-                                    <input type="text" placeholder="C/O"
-                                        name="username" class="form-control" />
-                                        <div class="invalid-feedback">
-                                            <span>Du behöver fylla i C/O i fältet ovan.</span>
-                                        </div>
-                                    <div class="valid-feedback">
-                                        <span>Bra jobbat!</span>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7 mb-2">
-                                    <input type="text" placeholder="Postnummer"
-                                        name="username" class="form-control" required />
-                                        <div class="invalid-feedback">
-                                            <span>Du behöver fylla i ditt postnummer i fältet ovan.</span>
-                                        </div>
-                                        <div class="valid-feedback">
-                                            <span>Bra jobbat!</span>
-                                        </div>
-                                    </div>
-                                <div class="col-12 col-lg-7 mb-2">
-                                    <input type="text" placeholder="Ort"
-                                        name="username" class="form-control" required />
-                                    <div class="invalid-feedback">
-                                        <span>Du behöver fylla i din ort i fältet ovan.</span>
-                                    </div>
-                                        <div class="valid-feedback">
-                                            <span>Bra jobbat!</span>
-                                        </div>
-                                    </div>
-                            <div class="col-12 col-lg-7">
-                                <input type="text" placeholder="Email"
-                                    name="username" class="form-control" required />
-                                    <div class="invalid-feedback">
-                                        <span>Du behöver fylla i din email adress i fältet ovan.</span>
-                                    </div>
-                                <div class="valid-feedback">
-                                    <span>Bra jobbat!</span>
-                                </div>
-                            </div>
+        <h1>UPPGIFTER</h1>
+        <div class="form-container p-3 col-12">
+            <form action="tacksida.html" class="needs-validation" novalidate>
+                <div class="row   p-3">
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="Förnamn"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i ditt förnamn i fältet ovan.</span>
                         </div>
-                    </form>
-                </div> <!--Behövs denna div? -->
-    <h1>
-        BEKRÄFTA KÖP
-    </h1>
-    <div class="container2">
-        <p3>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p3>
-        <br><br>
-        <p3>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p3>
-    </div>
-    </div> <!--Behövs denna div? -->
-    <div class="row p-3 justify-content-start">
-        <div class="col-12 col-lg-7">
-            <a href="confirmation.html" target="_blank">
-                <button type="submit" class="buybtn btn btn-dark btn-block">BESTÄLL</button>
-            <!-- </a> --> <!--Behövs inte denna a tag? -->
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="Efternamn"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="Adress"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i din adress i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="C/O"
+                        name="username" class="form-control" />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i C/O i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="Postnummer"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i ditt postnummer i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-2">
+                        <input type="text" placeholder="Ort"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i din ort i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" placeholder="Email"
+                        name="username" class="form-control" required />
+                        <div class="invalid-feedback">
+                            <span>Du behöver fylla i din email adress i fältet ovan.</span>
+                        </div>
+                        <div class="valid-feedback">
+                            <span>Bra jobbat!</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-    </div>  
-</section>
+        <h1>BEKRÄFTA KÖP</h1>
+        <div class="container2">
+            <p3>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p3>
+            <br><br>
+            <p3>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p3>
+        </div>
+        <div class="row p-3 justify-content-start">
+            <div class="col-12 col-lg-7">
+                <a href="confirmation.html" target="_blank">
+                    <button type="submit" class="buybtn btn btn-dark btn-block">BESTÄLL</button>
+                </a>
+            </div>
+        </div>  
+    </section>
 
 <!-- Content End -->
 
