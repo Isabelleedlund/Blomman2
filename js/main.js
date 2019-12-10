@@ -28,9 +28,9 @@ products.push(products1, products2, products3, products4, products5, products6);
 
 // let newProduct = {};
 
-// let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
+// let cart = JSON.parse(localStorage.getItem("cart")) || localStorage.setItem("cart", JSON.stringify([]));
 
 $(document).ready(function() {
 
@@ -43,8 +43,10 @@ $(document).ready(function() {
 // Cart
 function createCart() {
 
-    // get the actual value of LS cart
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    // get the actual value of LS cart if there is something
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+    }
 
     // reset cart
     $('#cart').popover('dispose');
@@ -240,7 +242,10 @@ function printProducts() {
 
 function addToCart(event) {
 
-    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+    }
+
     cart.push(event.data.added);
 
     localStorage.setItem("cart", JSON.stringify(cart));
