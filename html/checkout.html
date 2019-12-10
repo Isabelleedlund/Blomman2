@@ -13,6 +13,9 @@
     <!-- Own jQuery script -->
     <script type="text/javascript" src="../js/checkout.js"></script>
 
+    <!--Font awesome script -->
+    <script src="https://kit.fontawesome.com/40201fed75.js" crossorigin="anonymous"></script>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
@@ -35,16 +38,25 @@
 
 
 <!-- Content Start -->
-    <section id="checkout">
-        <h1>KASSA</h1>
-        <div class="container" id="orderctn">
-            <div class= "row">
-                <h2 class="col-2">Produkt</h2>
-                <h2 class="col-2"></h2>
-                <h2 class="col-2">Antal</h2>
-                <h2 class="col-2">Pris</h2>
-                <h2 class="col-2">Total</h2>
-            </div>
+<section id="checkout">
+    <h1>KASSA</h1>
+    <div class="container" id="orderctn">
+        <div class= "row">
+            <h2 class="col-2">Produkt</h2>
+            <h2 class="col-3"></h2>
+            <h2 class="col-2">Antal</h2>
+            <h2 class="col-2">Pris</h2>
+            <h2 class="col-2">Total</h2>
+        </div>
+    </div>
+    <div class="container" id="sum">
+        <div class= "row justify-content-end" id="vat">
+        <p class="col-2">Moms</p>
+        <p class="col-2">Moms Total</p>
+        </div>
+        <div class= "row justify-content-end" id="vat">
+        <p class="col-2">Totalt</p>
+        <p class="col-2">Total pris</p>
         </div> 
         <div class="container" id="sum">
             <div class= "row justify-content-end" id="vat">
