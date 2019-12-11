@@ -1,3 +1,5 @@
+// Defining all the products
+
 function ProductItem(t, p, img, d, id, q) {
     this.title = t;
     this.price = p;
@@ -38,43 +40,92 @@ products.push(product1, product2, product3, product4, product5, product6, produc
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+
+// When document is loaded
+
 $(document).ready(function() {
 
     printProducts();
 
     createCart();
 
-    // Footer Start \\
-
-    // Change Facebook Icon color when hover over img. 
-    $('#imgfb').hover(
-        function(){
-            $(this).attr('src','img/002-facebook_color.png')
-        },
-        function(){
-            $(this).attr('src','img/002-facebook_grey.png')
-        });
-
-    // Change Instagram Icon color when hover over img. 
-    $('#imgig').hover(
-        function(){
-            $(this).attr('src','img/003-instagram_color.png')
-        },
-        function(){
-            $(this).attr('src','img/003-instagram_grey.png')
-        });
-
-    // Change Twitter Icon color when hover over img. 
-    $('#imgtwi').hover(
-        function(){
-            $(this).attr('src','img/005-twitter_color.png')
-        },
-        function(){
-            $(this).attr('src','img/005-twitter_grey.png')
-    });
-    // Footer End \\
+    changeFooterIcon();
 
 });
+
+// Products catalog
+
+function printProducts() {
+    
+    $.each(products, function(i, product) {
+        
+        // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
+  
+        let cardDiv = $("<div>")
+                            .addClass("product-card col-6 col-md-4 col-lg-3")
+                            .attr("id", "carddiv");
+            
+        let productCard = $("<div>")
+                            .addClass("card h-100 d-flex flex-column")
+                            .appendTo(cardDiv);
+
+        let cardTitle = $("<h3>")
+                            .addClass("card-title")
+                            .html(product.title)
+                            .appendTo(productCard);
+
+        let  imgDiv = $("<div>")
+                            .addClass("card-body")
+                            .attr("id", "imgdiv")
+                            .appendTo(productCard);
+
+        let productImg = $("<img>")
+                            .addClass("img-fluid")
+                            .attr("src", product.img)
+                            .appendTo(imgDiv);
+
+        let cardFooter = $("<div>")
+                            .addClass("card-footer d-flex justify-content-between")
+                            .attr("id", "cardfooter")
+                            .appendTo(productCard);
+
+        let productPrice = $("<span>")
+                            .attr("id", "productprice")
+                            .html(product.price + " SEK")
+                            .appendTo(cardFooter);
+
+        let productDescr = $("<div>")
+                            .attr("id", "descrdiv"+i)
+                            .attr("style", "display: none")
+                            .html(product.description)
+                            .appendTo(productCard);
+
+        let dialogButton = $("<button>")
+                            .attr("type", "button")
+                            .attr("id", "descriptionbutton")
+                            .addClass("btn btn-info")
+                            .html("Läs mer")
+                            .appendTo(cardFooter)
+
+                        // when clicked productDescr will be visible    
+                            .click(function() {
+                                $("#descrdiv"+i).toggle("slow");
+                            });
+
+        let addToCartButton = $("<button>")
+                                    .attr("type", "button")
+                                    .addClass("btn btn-dark")
+                                    .attr("id", "addtocart")
+                                    .html("Lägg till i varukorg")
+                                    .on("click", { added: product }, addToCart)
+                                    .appendTo(productCard);
+
+        $("#productrow").append(cardDiv);
+
+    });
+    
+}
+
 
 // Cart
 function createCart() {
@@ -262,78 +313,9 @@ function createCart() {
             });
         }
 
-};
+}
 
-function printProducts() {
-    
-    $.each(products, function(i, product) {
-        
-        // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
-  
-        let cardDiv = $("<div>")
-                            .addClass("product-card col-6 col-md-4 col-lg-3")
-                            .attr("id", "carddiv");
-            
-        let productCard = $("<div>")
-                            .addClass("card h-100 d-flex flex-column")
-                            .appendTo(cardDiv);
-
-        let cardTitle = $("<h3>")
-                            .addClass("card-title")
-                            .html(product.title)
-                            .appendTo(productCard);
-
-        let  imgDiv = $("<div>")
-                            .addClass("card-body")
-                            .attr("id", "imgdiv")
-                            .appendTo(productCard);
-
-        let productImg = $("<img>")
-                            .addClass("img-fluid")
-                            .attr("src", product.img)
-                            .appendTo(imgDiv);
-
-        let cardFooter = $("<div>")
-                            .addClass("card-footer d-flex justify-content-between")
-                            .attr("id", "cardfooter")
-                            .appendTo(productCard);
-
-        let productPrice = $("<span>")
-                            .attr("id", "productprice")
-                            .html(product.price + " SEK")
-                            .appendTo(cardFooter);
-
-        let productDescr = $("<div>")
-                            .attr("id", "descrdiv"+i)
-                            .attr("style", "display: none")
-                            .html(product.description)
-                            .appendTo(productCard);
-
-        let dialogButton = $("<button>")
-                            .attr("type", "button")
-                            .attr("id", "descriptionbutton")
-                            .addClass("btn btn-info")
-                            .html("Läs mer")
-                            .appendTo(cardFooter)
-
-                        // when clicked productDescr will be visible    
-                            .click(function() {
-                                $("#descrdiv"+i).toggle("slow");
-                            });
-
-        let addToCartButton = $("<button>")
-                                    .attr("type", "button")
-                                    .addClass("btn btn-dark")
-                                    .attr("id", "addtocart")
-                                    .html("Lägg till i varukorg")
-                                    .on("click", { added: product }, addToCart)
-                                    .appendTo(productCard);
-
-        $("#productrow").append(cardDiv);
-
-    });
-    
-};
+// When adding to cart
 
 function addToCart(event) {
 
@@ -346,4 +328,37 @@ function addToCart(event) {
     localStorage.setItem("cart", JSON.stringify(cart));
     createCart();
 
-};
+}
+
+function changeFooterIcon() {
+    
+    // Footer Start \\
+
+    // Change Facebook Icon color when hover over img. 
+    $('#imgfb').hover(
+        function(){
+            $(this).attr('src','img/002-facebook_color.png')
+        },
+        function(){
+            $(this).attr('src','img/002-facebook_grey.png')
+        });
+
+    // Change Instagram Icon color when hover over img. 
+    $('#imgig').hover(
+        function(){
+            $(this).attr('src','img/003-instagram_color.png')
+        },
+        function(){
+            $(this).attr('src','img/003-instagram_grey.png')
+        });
+
+    // Change Twitter Icon color when hover over img. 
+    $('#imgtwi').hover(
+        function(){
+            $(this).attr('src','img/005-twitter_color.png')
+        },
+        function(){
+            $(this).attr('src','img/005-twitter_grey.png')
+    });
+    // Footer End \\
+}
