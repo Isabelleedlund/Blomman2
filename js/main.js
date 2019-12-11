@@ -40,9 +40,39 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 $(document).ready(function() {
 
+    printProducts();
+
     createCart();
 
-    printProducts();
+    // Footer Start \\
+
+    // Change Facebook Icon color when hover over img. 
+    $('#imgfb').hover(
+        function(){
+            $(this).attr('src','img/002-facebook_color.png')
+        },
+        function(){
+            $(this).attr('src','img/002-facebook_grey.png')
+        });
+
+    // Change Instagram Icon color when hover over img. 
+    $('#imgig').hover(
+        function(){
+            $(this).attr('src','img/003-instagram_color.png')
+        },
+        function(){
+            $(this).attr('src','img/003-instagram_grey.png')
+        });
+
+    // Change Twitter Icon color when hover over img. 
+    $('#imgtwi').hover(
+        function(){
+            $(this).attr('src','img/005-twitter_color.png')
+        },
+        function(){
+            $(this).attr('src','img/005-twitter_grey.png')
+    });
+    // Footer End \\
 
 });
 
@@ -88,7 +118,7 @@ function createCart() {
         
         // create empty cart with a message
         $('#cart').popover( { 
-            placement: 'bottom', 
+            placement: 'auto', 
             container: 'body',
             html: true,
             title: cartTitleContainer,
@@ -129,37 +159,49 @@ function createCart() {
                 .attr("id", "cartItemQuantityContainer");
 
             let cartItemTitleAndPrice = $("<div>")
-                .addClass("col-12")
+                .addClass("col-12 pb-2")
                 .html(value.title + "<br />" + value.price + " SEK");
 
-
             let cartItemDecrease = $("<span>")
-                .addClass("pr-2")
-                .text("-")
+                .addClass("pr-3")
+                .text("- ")
                 .on("click", function () {
                     console.log("You want to decrease");
                 });
 
-            let cartItemQuantity = $("<span>") 
-                .append(cartItemDecrease)
-                .append(value.quantity + " + ");
+            let cartItemQuantity = $("<span>")
+                .addClass("pr-3")
+                .html(value.quantity);
 
+            let cartItemIncrease = $("<span>")
+                .addClass("pr-3")
+                .text(" + ")
+                .on("click", function () {
+                    console.log("You want to increase");
+                });
+
+            // Trash in cart, with function to trash and save the result in LS.
             let cartItemTrash = $("<span>")
                 .on("click", function () { 
                     cart.splice( index , 1 );
                     localStorage.setItem("cart", JSON.stringify(cart));                    
                     $(this).parents("#cartItem").remove();
                     
-                    // here is a problem: how to get the right position? seems that the cart is not loaded or that it's position is not updated completely. See popover doc?
-                    // https://popper.js.org/popper-documentation.html#Popper.scheduleUpdate
                     createCart();
-                    $('#cart').popover('show');
 
+                    // here is a problem: how to get the right position if wanting 
+                    // to show the cart right after you threw an item away ? 
+                    // Seems that the cart is not loaded completely and that it's position
+                    // is not updated completely. See popover doc?
+                    // https://popper.js.org/popper-documentation.html#Popper.scheduleUpdate
+                    // $('#cart').popover('show');
 
                 })
-                .append("X");
+                .html("<i class='fas fa-trash-alt'></i>");
 
+            cartItemQuantityContainer.append(cartItemDecrease);
             cartItemQuantityContainer.append(cartItemQuantity);
+            cartItemQuantityContainer.append(cartItemIncrease);
             cartItemQuantityContainer.append(cartItemTrash);
 
             cartItemData.append(cartItemTitleAndPrice);
@@ -168,7 +210,7 @@ function createCart() {
             let cartItemDataContainer = $("<div>")
                 .addClass("col-7")
                 .attr("id", "cartItemDataContainer")
-                .html(cartItemData);
+                .append(cartItemData);
 
             let cartItemImg = $("<img>")
                 .attr("src", value.img)
@@ -212,13 +254,12 @@ function createCart() {
         // enable cart Popover
         $('#cart')
             .popover( { 
-                placement: 'bottom', 
+                placement: 'auto', 
                 html: true, 
                 container: 'body',
                 title: cartTitleContainer,
                 content: cartMainContainer
-            }).popover('update');
-
+            });
         }
 
 };
@@ -306,36 +347,3 @@ function addToCart(event) {
     createCart();
 
 };
-
-$(document).ready(function() { 
-
-// Footer Start \\
-
-// Change Facebook Icon color when hover over img. 
-$('#imgfb').hover(
-    function(){
-        $(this).attr('src','img/002-facebook_color.png')
-    },
-    function(){
-        $(this).attr('src','img/002-facebook_grey.png')
-    });
-
-// Change Instagram Icon color when hover over img. 
-$('#imgig').hover(
-    function(){
-        $(this).attr('src','img/003-instagram_color.png')
-    },
-    function(){
-        $(this).attr('src','img/003-instagram_grey.png')
-    });
-
-// Change Twitter Icon color when hover over img. 
-$('#imgtwi').hover(
-    function(){
-        $(this).attr('src','img/005-twitter_color.png')
-    },
-    function(){
-        $(this).attr('src','img/005-twitter_grey.png')
-});
-// Footer End \\
-});
