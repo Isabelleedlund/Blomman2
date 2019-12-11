@@ -2,22 +2,10 @@
 
 footer {
     border-top: 1px solid lightgrey;
-    margin-top: 40px;
-
-
-    .footer-widget { 
-        margin-top: 40px;
-        margin-bottom: 40px;
-
-        h5{
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-
         .title { // BLOMMA
             color: $main-color;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         a {
@@ -31,7 +19,6 @@ footer {
         margin: 0;
             li {
                 font-family: $sfont-stack;
-                font-size: 16px;
                 list-style: none;
                 color: $font-color;
             }
@@ -54,10 +41,10 @@ footer {
                 margin: 0 0 1%;
                 }
                 .someimg {
-                width: 30px;
+                width: 75%;
                 } 
             }
         }
     }
-    }
+    
 }

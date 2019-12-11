@@ -28,147 +28,107 @@
     </head>
 <body>
 
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom">
-    <a class="navbar-brand" href="#">
-        <img src="../img/logga.jpg" height="90" alt="Blomman: loggan" />
-    </a>
-</nav>
-<!-- Navbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand bg-white d-flex justify-content-between border-bottom">
+        <a class="navbar-brand" href="#">
+            <img src="../img/logga.jpg" height="90" alt="Blomman: loggan" />
+        </a>
+    </nav>
+    <!-- Navbar End -->
 
 
-<!-- Content Start -->
-<section id="checkout">
-    <h1>KASSA</h1>
-    <div class="container" id="orderctn">
-        <div class= "row">
-            <h2 class="col-2">Produkt</h2>
-            <h2 class="col-3"></h2>
-            <h2 class="col-2">Antal</h2>
-            <h2 class="col-2">Pris</h2>
-            <h2 class="col-2">Total</h2>
+    <!-- Content Start -->
+    <section id="checkout">
+        <h1 class="checkoutheader">KASSA</h1>
+        <div class="container" id="orderctn">
+            <div class= "row">
+                <h4 class="col-2 orderhead">Produkt</h4>
+                <h4 class="col-3 orderhead"></h4>
+                <h4 class="col-2 orderhead">Antal</h4>
+                <h4 class="col-2 orderhead">Pris</h4>
+                <h4 class="col-2 orderhead">Total</h4>
+            </div>
+            <hr>
         </div>
-    </div>
-    <div class="container" id="sum">
-        <div class= "row justify-content-end" id="vat">
-        <p class="col-2">Moms</p>
-        <p class="col-2">Moms Total</p>
-        </div>
-        <div class= "row justify-content-end" id="vat">
-        <p class="col-2">Totalt</p>
-        <p class="col-2">Total pris</p>
-        </div> 
         <div class="container" id="sum">
             <div class= "row justify-content-end" id="vat">
-            <p class="col-2">Moms</p>
-            <p class="col-2">Moms Total</p>
+                <p class="col-3 col-md-2">Moms</p>
+                <p class="col-3 col-md-2">Moms Total</p>
             </div>
             <div class= "row justify-content-end" id="vat">
-            <p class="col-2">Totalt</p>
-            <p class="col-2">Total pris</p>
+                <p class="col-3 col-md-2">Totalt</p>
+                <p class="col-3 col-md-2">Total pris</p>
             </div> 
-        </div>
-        <h1>UPPGIFTER</h1>
-        <div class="form-container p-3 col-12">
-            <form action="tacksida.html" class="needs-validation" novalidate>
-                <div class="row   p-3">
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="Förnamn"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i ditt förnamn i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
+        </div> 
+        <h1 class="checkoutheader">UPPGIFTER</h1>
+            <form action="#" class="needs-validation m-5" novalidate>
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="inputName">Förnamn</label>
+                        <input type="text" class="form-control" id="customerName" name="customerName" required>
+                        <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                        <div class="invalid-feedback">Vänligen fyll i namn.</div>
                     </div>
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="Efternamn"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i ditt efternamn i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="Adress"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i din adress i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="C/O"
-                        name="username" class="form-control" />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i C/O i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="Postnummer"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i ditt postnummer i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 mb-2">
-                        <input type="text" placeholder="Ort"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i din ort i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <input type="text" placeholder="Email"
-                        name="username" class="form-control" required />
-                        <div class="invalid-feedback">
-                            <span>Du behöver fylla i din email adress i fältet ovan.</span>
-                        </div>
-                        <div class="valid-feedback">
-                            <span>Bra jobbat!</span>
-                        </div>
+                    <div class="form-group col-6">
+                        <label for="inputLastName">Efternamn</label>
+                        <input type="text" class="form-control" id="customerLastName" name="customerLastName" required>
+                        <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                        <div class="invalid-feedback">Vänligen fyll i efternamn.</div>
                     </div>
                 </div>
-            </form>
-        </div>
-        <h1>BEKRÄFTA KÖP</h1>
-        <div class="container2">
-            <p3>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p3>
-            <br><br>
-            <p3>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p3>
-        </div>
-        <div class="row p-3 justify-content-start">
-            <div class="col-12 col-lg-7">
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="inputAddress">Adress</label>
+                        <input type="text" class="form-control" id="customerAddress" name="customerAddress" required>
+                        <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                        <div class="invalid-feedback">Vänligen fyll i adress.</div>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inputCO">C/O</label>
+                        <input type="text" class="form-control" id="customerCO">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="inputZip">Postnummer</label>
+                        <input type="number" class="form-control" id="customerZip">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inputcity">Ort</label>
+                        <input type="text" class="form-control" id="customerCity" name="custoemrZip" required>
+                        <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                        <div class="invalid-feedback">Vänligen fyll i ort.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">E-post adress</label>
+                    <input type="email" class="form-control" id="customerEmail" name="customerEmail" required>
+                    <div class="valid-feedback"><i class="fas fa-check"></i></div>
+                    <div class="invalid-feedback">Vänligen fyll i e-postadress.</div>
+                </div> 
+                <button type="submit" class="btn" id="submitFormButton">Nästa</button> 
+            </form>  
+           
+        <h1 class="checkoutheader">BEKRÄFTA KÖP</h1>
+            <div class="container" id="termsoforder">
+                <p>Med "Slutför köp" godkänner du XX:s <u><a href="url">Almänna Villkor</a></u></p> 
+                <p>För att ge dig en komplett medlemsupplevelse behandlar vi dina personuppgifter i enlighet med XX:s Integritetsmeddelande.</p>
                 <a href="confirmation.html" target="_blank">
-                    <button type="submit" class="buybtn btn btn-dark btn-block">BESTÄLL</button>
+                    <button type="button" class="btn" id="confirmationbutton">SLUTFÖR KÖP</button>
                 </a>
             </div>
-        </div>  
+          
     </section>
 
 <!-- Content End -->
 
 <!-- Footer Start -->
-<footer class="footer">
+<footer class="footer mt-5">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="footer-widget">
-                <h5>Besöksadress</h5> 
+                <div class="footer-widget my-5">
+                <h5 class="mt-2 mb-1">Besöksadress</h5> 
                 <div class="footer-widget-content">
                     <ul>
                         <li class="title">BLOMMAN</li>
@@ -181,8 +141,8 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="footer-widget">
-            <h5>Öppettider</h5>
+            <div class="footer-widget my-5">
+            <h5 class="mt-2 mb-1">Öppettider</h5>
             <div class="footer-widget-content">
                 <div class="open-time">
                     <ul class="opening-time">
@@ -199,8 +159,8 @@
         </div>
         </div>
         <div class="col-md-2">
-            <div class="footer-widget">
-                <h5>Villkor</h5>
+            <div class="footer-widget my-5">
+                <h5 class="mt-2 mb-1">Villkor</h5>
                 <div class="footer-widget-content">
                     <ul>
                     <li><a href="#">Köpvillkor</a></li>
@@ -211,11 +171,11 @@
             </div>
         </div>
             <div class="col-md-2">
-                <div class="footer-widget">
-                    <h5>Följ oss:</h5>
+                <div class="footer-widget my-5">
+                    <h5 class="mt-2 mb-1">Följ oss:</h5>
                     <div class="footer-widget-content">
                         <div class="images-gallery">
-                            <ul>
+                            <ul class="d-flex">
                                 <li><a href="#"><img src="../img/002-facebook_grey.png" class="someimg" id="imgfb" alt="Facebook"/></a></li>
                                 <li><a href="#"><img src="../img/003-instagram_grey.png" class="someimg" id="imgig" alt="Instagram"/></a></li>
                                 <li><a href="#"><img src="../img/005-twitter_grey.png" class="someimg" id="imgtwi" alt="Twitter"/></a></li>
