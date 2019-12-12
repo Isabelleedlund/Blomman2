@@ -22,6 +22,7 @@ function printOrder(){
                         .addClass("col-3")
                         .html(product.title)
                         .appendTo("#orderrow" + i);
+       
         let prodQuant = $("<p>")        
                         .addClass("col-2")
                         .html(quant)
@@ -46,8 +47,7 @@ function printOrder(){
                         .appendTo(del)
                         .click(function() {
                             deleteItem(i);
-                        });
-                     
+                        });           
         });     
 };
 function deleteItem(i) {

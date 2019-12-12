@@ -150,6 +150,7 @@ function createCart() {
 
     let cartCloseButton = $("<button>")
         .attr("type", "button")
+        .attr("id", "cartclosebutton")
         .addClass("close")
         .attr("aria-label", "Close");
 
