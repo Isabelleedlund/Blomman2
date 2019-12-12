@@ -1,35 +1,34 @@
 // Defining all the products
 
-function ProductItem(t, p, img, d, id, q, ppu) {
+function ProductItem(t, p, img, d, id, q) {
     this.title = t;
     this.price = p;
     this.img = img;
     this.description = d;
     this.id = id;
     this.quantity = q;
-    this.pricePerUnit = ppu;
 }
 
-let product1 = new ProductItem("Amaryllis", 79, "img/amaryllis.png", "Stora (18-19cm) rosa blommor blommor på korta stabila stjälkar.", 1, 1, 79);
-let product2 = new ProductItem("Ardisia", 249, "img/Ardisia.png", "De vackra bären som kommer i olika nivåer gör denna växt mycket dekorativ.", 2, 1, 249);
-let product3 = new ProductItem("Benjaminfikus", 399, "img/Benjaminfikus.png", "Benjaminfikus är en tät och buskig växt med blanka blad som finns i olika färger och storlekar beroende på sort.", 3, 1, 399);
-let product4 = new ProductItem("Rosa Fönsterazalea", 49, "img/Fonsterazalea_rosa.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 4, 1, 49);
-let product5 = new ProductItem("Fönsterazalea", 79, "img/Fonsterazalea.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 5, 1, 79);
-let product6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Fin, lite större krukväxt som är mycket tålig och kan bli gammal.", 6, 1, 399);
-let product7 = new ProductItem("Gullranka Liten", 59, "img/Gullranka_liten.png", "En klassisk växt som är både tålig och lättplacerad.", 7, 1, 59);
-let product8 = new ProductItem("Gullranka Stor", 79, "img/Gullranka.png", "En klassisk växt som är både tålig och lättplacerad.", 8, 1, 79);
-let product9 = new ProductItem("Julros", 199, "img/julros.png", "Njut av julrosen inne under vintern och plantera ut den till våren.", 9, 1, 199);
-let product10 = new ProductItem("Monstera", 2990, "img/monstera.png", "Mycket lättskött växt med stora, vackra, flikiga blad.", 10, 1, 2990);
-let product11 = new ProductItem("Novemberkaktus", 59, "img/novemberkaktus.png", "Från Brasiliens djungel kommer denna växt som med sina fantastiska färger lyser upp i höstmörkret.", 11, 1, 59);
-let product12 = new ProductItem("Papuasköld", 199, "img/papuaskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 12, 1, 199);
-let product13 = new ProductItem("Paraplyaralia", 79, "img/Paraplyaralia.png", "Mycket lättskött och tålig växt!", 13, 1, 79);
-let product14 = new ProductItem("Princettia", 49, "img/Princettia.png", "En kraftig och tålig växt med karamellrosa stjärnor och mörkt gröna blad.", 14, 1, 49);
-let product15 = new ProductItem("Rosenkalla", 149, "img/Rosenkalla.png", "Elegant växt med luftrenande egenskaper.", 15, 1, 149);
-let product16 = new ProductItem("Rumsgran", 179, "img/Rumsgran.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 16, 1, 179);
-let product17 = new ProductItem("Svärmorstunga", 129, "img/Svarmors_tunga.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 17, 1, 129);
-let product18 = new ProductItem("Vågbladskalatera", 79, "img/Vagbladskalatea.png", "Tät växt med fina blad som har vågiga kanter och rödlila undersida.", 18, 1, 79);
-let product19 = new ProductItem("Zamiakalla Raven", 279, "img/Zamiakalla.png", "En av de mest tåliga och lättskötta krukväxterna!", 19, 1, 279);
-let product20 = new ProductItem("Zebrasköld", 299, "img/Zebraskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 20, 1, 299);
+let product1 = new ProductItem("Amaryllis", 79, "img/amaryllis.png", "Stora (18-19cm) rosa blommor blommor på korta stabila stjälkar.", 1, 1);
+let product2 = new ProductItem("Ardisia", 249, "img/Ardisia.png", "De vackra bären som kommer i olika nivåer gör denna växt mycket dekorativ.", 2, 1);
+let product3 = new ProductItem("Benjaminfikus", 399, "img/Benjaminfikus.png", "Benjaminfikus är en tät och buskig växt med blanka blad som finns i olika färger och storlekar beroende på sort.", 3, 1);
+let product4 = new ProductItem("Rosa Fönsterazalea", 49, "img/Fonsterazalea_rosa.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 4, 1);
+let product5 = new ProductItem("Fönsterazalea", 79, "img/Fonsterazalea.png", "Otroligt vacker växt som är uppskattad av många. De nya sorterna är lättskötta! ", 5, 1);
+let product6 = new ProductItem("Förmakspalm", 399, "img/Formakspalm.png", "Fin, lite större krukväxt som är mycket tålig och kan bli gammal.", 6, 1);
+let product7 = new ProductItem("Gullranka Liten", 59, "img/Gullranka_liten.png", "En klassisk växt som är både tålig och lättplacerad.", 7, 1);
+let product8 = new ProductItem("Gullranka Stor", 79, "img/Gullranka.png", "En klassisk växt som är både tålig och lättplacerad.", 8, 1);
+let product9 = new ProductItem("Julros", 199, "img/julros.png", "Njut av julrosen inne under vintern och plantera ut den till våren.", 9, 1);
+let product10 = new ProductItem("Monstera", 2990, "img/monstera.png", "Mycket lättskött växt med stora, vackra, flikiga blad.", 10, 1);
+let product11 = new ProductItem("Novemberkaktus", 59, "img/novemberkaktus.png", "Från Brasiliens djungel kommer denna växt som med sina fantastiska färger lyser upp i höstmörkret.", 11, 1);
+let product12 = new ProductItem("Papuasköld", 199, "img/papuaskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 12, 1);
+let product13 = new ProductItem("Paraplyaralia", 79, "img/Paraplyaralia.png", "Mycket lättskött och tålig växt!", 13, 1);
+let product14 = new ProductItem("Princettia", 49, "img/Princettia.png", "En kraftig och tålig växt med karamellrosa stjärnor och mörkt gröna blad.", 14, 1);
+let product15 = new ProductItem("Rosenkalla", 149, "img/Rosenkalla.png", "Elegant växt med luftrenande egenskaper.", 15, 1);
+let product16 = new ProductItem("Rumsgran", 179, "img/Rumsgran.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 16, 1);
+let product17 = new ProductItem("Svärmorstunga", 129, "img/Svarmors_tunga.png", "Lättskött liten barrväxt som sprider hemtrevlig stämning.", 17, 1);
+let product18 = new ProductItem("Vågbladskalatera", 79, "img/Vagbladskalatea.png", "Tät växt med fina blad som har vågiga kanter och rödlila undersida.", 18, 1);
+let product19 = new ProductItem("Zamiakalla Raven", 279, "img/Zamiakalla.png", "En av de mest tåliga och lättskötta krukväxterna!", 19, 1);
+let product20 = new ProductItem("Zebrasköld", 299, "img/Zebraskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 20, 1);
 
 // To show 8 products on site 
 let products = [];
@@ -50,10 +49,6 @@ $(document).ready(function() {
     createCart();
 
     changeFooterIcon();
-
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
 
 });
 
@@ -134,10 +129,10 @@ function printProducts() {
 // Cart
 function createCart() {
 
-    console.log("createCart() starts");
-
-    // update the actual value of cart from LS cart if there is something
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // get the actual value of LS cart if there is something
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"));
+    }
 
     // reset cart
     $('#cart').popover('dispose');
@@ -154,7 +149,6 @@ function createCart() {
 
     let cartCloseButton = $("<button>")
         .attr("type", "button")
-        .attr("id", "cartclosebutton")
         .addClass("close")
         .attr("aria-label", "Close");
 
@@ -167,16 +161,15 @@ function createCart() {
     cartTitleSpan.appendTo(cartTitleContainer);
     cartCloseButton.appendTo(cartTitleContainer);
 
-    // check whether the cart coming from LS is empty or not
+    // check whether the LS cart is empty or not
     if (cart.length === 0) {
         
-        console.log(cart, "LS cart is empty");
+        // console.log(cart, "LS cart is empty");
         
         // create empty cart with a message
         $('#cart').popover( { 
-            placement: 'left', 
+            placement: 'auto', 
             container: 'body',
-            boundary: 'viewport',
             html: true,
             title: cartTitleContainer,
             content: "Din varukorg är tom."
@@ -185,7 +178,7 @@ function createCart() {
     } 
     else {
         
-        console.log(cart, "cart is not empty");    
+        // console.log("cart is not empty");    
         
         // create cart body      
         let cartMainContainer = $("<div>")
@@ -217,64 +210,28 @@ function createCart() {
 
             let cartItemTitleAndPrice = $("<div>")
                 .addClass("col-12 pb-2")
-                .html(value.title + "<br />" + value.pricePerUnit * value.quantity + " SEK");
+                .html(value.title + "<br />" + value.price + " SEK");
 
             let cartItemDecrease = $("<span>")
-                .addClass("pl-1 pr-1 ml-0 mr-2")
-                .text("-")
-                .on("click", { added: this }, function (event) {
-                    console.log("You want to decrease", event.data.added, event.data.added.quantity );
-                    
-                    console.log(cart);
-
-                    if (event.data.added.quantity > 1) {
-
-                        $.each(cart, function(index, product) {
-                            if (product.id === event.data.added.id) {
-                                product.quantity--;
-                                product.price = product.pricePerUnit * product.quantity;
-                            }
-                        });
-
-                        localStorage.setItem("cart", JSON.stringify(cart));
-                        createCart();
-                        $("#cart").popover('show');
-
-                    } else {
-                        console.log("you cant decrease from one!");
-                    }
-
+                .addClass("pr-3")
+                .text("- ")
+                .on("click", function () {
+                    console.log("You want to decrease");
                 });
 
             let cartItemQuantity = $("<span>")
-                .addClass("pl-0 pr-0 ml-2 mr-2")
+                .addClass("pr-3")
                 .html(value.quantity);
 
             let cartItemIncrease = $("<span>")
-                .addClass("pl-1 pr-1 ml-2 mr-2")
-                .text("+")
-                .on("click", { added: this }, function (event) {
-                    console.log("You want to increase", event.data.added, event.data.added.quantity );
-                    
-                    console.log(cart);
-
-                    $.each(cart, function(index, product) {
-                        if (product.id === event.data.added.id) {
-                            product.quantity++;
-                            product.price = product.pricePerUnit * product.quantity;
-                        }
-                    });
-
-                    localStorage.setItem("cart", JSON.stringify(cart));
-                    createCart();
-                    $("#cart").popover('show');
-
+                .addClass("pr-3")
+                .text(" + ")
+                .on("click", function () {
+                    console.log("You want to increase");
                 });
 
             // Trash in cart, with function to trash and save the result in LS.
             let cartItemTrash = $("<span>")
-                .html("<i class='fas fa-trash-alt'></i>")
-                .addClass("pl-1 pr-1 ml-2 mr-2")
                 .on("click", function () { 
                     cart.splice( index , 1 );
                     localStorage.setItem("cart", JSON.stringify(cart));                    
@@ -282,17 +239,15 @@ function createCart() {
                     
                     createCart();
 
-                    $("#cart").popover('show');
-
                     // here is a problem: how to get the right position if wanting 
                     // to show the cart right after you threw an item away ? 
                     // Seems that the cart is not loaded completely and that it's position
                     // is not updated completely. See popover doc?
                     // https://popper.js.org/popper-documentation.html#Popper.scheduleUpdate
                     // $('#cart').popover('show');
-                    // .ready() ??
 
-                });
+                })
+                .html("<i class='fas fa-trash-alt'></i>");
 
             cartItemQuantityContainer.append(cartItemDecrease);
             cartItemQuantityContainer.append(cartItemQuantity);
@@ -349,17 +304,13 @@ function createCart() {
         // enable cart Popover
         $('#cart')
             .popover( { 
-                placement: 'left', 
+                placement: 'auto', 
                 html: true, 
                 container: 'body',
-                boundary: 'viewport',
                 title: cartTitleContainer,
                 content: cartMainContainer
             });
         }
-
-        console.log("createCart() ends");
-   
 
 }
 
@@ -367,44 +318,110 @@ function createCart() {
 
 function addToCart(event) {
 
-    // sync with cart LS (necessary?)
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     if (cart.length == 0) {
         // if there is nothing in the cart        
-        console.log("there was nothing in the cart, lets add this product: ", event.data.added.title);
+        console.log("there was nothing in the cart, lets add this product");
 
         cart.push(event.data.added);
+        console.log(cart);
 
         localStorage.setItem("cart", JSON.stringify(cart));
     
     } else {
+    
+        // get the value from cart LS to sync both (temporarily)
+        let cart = JSON.parse(localStorage.getItem("cart"));
 
-        let foundProduct = false;
-
-        $.each(cart, function(index, product) {
-            
-            if (product.id === event.data.added.id) {
-                console.log("something similar!", product.title, product.quantity);
-                product.quantity++;
-                foundProduct = true;
-            }
-
-        });
-
-        if (!foundProduct) {
-                console.log("new product! we simply add it");
-                cart.push(event.data.added);
-                
+        // go through the cart array and if there is the same id, add 1 to the quantity 
+        function isSimilar(product) {
+            return product.quantity === event.data.added.id;
         }
+        
+        let similarProduct = cart.find(isSimilar);
+
+        if (similarProduct) {
+            console.log("something similar");
+            similarProduct.quantity += 1;
+            cart.push(similarProduct);
+        } else { 
+            console.log("nothing similar");
+            cart.push(event.data.added);
+        }        
 
         localStorage.setItem("cart", JSON.stringify(cart));
+
+        console.log(cart);
+        console.log( JSON.parse(localStorage.getItem("cart")) );
+        
+        
+        // $.each(cart, function ( index, product ) {
+        //     const similarId = product(value => product.id === event.data.added.id) 
+            
+        //     if (event.data.added.id === product.id) {
+        //         product.quantity = product.quantity + 1;
+        //         localStorage.setItem("cart", JSON.stringify(cart));
+        //         return;
+        //     } else { 
+        //         console.log("there was nothing similar in the array, let's add the new product");
+        //         cart.push(event.data.added); 
+        //         localStorage.setItem("cart", JSON.stringify(cart));
+        //     };
+        // });
+
+        // console.log(cart);
+        // console.log( JSON.parse(localStorage.getItem("cart")) );
+
+
+        // let alreadyInTheCart = $.grep(product, function ( value , property ) {
+        //     return event.data.added.id === product.id;
+        // });
+
+        // go through this new array and add 1 to the quantity property of the product
+        // $.each(alreadyInTheCart, function ( index, product ) {
+        //     product.quantity += 1;
+        // });
+
+
+        // console.log(alreadyAdded.quantity);
+
+        // console.log("before map", cart);
+        // cart = $.map(cart, function ( product, i) { 
+        //     if (event.data.added.id === product.id) {
+        //         console.log("there is already a ", event.data.added.title + " (in cart LS) and a ", product.title  + " (in cart)");
+        //         product.quantity += 1;
+        //     } else {
+        //         cart.push(event.data.added);
+        //     }
+        //     return cart
+        // });
+
+        // console.log("after map", cart);
+        // cart.push(event.data.added);
+
+        // go through every position in cart and if there is a match between ids from LS and the one higher the quantity
+
+        // let updatingCart = [];
+
+        // $.each(cart, function( index , product ) {
+            
+        //     if (event.data.added.id === product.id) {
+        //         console.log("there is already a ", event.data.added.title + " (in cart LS) and a ", product.title  + " (in cart)");
+        //         product.quantity += 1;
+        //     } else {
+        //         updatingCart.push(event.data.added);
+        //     }
+        
+        // });
+
+        // console.log(updatingCart);
+
         
     }
 
+    
+    
     createCart();
-    
-    
 
 }
 

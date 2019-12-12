@@ -76,8 +76,7 @@ function printOrder(){
                         .appendTo(del)
                         .click(function() {
                             deleteItem(i);
-                        });
-                     
+                        });           
         });     
 };
 function deleteItem(i) {
