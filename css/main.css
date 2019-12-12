@@ -29,7 +29,20 @@ h5 {
   text-align: center;
   background-color: #FF5E6B; }
 
-#delbutton {
+.input-group {
+  flex-wrap: nowrap; }
+
+.input-group-field {
+  width: 30%;
+  height: min-content;
+  padding: 0.5rem;
+  margin: 0 auto; }
+
+.input-group-field::-webkit-inner-spin-button,
+.input-group-field::-webkit-outer-spin-button {
+  -webkit-appearance: none; }
+
+.btn-small {
   background-color: #FF5E6B;
   border-radius: 50%; }
 

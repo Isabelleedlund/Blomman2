@@ -6,7 +6,24 @@
     background-color: $main-color;
 }
 
-#delbutton {
+.input-group {
+    flex-wrap: nowrap;
+
+}
+
+.input-group-field {
+    width: 30%;
+    height: min-content;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+.input-group-field::-webkit-inner-spin-button,
+.input-group-field::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+}
+
+.btn-small {
     background-color: $main-color;
     border-radius: 50%;
 }
@@ -22,7 +39,7 @@
 #termsoforder {
     text-align: center;
         p {
-           font: $sfont-stack; 
+           font: $sfont-stack;
         }
         #confirmationbutton {
             background-color: $main-color;

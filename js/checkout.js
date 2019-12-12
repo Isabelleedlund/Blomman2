@@ -22,10 +22,40 @@ function printOrder(){
                         .addClass("col-3")
                         .html(product.title)
                         .appendTo("#orderrow" + i);
-        let prodQuant = $("<p>")        
-                        .addClass("col-2")
-                        .html(quant)
-                        .appendTo("#orderrow" + i);
+//        let prodQuant = $("<p>")        
+//                      .addClass("col-2")
+//                      .html(quant)
+//                       .appendTo("#orderrow" + i);
+        let quantInputGr = $("<div>")
+                           .addClass("col-2 input-group plus-minus-input")
+                           .appendTo("#orderrow" + i);
+        let InputGrMinBtn = $("<div>")
+                        .addClass ("input-group-button")
+                        .appendTo(quantInputGr);
+        let quantMinBtn = $("<button>")
+                          .addClass("btn btn-small")
+                          .attr("type", "button")
+                          .attr("data-quantity", "minus")
+                          .attr("data-field", "quantity")
+                          .html("<i class='fa fa-minus'></i>")
+                          .appendTo(InputGrMinBtn);
+        
+        let inputField  = $("<input>")
+                          .addClass("input-group-field")
+                          .attr("type", "number")
+                          .attr("name", "quantity")
+                          .attr("value", quant)
+                          .appendTo(quantInputGr);
+        let InputGrPluBtn = $("<div>")
+                          .addClass ("input-group-button")
+                          .appendTo(quantInputGr);
+        let quantPluBtn = $("<button>")
+                          .addClass("btn btn-small")
+                          .attr("type", "button")
+                          .attr("data-quantity", "plus")
+                          .attr("data-field", "quantity")
+                          .html("<i class='fa fa-plus'></i>")
+                          .appendTo(InputGrPluBtn);
         let prodPrice = $("<span>")
                         .addClass("col-2")
                         .html(product.price+" SEK") 
