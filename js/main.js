@@ -175,6 +175,7 @@ function createCart() {
         $('#cart').popover( { 
             placement: 'left', 
             container: 'body',
+            boundary: 'viewport',
             html: true,
             title: cartTitleContainer,
             content: "Din varukorg är tom."
@@ -350,6 +351,7 @@ function createCart() {
                 placement: 'left', 
                 html: true, 
                 container: 'body',
+                boundary: 'viewport',
                 title: cartTitleContainer,
                 content: cartMainContainer
             });
