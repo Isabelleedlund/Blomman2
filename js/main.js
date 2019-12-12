@@ -51,10 +51,6 @@ $(document).ready(function() {
 
     changeFooterIcon();
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
-
 });
 
 // Products catalog
@@ -78,7 +74,7 @@ function printProducts() {
                             .html(product.title)
                             .appendTo(productCard);
 
-        let  imgDiv = $("<div>")
+        let imgDiv = $("<div>")
                             .addClass("card-body")
                             .attr("id", "imgdiv")
                             .appendTo(productCard);
@@ -170,7 +166,7 @@ function createCart() {
     // check whether the cart coming from LS is empty or not
     if (cart.length === 0) {
         
-        console.log(cart, "LS cart is empty");
+        // console.log(cart, "LS cart is empty");
         
         // create empty cart with a message
         $('#cart').popover( { 
@@ -185,7 +181,7 @@ function createCart() {
     } 
     else {
         
-        console.log(cart, "cart is not empty");    
+        // console.log(cart, "cart is not empty");    
         
         // create cart body      
         let cartMainContainer = $("<div>")
@@ -212,20 +208,22 @@ function createCart() {
                 .attr("id", "cartItemData");
 
             let cartItemQuantityContainer = $("<div>")
-                .addClass("col-12")
+                .addClass("col-12 d-flex flex-nowrap align-items-center")
                 .attr("id", "cartItemQuantityContainer");
 
             let cartItemTitleAndPrice = $("<div>")
                 .addClass("col-12 pb-2")
                 .html(value.title + "<br />" + value.pricePerUnit * value.quantity + " SEK");
 
-            let cartItemDecrease = $("<span>")
-                .addClass("pl-1 pr-1 ml-0 mr-2")
+            let cartItemDecrease = $("<button>")
+                .addClass("btn btn-light rounded-pill p-1 m-2")
+                .attr("type", "button")
                 .text("-")
                 .on("click", { added: this }, function (event) {
+                    
                     console.log("You want to decrease", event.data.added, event.data.added.quantity );
                     
-                    console.log(cart);
+                    // console.log(cart);
 
                     if (event.data.added.quantity > 1) {
 
@@ -250,13 +248,14 @@ function createCart() {
                 .addClass("pl-0 pr-0 ml-2 mr-2")
                 .html(value.quantity);
 
-            let cartItemIncrease = $("<span>")
-                .addClass("pl-1 pr-1 ml-2 mr-2")
+            let cartItemIncrease = $("<button>")
+                .addClass("btn btn-light rounded-pill p-1 m-2")
+                .attr("type", "button")
                 .text("+")
                 .on("click", { added: this }, function (event) {
                     console.log("You want to increase", event.data.added, event.data.added.quantity );
                     
-                    console.log(cart);
+                    // console.log(cart);
 
                     $.each(cart, function(index, product) {
                         if (product.id === event.data.added.id) {
@@ -272,9 +271,10 @@ function createCart() {
                 });
 
             // Trash in cart, with function to trash and save the result in LS.
-            let cartItemTrash = $("<span>")
+            let cartItemTrash = $("<button>")
                 .html("<i class='fas fa-trash-alt'></i>")
-                .addClass("pl-1 pr-1 ml-2 mr-2")
+                .addClass("btn p-0 ml-2 mr-2")
+                .attr("type", "button")
                 .on("click", function () { 
                     cart.splice( index , 1 );
                     localStorage.setItem("cart", JSON.stringify(cart));                    
@@ -321,6 +321,58 @@ function createCart() {
             cartMainContainer.append(cartItemContainer);
         });
 
+        // cart body > cart "Total price" display
+
+        let cartTotalPriceContainer = $("<div>")
+        .addClass("container pl-0 pr-0")
+        .attr("id", "cartTotalPriceContainer");
+
+        let cartTotalPriceRow = $("<div>")
+            .addClass("row border-bottom")
+            .attr("id", "cartTotalPriceRow");
+
+        let cartTotalPriceCol = $("<div>")
+            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
+            .attr("id", "cartTotalPriceCol");
+
+
+// Start to work from here
+
+        let totalPrice = 0;
+        
+        $.each(cart, function(index, product) {
+    
+            console.log(product.price);
+            totalPrice = totalPrice + product.price; 
+
+        });
+
+        // function totalPrice () {
+
+        //     console.log("New price");            
+        //     console.log(cart);
+            
+        //     localStorage.setItem("cart", JSON.stringify(cart));
+        //     createCart();
+        //     $("#cart").popover('show');
+
+        //     return "hello";
+        // }
+
+// End to work here
+
+
+        let cartTotalPriceData = $("<p>")
+            .attr("id", "cartTotalPriceData")
+            .addClass("h4 text-danger")
+            .html(totalPrice);
+
+        cartTotalPriceData.appendTo(cartTotalPriceCol);
+        cartTotalPriceCol.appendTo(cartTotalPriceRow);
+        cartTotalPriceRow.appendTo(cartTotalPriceContainer);
+
+        cartTotalPriceContainer.appendTo(cartMainContainer);
+
         // cart body > cart "Place order" button
         let cartToCheckoutButtonContainer = $("<div>")
             .addClass("container pl-0 pr-0")
@@ -331,13 +383,13 @@ function createCart() {
             .attr("id", "cartToCheckoutButtonRow");
 
         let cartToCheckoutButtonCol = $("<div>")
-            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
+            .addClass("col-12 d-flex justify-content-center p-1 mt-2 pb-1")
             .attr("id", "cartToCheckoutButtonCol");
 
         let toCheckoutButton = $("<button>")
             .attr("type", "button")
             .attr("id", "toCheckoutButton")
-            .addClass("btn btn-info")
+            .addClass("btn btn-outline-success")
             .on("click", function () { location.href = "html/checkout.html" } )
             .html("Till Kassan");
 
@@ -356,7 +408,7 @@ function createCart() {
                 title: cartTitleContainer,
                 content: cartMainContainer
             });
-        }
+         }
 
         console.log("createCart() ends");
    
