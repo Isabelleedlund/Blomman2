@@ -39,9 +39,18 @@ products.push(product1, product2, product3, product4, product5, product6, produc
 // let products = [];
 // products.push(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product20);
 
+// function Order(products, tp, ordern) {
+//     this.products = products;
+//     this.totalPrice = tp;
+//     this.orderNumber = ordern;
+// }
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Runs the following when HTML document is loaded:
+// let order = JSON.parse(localStorage.getItem("order")) || [];
+
+
+// When document is loaded
 
 $(document).ready(function() {
 
@@ -59,10 +68,10 @@ function printProducts() {
     
     $.each(products, function(i, product) {
         
-        // Generate content based on the products
+        // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
   
         let cardDiv = $("<div>")
-                            .addClass("product-card col-6 col-md-4 col-lg-3 p-3")
+                            .addClass("product-card col-6 col-md-4 col-lg-3")
                             .attr("id", "carddiv");
             
         let productCard = $("<div>")
@@ -95,7 +104,6 @@ function printProducts() {
                             .appendTo(cardFooter);
 
         let productDescr = $("<div>")
-                            .addClass("p-3")
                             .attr("id", "descrdiv"+i)
                             .attr("style", "display: none")
                             .html(product.description)
@@ -285,6 +293,14 @@ function createCart() {
 
                     $("#cart").popover('show');
 
+                    // here is a problem: how to get the right position if wanting 
+                    // to show the cart right after you threw an item away ? 
+                    // Seems that the cart is not loaded completely and that it's position
+                    // is not updated completely. See popover doc?
+                    // https://popper.js.org/popper-documentation.html#Popper.scheduleUpdate
+                    // $('#cart').popover('show');
+                    // .ready() ??
+
                 });
 
             cartItemQuantityContainer.append(cartItemDecrease);
@@ -328,6 +344,9 @@ function createCart() {
             .addClass("col-12 d-flex justify-content-center p-1 pt-0")
             .attr("id", "cartTotalPriceCol");
 
+
+// Start to work from here
+
         let totalPrice = 0;
         
         $.each(cart, function(index, product) {
@@ -336,6 +355,20 @@ function createCart() {
             totalPrice = totalPrice + product.price;
             
         });
+
+        // function totalPrice () {
+
+        //     console.log("New price");            
+        //     console.log(cart);
+            
+        //     localStorage.setItem("cart", JSON.stringify(cart));
+        //     createCart();
+        //     $("#cart").popover('show');
+
+        //     return "hello";
+        // }
+
+// End to work here
 
         let cartTotalPriceData = $("<p>")
             .attr("id", "cartTotalPriceData")
@@ -396,6 +429,7 @@ function addToCart(event) {
 
     // sync with cart LS (necessary?)
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // let order = JSON.parse(localStorage.getItem("order")) || [];
 
     if (cart.length == 0) {
         // if there is nothing in the cart        
@@ -403,7 +437,10 @@ function addToCart(event) {
 
         cart.push(event.data.added);
 
+        // let order = new Order([event.data.added], event.data.added.price, "To be generated");
+
         localStorage.setItem("cart", JSON.stringify(cart));
+        // localStorage.setItem("order", JSON.stringify(order));
     
     } else {
 
@@ -414,6 +451,13 @@ function addToCart(event) {
             if (product.id === event.data.added.id) {
                 console.log("something similar!", product.title, product.quantity);
                 product.quantity++;
+
+                // $.each(order, function( index, value) {
+                //     console.log("something similar, we change quantity of it and add it to the total price");
+                //     value.products[index].quantity++;
+                //     value.totalPrice = value.totalPrice + product.price; 
+                // })
+
                 foundProduct = true;
             }
 
@@ -424,9 +468,12 @@ function addToCart(event) {
         if (!foundProduct) {
                 console.log("new product! we simply add it");
                 cart.push(event.data.added);
+                // order.products.push(event.data.added);
+                // order.totalPrice = order.totalPrice + event.data.added.price;  
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
+        // localStorage.setItem("order", JSON.stringify(order));
         
     }
 
