@@ -363,9 +363,9 @@ function createCart() {
         let toCheckoutButton = $("<button>")
             .attr("type", "button")
             .attr("id", "toCheckoutButton")
-            .addClass("btn btn-outline-success")
+            .addClass("btn")
             .on("click", function () { location.href = "html/checkout.html" } )
-            .html("Till Kassan");
+            .html("TILL KASSAN");
 
         toCheckoutButton.appendTo(cartToCheckoutButtonCol);
         cartToCheckoutButtonCol.appendTo(cartToCheckoutButtonRow);

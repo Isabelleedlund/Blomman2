@@ -73,6 +73,10 @@ h5 {
 .popover .popover-header #myCartTitle #cartclosebutton {
   font-size: 1.5rem; }
 
+.popover .popover-body #toCheckoutButton {
+  color: #FFF;
+  background-color: #FF5E6B; }
+
 footer {
   border-top: 1px solid lightgrey; }
   footer .title {
