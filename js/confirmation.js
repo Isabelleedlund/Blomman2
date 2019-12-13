@@ -12,6 +12,7 @@ let buyOrder = localStorage.getItem('orderNumber', '');
         localStorage.setItem('orderNo', buyOrder);
     
     $("#on").text(buyOrder)
+    
 });
 
 
