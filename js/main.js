@@ -66,7 +66,7 @@ function printProducts() {
         // SKAPA INNEHÅLL PÅ SIDAN BASERAT PÅ DATA FRÅN PRODUCTS
   
         let cardDiv = $("<div>")
-                            .addClass("product-card col-6 col-md-4 col-lg-3")
+                            .addClass("product-card col-6 col-md-4 col-lg-3 p-3")
                             .attr("id", "carddiv");
             
         let productCard = $("<div>")
@@ -99,6 +99,7 @@ function printProducts() {
                             .appendTo(cardFooter);
 
         let productDescr = $("<div>")
+                            .addClass("p-3")
                             .attr("id", "descrdiv"+i)
                             .attr("style", "display: none")
                             .html(product.description)

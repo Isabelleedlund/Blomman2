@@ -15,11 +15,11 @@ function printOrder(){
                         .appendTo("#orderrow" + i);
         let orderimg = $("<img>")
                         .attr("src", "../"+product.img)
-                        .addClass("col-2")
+                        .addClass("col-2 p-4")
                         .appendTo("#orderrow" + i);
         
         let prodTitle = $("<p>") 
-                        .addClass("col-3")
+                        .addClass("col-3 mt-4 p-4")
                         .html(product.title)
                         .appendTo("#orderrow" + i);
 //        let prodQuant = $("<p>")        
@@ -27,7 +27,7 @@ function printOrder(){
 //                      .html(quant)
 //                       .appendTo("#orderrow" + i);
         let quantInputGr = $("<div>")
-                           .addClass("col-2 input-group plus-minus-input")
+                           .addClass("col-2 input-group plus-minus-input mt-4 py-3 pl-2 pr-5")
                            .appendTo("#orderrow" + i);
         let InputGrMinBtn = $("<div>")
                         .addClass ("input-group-button")
@@ -57,19 +57,19 @@ function printOrder(){
                           .html("<i class='fa fa-plus'></i>")
                           .appendTo(InputGrPluBtn);
         let prodPrice = $("<span>")
-                        .addClass("col-2")
+                        .addClass("col-2 pl-4 pt-5")
                         .html(product.price+" SEK") 
                         .appendTo("#orderrow" + i);
         let totPrice = $("<span>")
-                        .addClass("col-2")
-                        .html(quant*product.price)
+                        .addClass("col-2 pl-4 pt-5")
+                        .html(quant*product.price+" SEK")
                         .appendTo("#orderrow" + i);
         let del = $("<p>")        
-                        .addClass("col-1")
+                        .addClass("col-1 mt-4 py-3")
                         .appendTo("#orderrow" + i);
                         
         let deleteButton = $("<button>")
-                        .addClass("btn btn-small")
+                        .addClass("btn btn-small mt-0")
                         .attr("id", "delbutton")
                         .attr("type", "button")
                         .html("<i class='fas fa-trash-alt'></i>")
