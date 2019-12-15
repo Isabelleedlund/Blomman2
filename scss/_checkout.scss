@@ -1,37 +1,62 @@
 @charset "UTF-8";
 
-
 .checkoutheader {
     text-align: center;
     background-color: $main-color;
 }
 
-.input-group {
-    flex-wrap: nowrap;
-
-    
-    .input-group-field {
-        width: 30%;
-        height: min-content;
-        padding: 0.5rem;
-        margin: 0 auto;
-        font-size: 0.5rem;
-    }
-    
-    .input-group-field::-webkit-inner-spin-button,
-    .input-group-field::-webkit-outer-spin-button {
-      -webkit-appearance: none; 
+#orderctn {
+    .orderhead {
+        font-size: 4vmin;
     }
 
-}
+    #orderrow {
+        align-items: center;
+        .prodtitle {
+            font-size: 3.5vmin;
+        }
+        .pprice {
+            margin: 0 auto;
+            font-size: 2.5vmin;
+            padding-left: 2vmin;
+            padding-right: 0%;
+        }
+        .input-group {
+            flex-wrap: nowrap;
+            align-items: center;
+            padding-left: 2.5vmin;
+            padding-right: 2.5vmin;
 
+            .input-group-field {
+                width: 3vmin;
+                height: min-content;
+                font-size: 2vmin;
+                padding-left: 0.4vmin;
+                margin: 0 auto;
+            }
 
+            .input-group-field::-webkit-inner-spin-button,
+            .input-group-field::-webkit-outer-spin-button {
+              -webkit-appearance: none; 
+            }
+        }
+    }
 
-.btn-small {
-    background-color: $main-color;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    margin-top: 0;
+    .btn-small {
+        background-color: $main-color;
+        border-radius: 50%;
+        font-size: 2vmin;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 1px solid $font-color;
+        padding: 0.8vmin;
+        color: $font-color;
+    }
+
+    #delbtn {
+        margin: 0;
+        padding-left: 0;
+    }
 }
 
 #submitFormButton {
@@ -54,4 +79,3 @@
           background-color: $hoover;  
         }
 }
-

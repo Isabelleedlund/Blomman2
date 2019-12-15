@@ -5,11 +5,12 @@ footer {
         .title { // BLOMMA
             color: $main-color;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 4vmin;
         }
 
         a {
             color: $font-color;
+            font-size: 3vmin;
             &:hover{
             color: $main-color;
             } 
@@ -21,11 +22,21 @@ footer {
                 font-family: $sfont-stack;
                 list-style: none;
                 color: $font-color;
+                font-size: 3vmin;
+
+                span{
+                    font-size: 2.5vmin;
+                }
+                
+                a{
+                    font-size: 2.1vmin;
+                }
             }
         }
         .days{
             color: $main-color;
             font-weight: bold;
+            font-size: 3vmin;
 
         }
         .time {
