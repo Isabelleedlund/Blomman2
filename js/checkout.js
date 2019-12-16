@@ -218,8 +218,8 @@ $('#imgig').hover(
     },
     function(){
         $(this).attr('src','../img/003-instagram_grey.png')
+    });
 function changeFooterIcon() {
-    
     // Footer Start \\
 
     // Change Facebook Icon color when hover over img. 

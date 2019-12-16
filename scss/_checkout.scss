@@ -64,10 +64,18 @@
     .accordionButton {
         width: 100%;
         border-radius: 0;
+        font-family: $font-stack;
+        color: $font-color;
+        font-weight: 600;
     }
 
     form {
 
+        #customerZip::-webkit-inner-spin-button,
+        #customerZip::-webkit-outer-spin-button {
+              -webkit-appearance: none; 
+            }
+            
         .paycard {
             width: 10%;
         }
@@ -84,7 +92,7 @@
                   background-color: $hoover;  
                 }
         }
-        
+
         #submitFormButton {
             background-color: $main-color;
         }
