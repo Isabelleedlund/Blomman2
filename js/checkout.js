@@ -1,5 +1,3 @@
-let quant=3;
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function printOrder(){
@@ -8,11 +6,13 @@ function printOrder(){
                         .addClass("row")
                         .attr("id", "orderrow")
                         .appendTo("#orderctn");
+
         let prodRow = $("<div>")
                         .addClass("col-12")
                         .addClass("d-flex")
                         .attr("id", "productrow")
                         .appendTo("#orderrow");
+
         let orderimg = $("<img>")
                         .attr("src", "../"+product.img)
                         .addClass("col-2 p-2")
@@ -22,16 +22,20 @@ function printOrder(){
                         .addClass("col-3 prodtitle pl-0 ")
                         .html(product.title)
                         .appendTo("#orderrow");
+
 //        let prodQuant = $("<p>")        
 //                      .addClass("col-2")
 //                      .html(quant)
 //                       .appendTo("#orderrow" + i);
-        let quantInputGr = $("<div>")
+
+        let quantityContainer = $("<div>")
                            .addClass("col-2 input-group plus-minus-input")
                            .appendTo("#orderrow");
+
         let InputGrMinBtn = $("<div>")
-                        .addClass ("input-group-button")
-                        .appendTo(quantInputGr);
+                            .addClass ("input-group-button")
+                            .appendTo(quantityContainer);
+
         let quantMinBtn = $("<button>")
                           .addClass("btn btn-small")
                           .attr("type", "button")
@@ -40,15 +44,15 @@ function printOrder(){
                           .html("<i class='fa fa-minus'></i>")
                           .appendTo(InputGrMinBtn);
         
-        let inputField  = $("<input>")
-                          .addClass("input-group-field")
-                          .attr("type", "number")
-                          .attr("name", "quantity")
-                          .attr("value", quant)
-                          .appendTo(quantInputGr);
+        let quantitySpan  = $("<span>")
+                          .attr("id", "quantitySpan")
+                          .html(product.quantity)
+                          .appendTo(quantityContainer);
+
         let InputGrPluBtn = $("<div>")
-                          .addClass ("input-group-button")
-                          .appendTo(quantInputGr);
+                            .addClass ("input-group-button")
+                            .appendTo(quantityContainer);
+
         let quantPluBtn = $("<button>")
                           .addClass("btn btn-small")
                           .attr("type", "button")
@@ -56,30 +60,34 @@ function printOrder(){
                           .attr("data-field", "quantity")
                           .html("<i class='fa fa-plus'></i>")
                           .appendTo(InputGrPluBtn);
+
         let prodPrice = $("<span>")
                         .addClass("col-2 pprice")
                         .html(product.price+" SEK") 
                         .appendTo("#orderrow");
+
         let totPrice = $("<span>")
                         .addClass("col-2 pprice")
                         .html(quant*product.price+" SEK")
                         .appendTo("#orderrow");
+
         let del = $("<p>")        
-                        .addClass("col-1")
-                        .attr("id", "delbtn")
-                        .appendTo("#orderrow");
+                    .addClass("col-1")
+                    .attr("id", "delbtn")
+                    .appendTo("#orderrow");
                         
         let deleteButton = $("<button>")
-                        .addClass("btn btn-small m-0")
-                        .attr("id", "delbutton")
-                        .attr("type", "button")
-                        .html("<i class='fas fa-trash-alt'></i>")
-                        .appendTo(del)
-                        .click(function() {
-                            deleteItem(i);
-                        });           
-        });     
+                            .addClass("btn btn-small m-0")
+                            .attr("id", "delbutton")
+                            .attr("type", "button")
+                            .html("<i class='fas fa-trash-alt'></i>")
+                            .appendTo(del)
+                            .click(function() {
+                                deleteItem(i);
+                            });           
+            });     
 };
+
 function deleteItem(i) {
     $("#orderrow" + i).remove();
     cart.splice(i , 1);
@@ -140,100 +148,5 @@ $('#imgtwi').hover(
     function(){
         $(this).attr('src','../img/005-twitter_grey.png')
 });
+
 // Footer End \\
-
-
-
-
-
-
-// $(document).ready(".buybtn").click(function() {
-//     alert('button clicked');
-// });
-
-
-
-
-// let buyButton = $(".buybtn")
-//                 .click(function(){
-//                 alert ("handlar for .click() called.")
-//             })
-
-// /*
-// /* Set rates + misc */
-// var taxRate = 0.25;
-// var shippingRate = 15.00; 
-// var fadeTime = 300;
-
-
-// /* Assign actions */
-// $('.product-quantity input').change( function() {
-//   updateQuantity(this);
-// });
-
-// $('.product-removal button').click( function() {
-//   removeItem(this);
-// });
-
-
-// /* Recalculate cart */
-// function recalculateCart()
-// {
-//   var subtotal = 0;
-  
-//   /* Sum up row totals */
-//   $('.product').each(function () {
-//     subtotal += parseFloat($(this).children('.product-line-price').text());
-//   });
-  
-//   /* Calculate totals */
-//   var tax = subtotal * taxRate;
-//   var shipping = (subtotal > 0 ? shippingRate : 0);
-//   var total = subtotal + tax + shipping;
-  
-//   /* Update totals display */
-//   $('.totals-value').fadeOut(fadeTime, function() {
-//     $('#cart-subtotal').html(subtotal.toFixed(2));
-//     $('#cart-tax').html(tax.toFixed(2));
-//     $('#cart-shipping').html(shipping.toFixed(2));
-//     $('#cart-total').html(total.toFixed(2));
-//     if(total == 0){
-//       $('.checkout').fadeOut(fadeTime);
-//     }else{
-//       $('.checkout').fadeIn(fadeTime);
-//     }
-//     $('.totals-value').fadeIn(fadeTime);
-//   });
-// }
-
-
-// /* Update quantity */
-// function updateQuantity(quantityInput)
-// {
-//   /* Calculate line price */
-//   var productRow = $(quantityInput).parent().parent();
-//   var price = parseFloat(productRow.children('.product-price').text());
-//   var quantity = $(quantityInput).val();
-//   var linePrice = price * quantity;
-  
-//   /* Update line price display and recalc cart totals */
-//   productRow.children('.product-line-price').each(function () {
-//     $(this).fadeOut(fadeTime, function() {
-//       $(this).text(linePrice.toFixed(2));
-//       recalculateCart();
-//       $(this).fadeIn(fadeTime);
-//     });
-//   });  
-// }
-
-
-// /* Remove item from cart */
-// function removeItem(removeButton)
-// {
-//   /* Remove row from DOM and recalc cart total */
-//   var productRow = $(removeButton).parent().parent();
-//   productRow.slideUp(fadeTime, function() {
-//     productRow.remove();
-//     recalculateCart();
-//   });
-// }
