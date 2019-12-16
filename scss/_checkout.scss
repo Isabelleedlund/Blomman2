@@ -59,23 +59,38 @@
     }
 }
 
-#submitFormButton {
-    background-color: $main-color;
-}
+.accordion {
 
-#submitFormButton:hover {
-    background-color: $hoover;
-}
+    .accordionButton {
+        width: 100%;
+        border-radius: 0;
+    }
 
-#termsoforder {
-    text-align: center;
-        p {
-           font: $sfont-stack;
+    form {
+
+        .paycard {
+            width: 10%;
         }
-        #confirmationbutton {
+
+        #termsoforder {
+            text-align: center;
+                p {
+                   font: $sfont-stack;
+                }
+                #confirmationbutton {
+                    background-color: $main-color;
+                }
+                #confirmationbutton:hover {
+                  background-color: $hoover;  
+                }
+        }
+        
+        #submitFormButton {
             background-color: $main-color;
         }
-        #confirmationbutton:hover {
-          background-color: $hoover;  
+        #submitFormButton:hover {
+            background-color: $hoover;
         }
+    }
 }
+

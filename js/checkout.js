@@ -86,20 +86,26 @@ function deleteItem(i) {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+
 function submitForm() {
     'use strict';
     
       // Get the forms we want to add validation styles to
-      let forms = document.getElementsByClassName('needs-validation');
+      let forms = document.getElementsByClassName("needs-validation");
+      let custForm = document.getElementById("customerform");
       // Loop over them and prevent submission
-      let validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
+      let validation = Array.prototype.filter.call(forms, function() {
+        document.getElementById("submitCForm").addEventListener("click", function(event) {
+            if (custForm.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            else {
+                $("#customerDetails").toggle("slow");
+                $("#paymentMethod").toggle("slow");
+            }
+            custForm.classList.add('was-validated');
+            }, false); 
       });
 };
 
@@ -107,7 +113,15 @@ function submitForm() {
 
 window.onload = function() {
     printOrder();
-   $("#submitFormButton").on("click", submitForm());
+    $("#submitCForm").on("click", submitForm());
+   // $("#submitFormButton").on("click", submitForm());
+    $("#showCustomerDetails").on("click", function(){
+        $("#customerDetails").toggle("slow");
+    });
+    $("#showTermsAndC").on("click", function(){
+        $("#termsAndConditions").toggle("slow");
+    });
+   
 };
 
 

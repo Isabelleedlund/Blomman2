@@ -70,20 +70,27 @@ h5 {
   margin: 0;
   padding-left: 0; }
 
-#submitFormButton {
+.accordion .accordionButton {
+  width: 100%;
+  border-radius: 0; }
+
+.accordion form .paycard {
+  width: 10%; }
+
+.accordion form #termsoforder {
+  text-align: center; }
+  .accordion form #termsoforder p {
+    font: "Lato", sans-serif; }
+  .accordion form #termsoforder #confirmationbutton {
+    background-color: #fdbcc1; }
+  .accordion form #termsoforder #confirmationbutton:hover {
+    background-color: #fa9aa2; }
+
+.accordion form #submitFormButton {
   background-color: #fdbcc1; }
 
-#submitFormButton:hover {
+.accordion form #submitFormButton:hover {
   background-color: #fa9aa2; }
-
-#termsoforder {
-  text-align: center; }
-  #termsoforder p {
-    font: "Lato", sans-serif; }
-  #termsoforder #confirmationbutton {
-    background-color: #fdbcc1; }
-  #termsoforder #confirmationbutton:hover {
-    background-color: #fa9aa2; }
 
 #on {
   font-size: 1.8rem;
