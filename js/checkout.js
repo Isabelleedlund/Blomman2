@@ -1,8 +1,10 @@
-cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 $(document).ready(function() {
     printOrder();
     $("#submitFormButton").on("click", submitForm());
+
+    changeFooterIcon()
 });
 
 
@@ -13,9 +15,11 @@ function printOrder(){
     let orderRow = $("<div>")
         .addClass("row")
         .attr("id", "orderRow")
-        .appendTo("#orderctn");
+        .appendTo(orderctn);
 
     $.each(cart, function(i, product) {
+
+        // Append to prodRow
 
         let prodRow = $("<div>")
             .addClass("col-12 d-flex no-gutters")
@@ -24,7 +28,10 @@ function printOrder(){
 
         let imgContainer = $("<div>")
             .addClass("col-3")
+            .attr("id", "imgContainer")
             .appendTo(prodRow);
+
+        // Append to above div imgContainer 
 
         let orderImg = $("<img>")
             .attr("src", "../" + product.img)
@@ -39,6 +46,26 @@ function printOrder(){
         let quantityContainer = $("<div>")
             .addClass("col-2")
             .appendTo(prodRow);
+
+        let prodPrice = $("<span>")
+            .addClass("col-2")
+            .attr("id", "prodPrice")
+            .html(product.price + " SEK")
+            .appendTo(prodRow);
+
+        let totalPrice = $("<span>")
+            .addClass("col-2")
+            .attr("id", "totalPrice")
+            .html(product.quantity * product.pricePerUnit + " SEK")
+            .appendTo(prodRow);
+
+        let deleteSpan = $("<span>")        
+            .addClass("col-1")
+            .attr("id", "deleteSpan")
+            .appendTo(prodRow);
+
+
+        // Append to qualityContainer
 
         let minusButton = $("<button>")
             .addClass("btn btn-primary")
@@ -65,22 +92,7 @@ function printOrder(){
             })
             .appendTo(quantityContainer);
 
-        let prodPrice = $("<span>")
-            .addClass("col-2")
-            .attr("id", "prodPrice")
-            .html(product.price + " SEK")
-            .appendTo(prodRow);
-
-        let totalPrice = $("<span>")
-            .addClass("col-2")
-            .attr("id", "totalPrice")
-            .html(product.quantity * product.pricePerUnit + " SEK")
-            .appendTo(prodRow);
-
-        let deleteSpan = $("<span>")        
-            .addClass("col-1")
-            .attr("id", "deleteSpan")
-            .appendTo(prodRow);
+            // Append to deleteSpan
                         
         let deleteButton = $("<button>")
             .addClass("btn")
@@ -120,35 +132,35 @@ function submitForm() {
 };
 
 
+function changeFooterIcon() {
+    
+    // Footer Start \\
 
+    // Change Facebook Icon color when hover over img. 
+    $('#imgfb').hover(
+        function(){
+            $(this).attr('src','../img/002-facebook_color.png')
+        },
+        function(){
+            $(this).attr('src','../img/002-facebook_grey.png')
+        });
 
-// Footer Start \\
+    // Change Instagram Icon color when hover over img. 
+    $('#imgig').hover(
+        function(){
+            $(this).attr('src','../img/003-instagram_color.png')
+        },
+        function(){
+            $(this).attr('src','../img/003-instagram_grey.png')
+        });
 
-// Change Facebook Icon color when hover over img. 
-$('#imgfb').hover(
-    function(){
-        $(this).attr('src','../img/002-facebook_color.png')
-    },
-    function(){
-        $(this).attr('src','../img/002-facebook_grey.png')
+    // Change Twitter Icon color when hover over img. 
+    $('#imgtwi').hover(
+        function(){
+            $(this).attr('src','../img/005-twitter_color.png')
+        },
+        function(){
+            $(this).attr('src','../img/005-twitter_grey.png')
     });
-
-// Change Instagram Icon color when hover over img. 
-$('#imgig').hover(
-    function(){
-        $(this).attr('src','../img/003-instagram_color.png')
-    },
-    function(){
-        $(this).attr('src','../img/003-instagram_grey.png')
-    });
-
-// Change Twitter Icon color when hover over img. 
-$('#imgtwi').hover(
-    function(){
-        $(this).attr('src','../img/005-twitter_color.png')
-    },
-    function(){
-        $(this).attr('src','../img/005-twitter_grey.png')
-});
-
-// Footer End \\
+    // Footer End \\
+}
