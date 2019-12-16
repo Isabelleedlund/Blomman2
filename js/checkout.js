@@ -2,6 +2,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 $(document).ready(function() {
     printOrder();
+    
     $("#submitFormButton").on("click", submitForm());
 
     changeFooterIcon()
@@ -139,8 +140,30 @@ function printOrder(){
             .appendTo(deleteSpan);
 
         });
-        // let vatTotal = 
+
+        printTotal();
+
 };
+
+function printTotal() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let sumTotal = 0;
+
+    $.each(cart, function(index, product) {
+        sumTotal = sumTotal + product.price;
+    });
+
+    $("#sumTotal").html(sumTotal + " SEK");
+
+    let vatTotal = sumTotal * 0.25;
+
+    $("#vatTotal").html(vatTotal + " SEK");
+
+    console.log(sumTotal);
+
+}
 
 
 

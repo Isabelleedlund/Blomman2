@@ -91,7 +91,7 @@ function printProducts() {
 
         let productPrice = $("<span>")
                             .attr("id", "productprice")
-                            .html(product.price + " SEK")
+                            .html(product.pricePerUnit + " SEK")
                             .appendTo(cardFooter);
 
         let productDescr = $("<div>")
@@ -414,6 +414,7 @@ function addToCart(event) {
             if (product.id === event.data.added.id) {
                 console.log("something similar!", product.title, product.quantity);
                 product.quantity++;
+                product.price = product.pricePerUnit * product.quantity;
                 foundProduct = true;
             }
 
