@@ -12,6 +12,8 @@ function printOrder(){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+    $("#orderRow").remove();
+
     let orderRow = $("<div>")
         .addClass("row")
         .attr("id", "orderRow")
@@ -50,7 +52,7 @@ function printOrder(){
         let prodPrice = $("<span>")
             .addClass("col-2")
             .attr("id", "prodPrice")
-            .html(product.price + " SEK")
+            .html(product.pricePerUnit + " SEK")
             .appendTo(prodRow);
 
         let totalPrice = $("<span>")
@@ -72,8 +74,23 @@ function printOrder(){
             .attr("type", "button")
             .attr("id", "minusButton")
             .html("<i class='fa fa-minus'></i>")
-            .on("click", function(){
-            console.log("You want to decrease");
+            .on("click", { added: this }, function(event) {
+                console.log("You want to decrease", event );
+                if (event.data.added.quantity > 1) {
+
+                    $.each(cart, function(index, product) {
+                        if (product.id === event.data.added.id) {
+                            product.quantity--;
+                            product.price = product.pricePerUnit * product.quantity;
+                        }
+                    });
+
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    printOrder();
+
+                } else {
+                    console.log("you cant decrease from one!");
+                }
             })
             .appendTo(quantityContainer);
         
@@ -87,8 +104,21 @@ function printOrder(){
             .attr("type", "button")
             .attr("id", "plusButton")
             .html("<i class='fa fa-plus'></i>")
-            .on("click", function(){
-                console.log("You want to increase");
+            .on("click", { added: this }, function (event) {
+                console.log("You want to increase", event.data.added, event.data.added.quantity );
+                
+                // console.log(cart);
+
+                $.each(cart, function(index, product) {
+                    if (product.id === event.data.added.id) {
+                        product.quantity++;
+                        product.price = product.pricePerUnit * product.quantity;
+                    }
+                });
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                printOrder();
+
             })
             .appendTo(quantityContainer);
 
@@ -104,11 +134,12 @@ function printOrder(){
                 cart.splice(i , 1);
                 localStorage.setItem("cart", JSON.stringify(cart));
                 $(this).parents("#prodRow").remove();
-                printProducts();
+                printOrder();
             })
             .appendTo(deleteSpan);
 
-        });     
+        });
+        // let vatTotal = 
 };
 
 
