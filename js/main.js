@@ -104,7 +104,7 @@ function printProducts() {
         let dialogButton = $("<button>")
                             .attr("type", "button")
                             .attr("id", "descriptionbutton")
-                            .addClass("btn btn-info")
+                            .addClass("btn")
                             .html("Läs mer")
                             .appendTo(cardFooter)
 
@@ -115,7 +115,7 @@ function printProducts() {
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
-                                    .addClass("btn btn-dark")
+                                    .addClass("btn")
                                     .attr("id", "addtocart")
                                     .html("Lägg till i varukorg")
                                     .on("click", { added: product }, addToCart)

@@ -15,12 +15,15 @@ body {
   text-align: center;
   margin-top: 20px;
   height: 60px;
-  font-size: 24px;
+  font-size: 3.5vmin;
 }
 #descriptionbutton {
   background-color: $main-color;
+  color: $font-color;
   border-radius: 7px;
   border-color: $main-color;
+  font-size: 1.8vmin;
+  padding: 0.4vmin;
 }
 #descriptionbutton:hover {
   background-color: $hoover;
@@ -31,12 +34,14 @@ body {
 }
 #addtocart {
   background-color: $main-color;
+  color: $font-color;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   border-color: $main-color;
-  padding: 10px;
+  font-size: 2vmin;
+  padding: 1vmin;
 }
 #addtocart:hover {
   background-color: $hoover;
@@ -46,12 +51,12 @@ body {
   border: 2px solid $press;
 }
 
-.product-card {
-  //padding: 10px;
-}
-
 .card-footer {
   background-color: $bg-color;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
 }
 
 .jumbotron {
@@ -62,4 +67,9 @@ body {
 
 #imgdiv {
   align-items: center;
+}
+
+button {
+    background-color: $main-color;
+    color: $font-color;
 }

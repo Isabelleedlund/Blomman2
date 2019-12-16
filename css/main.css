@@ -8,64 +8,87 @@ h1, h2, h3, h4, h5, h6 {
 p, span, label {
   font-family: "Lato", sans-serif;
   color: #656565;
-  font-size: 1rem; }
+  font-size: 2vmin; }
 
 h1 {
-  font-size: 2.2rem; }
+  font-size: 6vmin; }
 
 h2 {
-  font-size: 2.1rem; }
+  font-size: 5vmin; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 4.5vmin; }
 
 h4 {
-  font-size: 1.4rem; }
+  font-size: 4vmin; }
 
 h5 {
-  font-size: 1.2rem; }
+  font-size: 3.5vmin; }
 
 .checkoutheader {
   text-align: center;
-  background-color: #FF5E6B; }
+  background-color: #fdbcc1; }
 
-.input-group {
-  flex-wrap: nowrap; }
-  .input-group .input-group-field {
-    width: 30%;
-    height: min-content;
-    padding: 0.5rem;
+#orderctn .orderhead {
+  font-size: 4vmin; }
+
+#orderctn #orderrow {
+  align-items: center; }
+  #orderctn #orderrow .prodtitle {
+    font-size: 3.5vmin; }
+  #orderctn #orderrow .pprice {
     margin: 0 auto;
-    font-size: 0.5rem; }
-  .input-group .input-group-field::-webkit-inner-spin-button,
-  .input-group .input-group-field::-webkit-outer-spin-button {
-    -webkit-appearance: none; }
+    font-size: 2.5vmin;
+    padding-left: 2vmin;
+    padding-right: 0%; }
+  #orderctn #orderrow .input-group {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 2.5vmin;
+    padding-right: 2.5vmin; }
+    #orderctn #orderrow .input-group .input-group-field {
+      width: 3vmin;
+      height: min-content;
+      font-size: 2vmin;
+      padding-left: 0.4vmin;
+      margin: 0 auto; }
+    #orderctn #orderrow .input-group .input-group-field::-webkit-inner-spin-button,
+    #orderctn #orderrow .input-group .input-group-field::-webkit-outer-spin-button {
+      -webkit-appearance: none; }
 
-.btn-small {
-  background-color: #FF5E6B;
+#orderctn .btn-small {
+  background-color: #fdbcc1;
   border-radius: 50%;
-  font-size: 0.8rem;
-  margin-top: 0; }
+  font-size: 2vmin;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid #656565;
+  padding: 0.8vmin;
+  color: #656565; }
+
+#orderctn #delbtn {
+  margin: 0;
+  padding-left: 0; }
 
 #submitFormButton {
-  background-color: #FF5E6B; }
+  background-color: #fdbcc1; }
 
 #submitFormButton:hover {
-  background-color: #FF4352; }
+  background-color: #fa9aa2; }
 
 #termsoforder {
   text-align: center; }
   #termsoforder p {
     font: "Lato", sans-serif; }
   #termsoforder #confirmationbutton {
-    background-color: #FF5E6B; }
+    background-color: #fdbcc1; }
   #termsoforder #confirmationbutton:hover {
-    background-color: #FF4352; }
+    background-color: #fa9aa2; }
 
 #on {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
-  color: #FF5E6B; }
+  color: #fdbcc1; }
 
 .popover .popover-header #myCartTitle span {
   font-size: 1.2rem; }
@@ -75,28 +98,35 @@ h5 {
 
 .popover .popover-body #toCheckoutButton {
   color: #FFF;
-  background-color: #FF5E6B; }
+  background-color: #fdbcc1; }
 
 footer {
   border-top: 1px solid lightgrey; }
   footer .title {
-    color: #FF5E6B;
+    color: #fdbcc1;
     font-weight: 700;
-    font-size: 1rem; }
+    font-size: 4vmin; }
   footer a {
-    color: #656565; }
+    color: #656565;
+    font-size: 3vmin; }
     footer a:hover {
-      color: #FF5E6B; }
+      color: #fdbcc1; }
   footer ul {
     padding: 0;
     margin: 0; }
     footer ul li {
       font-family: "Lato", sans-serif;
       list-style: none;
-      color: #656565; }
+      color: #656565;
+      font-size: 3vmin; }
+      footer ul li span {
+        font-size: 2.5vmin; }
+      footer ul li a {
+        font-size: 2.1vmin; }
   footer .days {
-    color: #FF5E6B;
-    font-weight: bold; }
+    color: #fdbcc1;
+    font-weight: bold;
+    font-size: 3vmin; }
   footer .time {
     text-align: center; }
   footer .images-gallery ul {
@@ -119,38 +149,47 @@ body {
   text-align: center;
   margin-top: 20px;
   height: 60px;
-  font-size: 24px; }
+  font-size: 3.5vmin; }
 
 #descriptionbutton {
-  background-color: #FF5E6B;
+  background-color: #fdbcc1;
+  color: #656565;
   border-radius: 7px;
-  border-color: #FF5E6B; }
+  border-color: #fdbcc1;
+  font-size: 1.8vmin;
+  padding: 0.4vmin; }
 
 #descriptionbutton:hover {
-  background-color: #FF4352; }
+  background-color: #fa9aa2; }
 
 #descriptionbutton:active {
-  background-color: #FF5E6B;
-  border: 2px solid #FF5E6B; }
+  background-color: #fa858f;
+  border: 2px solid #fa858f; }
 
 #addtocart {
-  background-color: #FF5E6B;
+  background-color: #fdbcc1;
+  color: #656565;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-color: #FF5E6B;
-  padding: 10px; }
+  border-color: #fdbcc1;
+  font-size: 2vmin;
+  padding: 1vmin; }
 
 #addtocart:hover {
-  background-color: #FF4352; }
+  background-color: #fa9aa2; }
 
 #addtocart:active {
-  background-color: #FF5E6B;
-  border: 2px solid #FF5E6B; }
+  background-color: #fa858f;
+  border: 2px solid #fa858f; }
 
 .card-footer {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw; }
 
 .jumbotron {
   background-color: #ffffff;
@@ -159,3 +198,7 @@ body {
 
 #imgdiv {
   align-items: center; }
+
+button {
+  background-color: #fdbcc1;
+  color: #656565; }

@@ -6,29 +6,29 @@ function printOrder(){
     $.each(cart, function(i, product) {
         let orderRow = $("<div>")
                         .addClass("row")
-                        .attr("id", "orderrow" + i)
+                        .attr("id", "orderrow")
                         .appendTo("#orderctn");
         let prodRow = $("<div>")
                         .addClass("col-12")
                         .addClass("d-flex")
                         .attr("id", "productrow")
-                        .appendTo("#orderrow" + i);
+                        .appendTo("#orderrow");
         let orderimg = $("<img>")
                         .attr("src", "../"+product.img)
-                        .addClass("col-2 p-4")
-                        .appendTo("#orderrow" + i);
+                        .addClass("col-2 p-2")
+                        .appendTo("#orderrow");
         
         let prodTitle = $("<p>") 
-                        .addClass("col-3 mt-4 p-4")
+                        .addClass("col-3 prodtitle pl-0 ")
                         .html(product.title)
-                        .appendTo("#orderrow" + i);
+                        .appendTo("#orderrow");
 //        let prodQuant = $("<p>")        
 //                      .addClass("col-2")
 //                      .html(quant)
 //                       .appendTo("#orderrow" + i);
         let quantInputGr = $("<div>")
-                           .addClass("col-2 input-group plus-minus-input mt-4 py-3 pl-2 pr-5")
-                           .appendTo("#orderrow" + i);
+                           .addClass("col-2 input-group plus-minus-input")
+                           .appendTo("#orderrow");
         let InputGrMinBtn = $("<div>")
                         .addClass ("input-group-button")
                         .appendTo(quantInputGr);
@@ -57,19 +57,20 @@ function printOrder(){
                           .html("<i class='fa fa-plus'></i>")
                           .appendTo(InputGrPluBtn);
         let prodPrice = $("<span>")
-                        .addClass("col-2 pl-4 pt-5")
+                        .addClass("col-2 pprice")
                         .html(product.price+" SEK") 
-                        .appendTo("#orderrow" + i);
+                        .appendTo("#orderrow");
         let totPrice = $("<span>")
-                        .addClass("col-2 pl-4 pt-5")
+                        .addClass("col-2 pprice")
                         .html(quant*product.price+" SEK")
-                        .appendTo("#orderrow" + i);
+                        .appendTo("#orderrow");
         let del = $("<p>")        
-                        .addClass("col-1 mt-4 py-3")
-                        .appendTo("#orderrow" + i);
+                        .addClass("col-1")
+                        .attr("id", "delbtn")
+                        .appendTo("#orderrow");
                         
         let deleteButton = $("<button>")
-                        .addClass("btn btn-small mt-0")
+                        .addClass("btn btn-small m-0")
                         .attr("id", "delbutton")
                         .attr("type", "button")
                         .html("<i class='fas fa-trash-alt'></i>")
