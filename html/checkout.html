@@ -46,23 +46,22 @@
             <h1 class="checkoutheader">KASSA</h1>
             <div class="container" id="orderctn">
                 <div class= "row mt-4 justify-content-between">
-                    <h4 class="col-3 orderhead p-1">Produkt</h4>
-                    <h4 class="col-2 orderhead p-1"></h4>
-                    <h4 class="col-2 orderhead p-1">Antal</h4>
-                    <h4 class="col-2 orderhead p-1">Pris</h4>
-                    <h4 class="col-2 orderhead p-1">Total</h4>
+                    <h4 class="col-5 orderhead">Produkt</h4>
+                    <h4 class="col-2 orderhead">Antal</h4>
+                    <h4 class="col-2 orderhead">Pris</h4>
+                    <h4 class="col-2 orderhead">Total</h4>
                     <h4 class="col-1"></h4>
                 </div>
                 <hr>
             </div>
             <div class="container" id="sum">
-                <div class= "row justify-content-end" id="vat">
-                    <p class="col-3 col-md-2">Moms</p>
-                    <p class="col-3 col-md-2">Moms Total</p>
+                <div class= "row justify-content-end">
+                    <p class="col-3 col-md-2">Moms 25%</p>
+                    <p id="vatTotal" class="col-3 col-md-2"></p>
                 </div>
-                <div class= "row justify-content-end" id="vat">
+                <div class="row justify-content-end">
                     <p class="col-3 col-md-2">Totalt</p>
-                    <p class="col-3 col-md-2">Total pris</p>
+                    <p id="sumTotal" class="col-3 col-md-2"></p>
                 </div> 
             </div> 
             
@@ -236,10 +235,6 @@
             </div>
         </footer>
         <!-- Footer End -->
-
-        <script type="text/javascript" src="../js/confirmation.js"></script>
-        <script type="text/javascript" src="../js/checkout.js"></script>
-
 
     </body>
 
