@@ -1,98 +1,106 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+$(document).ready(function() {
+    printOrder();
+    $("#submitFormButton").on("click", submitForm());
+});
+
 
 function printOrder(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let orderRow = $("<div>")
+        .addClass("row")
+        .attr("id", "orderRow")
+        .appendTo("#orderctn");
+
     $.each(cart, function(i, product) {
-        let orderRow = $("<div>")
-                        .addClass("row")
-                        .attr("id", "orderrow")
-                        .appendTo("#orderctn");
 
         let prodRow = $("<div>")
-                        .addClass("col-12")
-                        .addClass("d-flex")
-                        .attr("id", "productrow")
-                        .appendTo("#orderrow");
+            .addClass("col-12 d-flex no-gutters")
+            .attr("id", "prodRow")
+            .appendTo(orderRow);
 
-        let orderimg = $("<img>")
-                        .attr("src", "../"+product.img)
-                        .addClass("col-2 p-2")
-                        .appendTo("#orderrow");
+        let imgContainer = $("<div>")
+            .addClass("col-3")
+            .appendTo(prodRow);
+
+        let orderImg = $("<img>")
+            .attr("src", "../" + product.img)
+            .addClass("img-fluid")
+            .appendTo(imgContainer);
         
-        let prodTitle = $("<p>") 
-                        .addClass("col-3 prodtitle pl-0 ")
-                        .html(product.title)
-                        .appendTo("#orderrow");
-
-//        let prodQuant = $("<p>")        
-//                      .addClass("col-2")
-//                      .html(quant)
-//                       .appendTo("#orderrow" + i);
+        let prodTitle = $("<span>")
+            .addClass("col-2")
+            .html(product.title)
+            .appendTo(prodRow);
 
         let quantityContainer = $("<div>")
-                           .addClass("col-2 input-group plus-minus-input")
-                           .appendTo("#orderrow");
+            .addClass("col-2")
+            .appendTo(prodRow);
 
-        let InputGrMinBtn = $("<div>")
-                            .addClass ("input-group-button")
-                            .appendTo(quantityContainer);
-
-        let quantMinBtn = $("<button>")
-                          .addClass("btn btn-small")
-                          .attr("type", "button")
-                          .attr("data-quantity", "minus")
-                          .attr("data-field", "quantity")
-                          .html("<i class='fa fa-minus'></i>")
-                          .appendTo(InputGrMinBtn);
+        let minusButton = $("<button>")
+            .addClass("btn btn-primary")
+            .attr("type", "button")
+            .attr("id", "minusButton")
+            .html("<i class='fa fa-minus'></i>")
+            .on("click", function(){
+            console.log("You want to decrease");
+            })
+            .appendTo(quantityContainer);
         
-        let quantitySpan  = $("<span>")
-                          .attr("id", "quantitySpan")
-                          .html(product.quantity)
-                          .appendTo(quantityContainer);
+        let quantitySpan = $("<span>")
+            .attr("id", "quantitySpan")
+            .html(product.quantity)
+            .appendTo(quantityContainer);
 
-        let InputGrPluBtn = $("<div>")
-                            .addClass ("input-group-button")
-                            .appendTo(quantityContainer);
-
-        let quantPluBtn = $("<button>")
-                          .addClass("btn btn-small")
-                          .attr("type", "button")
-                          .attr("data-quantity", "plus")
-                          .attr("data-field", "quantity")
-                          .html("<i class='fa fa-plus'></i>")
-                          .appendTo(InputGrPluBtn);
+        let plusButton = $("<button>")
+            .addClass("btn btn-primary")
+            .attr("type", "button")
+            .attr("id", "plusButton")
+            .html("<i class='fa fa-plus'></i>")
+            .on("click", function(){
+                console.log("You want to increase");
+            })
+            .appendTo(quantityContainer);
 
         let prodPrice = $("<span>")
-                        .addClass("col-2 pprice")
-                        .html(product.price+" SEK") 
-                        .appendTo("#orderrow");
+            .addClass("col-2")
+            .attr("id", "prodPrice")
+            .html(product.price + " SEK")
+            .appendTo(prodRow);
 
-        let totPrice = $("<span>")
-                        .addClass("col-2 pprice")
-                        .html(quant*product.price+" SEK")
-                        .appendTo("#orderrow");
+        let totalPrice = $("<span>")
+            .addClass("col-2")
+            .attr("id", "totalPrice")
+            .html(product.quantity * product.pricePerUnit + " SEK")
+            .appendTo(prodRow);
 
-        let del = $("<p>")        
-                    .addClass("col-1")
-                    .attr("id", "delbtn")
-                    .appendTo("#orderrow");
+        let deleteSpan = $("<span>")        
+            .addClass("col-1")
+            .attr("id", "deleteSpan")
+            .appendTo(prodRow);
                         
         let deleteButton = $("<button>")
-                            .addClass("btn btn-small m-0")
-                            .attr("id", "delbutton")
-                            .attr("type", "button")
-                            .html("<i class='fas fa-trash-alt'></i>")
-                            .appendTo(del)
-                            .click(function() {
-                                deleteItem(i);
-                            });           
-            });     
+            .addClass("btn")
+            .attr("type", "button")
+            .attr("id", "deleteButton")
+            .html("<i class='fas fa-trash-alt'></i>")
+            .on("click", function(){
+                console.log("You want to remove");
+                cart.splice(i , 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                $(this).parents("#prodRow").remove();
+                printProducts();
+            })
+            .appendTo(deleteSpan);
+
+        });     
 };
 
-function deleteItem(i) {
-    $("#orderrow" + i).remove();
-    cart.splice(i , 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-}
+
+
 
 function submitForm() {
     'use strict';
@@ -111,12 +119,6 @@ function submitForm() {
       });
 };
 
-
-
-window.onload = function() {
-    printOrder();
-   $("#submitFormButton").on("click", submitForm());
-};
 
 
 
