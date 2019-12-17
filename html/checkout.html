@@ -120,49 +120,47 @@
                 </div>
                 <h1 class="mb-0">
                   <button class="btn accordionButton checkoutheader" type="button" id="submitCForm">
-                    BETALNING
+                    VÄLJ BETALNINGSMETOD
                   </button>
                 </h1>
-                <div id="paymentMethod" class="collapse">
-                    <div class="container">
-                        <form>
-                            <div class="row">
-                                <div class="col-6 radio">
-                                    <label><input type="radio" name="optradio">Visa och Mastercard</label>
-                                </div>
-                                <div class="col-4 d-flex">
-                                    <img src="../img/visacard.png" alt="" class="img-fluid paycard">
-                                    <img src="../img/mastercard.png" alt="" class="img-fluid paycard">
-                                </div>
-                                <div class="col-2">
-                                    <p>0:-</p>
-                                </div>
+                <div class="container collapse" id="paymentMethod">
+                    
+                        <div class="row">
+                            <div class="col-6 radio">
+                                <label><input type="radio"name="optradio">Visa och Mastercard</label>
                             </div>
-                            <div class="row">
-                                <div class="col-6 radio">
-                                    <label><input type="radio" name="optradio">Swish</label>
-                                </div>
-                                <div class="col-4">
-                                    <a href="#">Visa villkor</a>
-                                </div>
-                                <div class="col-2">
-                                    <p>0:-</p>
-                                </div>
-                            </div>       
-                        </form>
-                    </div>
+                            <div class="col-4 d-flex">
+                                <img src="../img/visacard.png" alt=""class="img-fluid paycard">
+                                <img src="../img/mastercard.png" alt=""class="img-fluid paycard">
+                            </div>
+                            <div class="col-2">
+                                <p>0:-</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 radio">
+                                <label><input type="radio"name="optradio">Swish</label>
+                            </div>
+                            <div class="col-4">
+                                <a href="#">Visa villkor</a>
+                            </div>
+                            <div class="col-2">
+                                <p>0:-</p>
+                            </div>
+                        </div>       
+                    
                 </div>
                 <h1 class="mb-0">
                   <button class="btn accordionButton checkoutheader" type="button" id="showTermsAndC">
-                        SLUTFÖR KÖP
+                        GODKÄNN OCH BEKRÄFTA KÖP
                   </button>
                 </h1>  
                 <div class="collapse" id="termsAndConditions">
                     <div class="container" id="termsoforder">
-                            <p>Med "BEKRÄFTA KÖP" godkänner du XX:s <u><a href="url">Almänna Villkor</a><u></p> 
-                            <p>För att ge dig en komplett medlemsupplevelse behandlar vi dinapersonuppgifter i enlighet med XX:Integritetsmeddelande.</p>
-                    </div>
+                        <p>Med "BEKRÄFTA KÖP" godkänner du XX:s <u><a href="url">Allmänna Villkor</a><u><p> 
+                        <p>För att ge dig en komplett medlemsupplevelse behandlar vi dinapersonuppgifter ienlighet med XX:Integritetsmeddelande.</p>
                         <button type="submit" class="btn" id="submitFormButton">BEKRÄFTA KÖP</button> 
+                    </div>  
                     </form>
                 </div>
             </div>  

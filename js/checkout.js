@@ -170,8 +170,8 @@ function submitForm() {
                 event.stopPropagation();
             }
             else {
-                $("#customerDetails").toggle("slow");
-                $("#paymentMethod").toggle("slow");
+                $("#paymentMethod").toggle();
+                $("#customerDetails").collapse();
             }
             custForm.classList.add('was-validated');
             }, false); 
@@ -213,16 +213,18 @@ function changeFooterIcon() {
 $(document).ready(function() {
  
     printOrder();
-        
-    $("#submitCForm").on("click", submitForm());
     
+    $("#submitCForm").on("click", submitForm());
+
     $("#showCustomerDetails").on("click", function(){
         $("#customerDetails").toggle("slow");
     });
     $("#showTermsAndC").on("click", function(){
-        $("#termsAndConditions").toggle("slow");
+        $("#termsAndConditions").toggle();   
+    }).one("click", function(){
+        $("#paymentMethod").hide();
     });
-
+    
     // balhazar: this is for the footer, doesn't need to be looked at.
     changeFooterIcon();
 
