@@ -31,13 +31,8 @@ let product18 = new ProductItem("Vågbladskalatera", 79, "img/Vagbladskalatea.pn
 let product19 = new ProductItem("Zamiakalla Raven", 279, "img/Zamiakalla.png", "En av de mest tåliga och lättskötta krukväxterna!", 19, 1, 279);
 let product20 = new ProductItem("Zebrasköld", 299, "img/Zebraskold.png", "Mörkt gröna blad med purpurfärgad undersida. Trivs på ljusa platser.", 20, 1, 299);
 
-// To show 8 products on site 
 let products = [];
-products.push(product1, product2, product3, product4, product5, product6, product7, product8);
-
-// To show all 20 products on site 
-// let products = [];
-// products.push(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product20);
+products.push(product1, product2, product3, product4, product5, product6, product7, product8, product9, product10, product11, product12, product13, product14, product15, product16, product17, product18, product19, product20);
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
