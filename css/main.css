@@ -29,13 +29,16 @@ h4 {
 h5 {
   font-size: 1rem; }
 
-.popover .popover-header #myCartTitle span {
+.navbar .logo-container img {
+  height: 90px; }
+
+.navbar .popover .popover-header #myCartTitle span {
   font-size: 1.2rem; }
 
-.popover .popover-header #myCartTitle #cartclosebutton {
+.navbar .popover .popover-header #myCartTitle #cartclosebutton {
   font-size: 1.5rem; }
 
-.popover .popover-body #toCheckoutButton {
+.navbar .popover .popover-body #toCheckoutButton {
   color: #FFF;
   background-color: #2FC8B4; }
 
@@ -133,12 +136,13 @@ footer {
   color: #696969;
   font-weight: 600; }
 
+.accordion img.paycard {
+  width: 20%;
+  height: 40%; }
+
 .accordion form #customerZip::-webkit-inner-spin-button,
 .accordion form #customerZip::-webkit-outer-spin-button {
   -webkit-appearance: none; }
-
-.accordion form .paycard {
-  width: 10%; }
 
 .accordion form #termsoforder {
   text-align: center; }

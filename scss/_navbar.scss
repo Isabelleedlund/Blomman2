@@ -1,18 +1,26 @@
-.popover {
-    .popover-header {
-        #myCartTitle {
-            span {
-                font-size: 1.2rem;
-          }
-           #cartclosebutton {
-               font-size: 1.5rem;
-           }
+.navbar {
+    .logo-container {
+        img {
+            height: 90px;
         }
     }
-    .popover-body {
-        #toCheckoutButton {
-            color: #FFF;
-            background-color: $main-color;
+
+    .popover {
+        .popover-header {
+            #myCartTitle {
+                span {
+                    font-size: 1.2rem;
+            }
+            #cartclosebutton {
+                font-size: 1.5rem;
+            }
+            }
+        }
+        .popover-body {
+            #toCheckoutButton {
+                color: #FFF;
+                background-color: $main-color;
+            }
         }
     }
 }
