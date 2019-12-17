@@ -83,7 +83,7 @@ function printOrder(){
             .appendTo(prodRow);
 
 
-        // Append to qualityContainer
+        // Append to quantityContainer
 
         let minusButton = $("<button>")
             .addClass("btn btn-primary")
