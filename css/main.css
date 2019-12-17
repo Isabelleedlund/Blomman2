@@ -29,13 +29,16 @@ h4 {
 h5 {
   font-size: 1rem; }
 
-.popover .popover-header #myCartTitle span {
+.navbar .logo-container img {
+  height: 90px; }
+
+.navbar .popover .popover-header #myCartTitle span {
   font-size: 1.2rem; }
 
-.popover .popover-header #myCartTitle #cartclosebutton {
+.navbar .popover .popover-header #myCartTitle #cartclosebutton {
   font-size: 1.5rem; }
 
-.popover .popover-body #toCheckoutButton {
+.navbar .popover .popover-body #toCheckoutButton {
   color: #FFF;
   background-color: #2FC8B4; }
 
