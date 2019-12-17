@@ -2,28 +2,32 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
-  color: #656565;
+  color: #443636;
   font-weight: 600; }
 
 p, span, label {
   font-family: "Lato", sans-serif;
-  color: #656565;
-  font-size: 2vmin; }
+  color: #696969;
+  font-size: 18px; }
+
+.currency-smaller-text {
+  font-size: 0.9rem;
+  padding-left: 4px; }
 
 h1 {
-  font-size: 6vmin; }
+  font-size: 2.5rem; }
 
 h2 {
-  font-size: 5vmin; }
+  font-size: 2rem; }
 
 h3 {
-  font-size: 4.5vmin; }
+  font-size: 1.5rem; }
 
 h4 {
-  font-size: 4vmin; }
+  font-size: 1.2rem; }
 
 h5 {
-  font-size: 3.5vmin; }
+  font-size: 1rem; }
 
 .popover .popover-header #myCartTitle span {
   font-size: 1.2rem; }
@@ -42,7 +46,7 @@ footer {
     font-weight: 700;
     font-size: 4vmin; }
   footer a {
-    color: #656565;
+    color: #696969;
     font-size: 3vmin; }
     footer a:hover {
       color: #2FC8B4; }
@@ -52,7 +56,7 @@ footer {
     footer ul li {
       font-family: "Lato", sans-serif;
       list-style: none;
-      color: #656565;
+      color: #696969;
       font-size: 3vmin; }
       footer ul li span {
         font-size: 2.5vmin; }
@@ -114,9 +118,9 @@ footer {
   font-size: 2vmin;
   margin-top: 0;
   margin-bottom: 0;
-  border: 1px solid #656565;
+  border: 1px solid #696969;
   padding: 0.8vmin;
-  color: #656565; }
+  color: #696969; }
 
 #orderctn #delbtn {
   margin: 0;
@@ -126,7 +130,7 @@ footer {
   width: 100%;
   border-radius: 0;
   font-family: "Montserrat", sans-serif;
-  color: #656565;
+  color: #696969;
   font-weight: 600; }
 
 .accordion form #customerZip::-webkit-inner-spin-button,
@@ -157,62 +161,35 @@ footer {
   color: #2FC8B4; }
 
 body {
-  background-color: #ffffff; }
-
-.card-title {
-  text-align: center;
-  margin-top: 20px;
-  height: 60px;
-  font-size: 3.5vmin; }
-
-#descriptionbutton {
-  background-color: #2FC8B4;
-  color: #656565;
-  border-radius: 7px;
-  border-color: #2FC8B4;
-  font-size: 1.8vmin;
-  padding: 0.4vmin; }
-
-#descriptionbutton:hover {
-  background-color: #009A84; }
-
-#descriptionbutton:active {
-  background-color: #67C5B9;
-  border: 2px solid #67C5B9; }
-
-#addtocart {
-  background-color: #2FC8B4;
-  color: #656565;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-color: #2FC8B4;
-  font-size: 2vmin;
-  padding: 1vmin; }
-
-#addtocart:hover {
-  background-color: #009A84; }
-
-#addtocart:active {
-  background-color: #67C5B9;
-  border: 2px solid #67C5B9; }
-
-.card-footer {
-  background-color: #ffffff;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw; }
-
-.jumbotron {
-  background-color: #ffffff;
-  padding: 0;
-  margin: 0; }
-
-#imgdiv {
-  align-items: center; }
-
-button {
-  background-color: #2FC8B4;
-  color: #656565; }
+  background-color: #FFFFFF; }
+  body #myjumbotron {
+    background-color: #FFFFFF; }
+  body .card-title {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto; }
+  body .card-footer {
+    background-color: #FFFFFF; }
+    body .card-footer #descriptionbutton {
+      background-color: #2FC8B4;
+      color: #696969;
+      border-color: #2FC8B4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    body .card-footer #descriptionbutton:hover {
+      background-color: #009A84; }
+    body .card-footer #descriptionbutton:active {
+      background-color: #67C5B9; }
+  body .productDescr {
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    font-size: 0.95rem; }
+  body #addtocart {
+    background-color: #2FC8B4;
+    color: #696969; }
+  body #addtocart:hover {
+    background-color: #009A84; }
+  body #addtocart:active {
+    background-color: #67C5B9; }

@@ -57,40 +57,41 @@ function printProducts() {
         // Generate content based on the products
   
         let cardDiv = $("<div>")
-                            .addClass("product-card col-6 col-md-4 col-lg-3 p-3")
+                            .addClass("product-card mx-0 mt-2 px-1 col-6 col-md-4 col-lg-3")
                             .attr("id", "carddiv");
             
         let productCard = $("<div>")
                             .addClass("card h-100 d-flex flex-column")
                             .appendTo(cardDiv);
 
-        let cardTitle = $("<h3>")
-                            .addClass("card-title")
+        let cardTitle = $("<h4>")
+                            .addClass("card-title text-center py-2 px-1 m-0")
                             .html(product.title)
                             .appendTo(productCard);
 
         let imgDiv = $("<div>")
-                            .addClass("card-body")
+                            .addClass("card-body p-2")
                             .attr("id", "imgdiv")
                             .appendTo(productCard);
 
         let productImg = $("<img>")
-                            .addClass("img-fluid")
                             .attr("src", product.img)
+                            .attr("alt", product.description)
+                            .addClass("img-fluid")
                             .appendTo(imgDiv);
 
         let cardFooter = $("<div>")
-                            .addClass("card-footer d-flex justify-content-between")
+                            .addClass("card-footer px-2 py-2 d-flex justify-content-between")
                             .attr("id", "cardfooter")
                             .appendTo(productCard);
 
         let productPrice = $("<span>")
                             .attr("id", "productprice")
-                            .html(product.pricePerUnit + " SEK")
+                            .html(product.pricePerUnit + "<span class='currency-smaller-text'>SEK</span>")
                             .appendTo(cardFooter);
 
-        let productDescr = $("<div>")
-                            .addClass("p-3")
+        let productDescr = $("<p>")
+                            .addClass("p-2 mb-0 productDescr")
                             .attr("id", "descrdiv"+i)
                             .attr("style", "display: none")
                             .html(product.description)
@@ -99,10 +100,9 @@ function printProducts() {
         let dialogButton = $("<button>")
                             .attr("type", "button")
                             .attr("id", "descriptionbutton")
-                            .addClass("btn")
+                            .addClass("btn btn-sm px-1 py-0")
                             .html("Läs mer")
                             .appendTo(cardFooter)
-
                         // when clicked productDescr will be visible    
                             .click(function() {
                                 $("#descrdiv"+i).toggle("slow");
@@ -110,9 +110,9 @@ function printProducts() {
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
-                                    .addClass("btn")
+                                    .addClass("btn btn-sm rounded-0 mt-1")
                                     .attr("id", "addtocart")
-                                    .html("Lägg till i varukorg")
+                                    .html("Lägg i kundvagn")
                                     .on("click", { added: product }, addToCart)
                                     .appendTo(productCard);
 
