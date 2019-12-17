@@ -1,29 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-$(document).ready(function() {
-    
-    printOrder();
-    
-    // balthazar: is this one below needed?
-    $("#submitFormButton").on("click", submitForm());
-
-    // balhazar: all code below was in Window onload, together with a printOrder().
-    
-    $("#submitCForm").on("click", submitForm());
-    // $("#submitFormButton").on("click", submitForm());
-    $("#showCustomerDetails").on("click", function(){
-        $("#customerDetails").toggle("slow");
-    });
-    $("#showTermsAndC").on("click", function(){
-        $("#termsAndConditions").toggle("slow");
-    });
-
-    // balhazar: this is for the footer, doesn't need to be looked at.
-    changeFooterIcon();
-
-});
-
-
 function printOrder(){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -233,3 +209,21 @@ function changeFooterIcon() {
     });
     // Footer End \\
 }
+
+$(document).ready(function() {
+ 
+    printOrder();
+        
+    $("#submitCForm").on("click", submitForm());
+    
+    $("#showCustomerDetails").on("click", function(){
+        $("#customerDetails").toggle("slow");
+    });
+    $("#showTermsAndC").on("click", function(){
+        $("#termsAndConditions").toggle("slow");
+    });
+
+    // balhazar: this is for the footer, doesn't need to be looked at.
+    changeFooterIcon();
+
+});
