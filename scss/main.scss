@@ -1,15 +1,14 @@
 @import 'variables.scss';
-@import 'checkout.scss';
-@import 'confirmation.scss';
 @import 'navbar.scss';
 @import 'footer.scss';
-
+@import 'checkout.scss';
+@import 'confirmation.scss';
 
 // Main \\
 
 body {
     background-color: $bg-color;
-    }
+}
 
 .card-title {
   text-align: center;

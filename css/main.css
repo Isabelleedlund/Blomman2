@@ -25,6 +25,58 @@ h4 {
 h5 {
   font-size: 3.5vmin; }
 
+.popover .popover-header #myCartTitle span {
+  font-size: 1.2rem; }
+
+.popover .popover-header #myCartTitle #cartclosebutton {
+  font-size: 1.5rem; }
+
+.popover .popover-body #toCheckoutButton {
+  color: #FFF;
+  background-color: #2FC8B4; }
+
+footer {
+  border-top: 1px solid lightgrey; }
+  footer .title {
+    color: #2FC8B4;
+    font-weight: 700;
+    font-size: 4vmin; }
+  footer a {
+    color: #656565;
+    font-size: 3vmin; }
+    footer a:hover {
+      color: #2FC8B4; }
+  footer ul {
+    padding: 0;
+    margin: 0; }
+    footer ul li {
+      font-family: "Lato", sans-serif;
+      list-style: none;
+      color: #656565;
+      font-size: 3vmin; }
+      footer ul li span {
+        font-size: 2.5vmin; }
+      footer ul li a {
+        font-size: 2.1vmin; }
+  footer .days {
+    color: #2FC8B4;
+    font-weight: bold;
+    font-size: 3vmin; }
+  footer .time {
+    text-align: center; }
+  footer .images-gallery ul {
+    padding-left: 0; }
+    footer .images-gallery ul li {
+      font-family: "Lato", sans-serif;
+      list-style: none;
+      float: left;
+      margin: 0 3% 2% 0;
+      position: relative; }
+      footer .images-gallery ul li:nth-child(3n) {
+        margin: 0 0 1%; }
+      footer .images-gallery ul li .someimg {
+        width: 75%; }
+
 .checkoutheader {
   text-align: center;
   background-color: #2FC8B4; }
@@ -103,58 +155,6 @@ h5 {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   color: #2FC8B4; }
-
-.popover .popover-header #myCartTitle span {
-  font-size: 1.2rem; }
-
-.popover .popover-header #myCartTitle #cartclosebutton {
-  font-size: 1.5rem; }
-
-.popover .popover-body #toCheckoutButton {
-  color: #FFF;
-  background-color: #2FC8B4; }
-
-footer {
-  border-top: 1px solid lightgrey; }
-  footer .title {
-    color: #2FC8B4;
-    font-weight: 700;
-    font-size: 4vmin; }
-  footer a {
-    color: #656565;
-    font-size: 3vmin; }
-    footer a:hover {
-      color: #2FC8B4; }
-  footer ul {
-    padding: 0;
-    margin: 0; }
-    footer ul li {
-      font-family: "Lato", sans-serif;
-      list-style: none;
-      color: #656565;
-      font-size: 3vmin; }
-      footer ul li span {
-        font-size: 2.5vmin; }
-      footer ul li a {
-        font-size: 2.1vmin; }
-  footer .days {
-    color: #2FC8B4;
-    font-weight: bold;
-    font-size: 3vmin; }
-  footer .time {
-    text-align: center; }
-  footer .images-gallery ul {
-    padding-left: 0; }
-    footer .images-gallery ul li {
-      font-family: "Lato", sans-serif;
-      list-style: none;
-      float: left;
-      margin: 0 3% 2% 0;
-      position: relative; }
-      footer .images-gallery ul li:nth-child(3n) {
-        margin: 0 0 1%; }
-      footer .images-gallery ul li .someimg {
-        width: 75%; }
 
 body {
   background-color: #ffffff; }
