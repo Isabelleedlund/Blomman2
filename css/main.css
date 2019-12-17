@@ -136,12 +136,13 @@ footer {
   color: #696969;
   font-weight: 600; }
 
+.accordion img.paycard {
+  width: 20%;
+  height: 40%; }
+
 .accordion form #customerZip::-webkit-inner-spin-button,
 .accordion form #customerZip::-webkit-outer-spin-button {
   -webkit-appearance: none; }
-
-.accordion form .paycard {
-  width: 10%; }
 
 .accordion form #termsoforder {
   text-align: center; }

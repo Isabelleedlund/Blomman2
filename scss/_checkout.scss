@@ -67,16 +67,17 @@
         font-weight: 600;
     }
 
+    img.paycard {
+        width: 20%;
+        height: 40%;
+    }
+
     form {
 
         #customerZip::-webkit-inner-spin-button,
         #customerZip::-webkit-outer-spin-button {
               -webkit-appearance: none; 
             }
-            
-        .paycard {
-            width: 10%;
-        }
 
         #termsoforder {
             text-align: center;
