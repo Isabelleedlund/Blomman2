@@ -1,58 +1,20 @@
+let cart= JSON.parse(localStorage.getItem("cart")) || [];
+
 $(document).ready(function() { 
 
     changeFooterIcon()
 
 min = 10000;
-// max
 
-// Generate a order Number when 
-let buyOrder = localStorage.getItem('orderNumber', '');
+buyOrder = $.map(product => ({title: product.title, pricePerUnit: product.pricePerUnit}));
+console.log(buyOrder);
 
-    // if(buyOrder == null){
-        buyOrder = Math.round(1) * (min + 3) + min;
-        // buyOrder = Math.floor(Math.random() * 10000) +1;
-        localStorage.setItem('orderNo', buyOrder);
+        buyOrder = Math.floor(Math.random() * 10000) + min;
+        localStorage.setItem(buyOrder, JSON.stringify(cart));
     
-    $("#on").text(buyOrder)
-    
+    $("#on").text(buyOrder);
+
 });
-
-
-
-// function Range(begin, end) {
-//     this.low = begin;
-//     this.hi = end;
-//     this.has = function(n) {
-//        return this.low <= n <= this.hi;
-//     }
-//   }
-  
-//   // code example
-//   var range = new Range(1,100);
-//   var num = 5;
-  
-//   if (range.has(num)) {
-//     alert("Number in range");
-//   }
-
-
-// let numbers = []
-
-// for (let i = 1; i <= 100; i++) {
-//     numbers.push(i)
-//     console.log(numbers[i])
-// }
-
-// let orderNumber = {
-//                 from: 10000,
-//                 to: 99999
-// };
-
-// for(let i = 0; i < orderNumber.length; i++) { 
-//     console.log(orderNumber[i]);
-// }
-
-
 
 function changeFooterIcon() {
     

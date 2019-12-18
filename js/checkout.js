@@ -157,26 +157,38 @@ $(document).ready(function() {
 
     }
 
-    function submitForm() {
-        'use strict';
-        
-        // Get the forms we want to add validation styles to
-        let forms = document.getElementsByClassName("needs-validation");
-        let custForm = document.getElementById("customerform");
-        // Loop over them and prevent submission
-        let validation = Array.prototype.filter.call(forms, function() {
-            document.getElementById("submitCForm").addEventListener("click", function(event) {
-                if (custForm.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    console.log("Something is wrong");
-                }
-                else {
-                    $("#customerDetails").toggle("slow");
-                    $("#paymentMethod").toggle("slow");
-                }
-                custForm.classList.add('was-validated');
-                }, false); 
+function submitForm() {
+    'use strict';
+    
+      // Get the forms we want to add validation styles to
+      let forms = document.getElementsByClassName("needs-validation");
+      let custForm = document.getElementById("customerform");
+      // Loop over them and prevent submission
+      let validation = Array.prototype.filter.call(forms, function() {
+        document.getElementById("submitCForm").addEventListener("click", function(event) {
+            if (custForm.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            else {
+                $("#paymentMethod").toggle();
+                $("#customerDetails").collapse();
+            }
+            custForm.classList.add('was-validated');
+            }, false); 
+      });
+};
+
+function changeFooterIcon() {
+    // Footer Start \\
+
+    // Change Facebook Icon color when hover over img. 
+    $('#imgfb').hover(
+        function(){
+            $(this).attr('src','../img/002-facebook_color.png')
+        },
+        function(){
+            $(this).attr('src','../img/002-facebook_grey.png')
         });
     };
 
@@ -213,16 +225,18 @@ $(document).ready(function() {
     }
  
     printOrder();
-        
-    $("#submitCForm").on("click", submitForm);
     
+    $("#submitCForm").on("click", submitForm());
+
     $("#showCustomerDetails").on("click", function(){
         $("#customerDetails").toggle("slow");
     });
     $("#showTermsAndC").on("click", function(){
-        $("#termsAndConditions").toggle("slow");
+        $("#termsAndConditions").toggle();   
+    }).one("click", function(){
+        $("#paymentMethod").hide();
     });
-
+    
     // balhazar: this is for the footer, doesn't need to be looked at.
     changeFooterIcon();
 
