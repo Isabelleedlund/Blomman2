@@ -355,7 +355,7 @@ function createCart() {
             .attr("id", "cartToCheckoutButtonRow");
 
         let cartToCheckoutButtonCol = $("<div>")
-            .addClass("col-12 justify-content-center")
+            .addClass("col-12")
             .attr("id", "cartToCheckoutButtonCol");
 
         let toCheckoutButton = $("<button>")
