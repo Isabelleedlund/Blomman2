@@ -64,7 +64,7 @@ function printProducts() {
                             .addClass("card h-100 d-flex flex-column")
                             .appendTo(cardDiv);
 
-        let cardTitle = $("<h4>")
+        let cardTitle = $("<h5>")
                             .addClass("card-title text-center py-2 px-1 m-0")
                             .html(product.title)
                             .appendTo(productCard);
@@ -186,13 +186,13 @@ function createCart() {
             .attr("id", "cartMainContainer");
 
         let cartItemContainer = $("<div>")
-            .addClass("container pl-0 pr-0 pt-2 pb-2")
+            .addClass("container py-1 px-2")
             .attr("id", "cartItemContainer");
 
         // cart body > cart items list
         $.each(cart, function( index, value ) {
             let cartItem = $("<div>")
-                .addClass("row pt-2 pb-3 border-bottom")
+                .addClass("row mx-0 px-0 my-1 py-1 border-bottom")
                 .attr("id", "cartItem");
 
             let cartItemImgContainer = $("<div>")
@@ -202,7 +202,7 @@ function createCart() {
             // cart Item Data
 
             let cartItemData = $("<div>")
-                .addClass("row no-gutters")
+                .addClass("row")
                 .attr("id", "cartItemData");
 
             let cartItemQuantityContainer = $("<div>")
@@ -314,11 +314,11 @@ function createCart() {
         // cart body > cart "Total price" display
 
         let cartTotalPriceContainer = $("<div>")
-        .addClass("container pl-0 pr-0")
+        .addClass("container py-1 px-2")
         .attr("id", "cartTotalPriceContainer");
 
         let cartTotalPriceRow = $("<div>")
-            .addClass("row border-bottom")
+            .addClass("row")
             .attr("id", "cartTotalPriceRow");
 
         let cartTotalPriceCol = $("<div>")
@@ -347,15 +347,15 @@ function createCart() {
 
         // cart body > cart "Place order" button
         let cartToCheckoutButtonContainer = $("<div>")
-            .addClass("container pl-0 pr-0")
+            .addClass("container py-1 px-2")
             .attr("id", "cartToCheckoutButtonContainer");
 
         let cartToCheckoutButtonRow = $("<div>")
-            .addClass("row")
+            .addClass("row border-top")
             .attr("id", "cartToCheckoutButtonRow");
 
         let cartToCheckoutButtonCol = $("<div>")
-            .addClass("col-12 d-flex justify-content-center p-1 mt-2 pb-1")
+            .addClass("col-12 justify-content-center")
             .attr("id", "cartToCheckoutButtonCol");
 
         let toCheckoutButton = $("<button>")
@@ -373,7 +373,8 @@ function createCart() {
         // enable cart Popover
         $('#cart')
             .popover( { 
-                placement: 'left', 
+                placement: 'left',
+                template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body p-0"></div></div>', 
                 html: true, 
                 container: 'body',
                 boundary: 'viewport',
