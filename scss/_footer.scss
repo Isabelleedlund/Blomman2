@@ -1,19 +1,22 @@
 // FOOTER \\
 
 footer {
-    border-top: 1px solid lightgrey;
         .title { // BLOMMA
+            color: $font-title-color;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        h4 {
             color: $main-color;
-            font-weight: 700;
-            font-size: 4vmin;
         }
 
         a {
             color: $font-color;
-            font-size: 3vmin;
-            &:hover{
-            color: $main-color;
-            } 
+            text-decoration: underline;
+            // for later on for desktop screen:
+            // &:hover{
+            // color: $hover;
+            // } 
         }
         ul {
         padding: 0;
@@ -22,43 +25,44 @@ footer {
                 font-family: $sfont-stack;
                 list-style: none;
                 color: $font-color;
-                font-size: 3vmin;
-
-                span{
-                    font-size: 2.5vmin;
-                }
-                
-                a{
-                    font-size: 2.1vmin;
-                }
             }
         }
-        .days{
-            color: $main-color;
-            font-weight: bold;
-            font-size: 3vmin;
-
+        th.openingtime, td.openingtime {
+            padding: 0;
         }
-        .time {
-            text-align: center;
-        }
-        .images-gallery{
-            ul{
-            padding-left: 0;
-            li{
+        table {
+            th, td {
                 font-family: $sfont-stack;
-                list-style: none;
-                float: left;
-                margin: 0 3% 2% 0;
-                position: relative;
-                &:nth-child(3n) {
-                margin: 0 0 1%;
-                }
-                .someimg {
-                width: 75%;
-                } 
             }
         }
-    }
+        #imgfb, #imgtwi, #imgig {
+            height: 50px;
+        }
+        // .days{
+        //     color: $font-title-color;
+        //     font-weight: 600;
+
+        // }
+        // .time {
+        //     text-align: center;
+        // }
+        // .images-gallery {
+        //     ul {
+        //         padding-left: 0;
+        //         li {
+        //             font-family: $sfont-stack;
+        //             list-style: none;
+        //             float: left;
+        //             margin: 0 3% 2% 0;
+        //             position: relative;
+        //                 &:nth-child(3n) {
+        //                     margin: 0 0 1%;
+        //                 }
+        //             .someimg {
+        //             width: 75%;
+        //             }
+        //     }
+        //     }
+        // }
     
 }

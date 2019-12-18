@@ -45,7 +45,7 @@
             </a>
             <div class="navbar-nav">
                 <div class="nav-item">
-                    <button type="button" class="btn btn-link" id="cart">
+                    <button type="button" class="btn btn-link pr-3" id="cart">
                         <img src="img/shopping-cart.png" height="50" alt="Varukorg">
                     </button>
                 </div>
@@ -59,36 +59,69 @@
                 <img src="img/flower-jumbotron.jpg" alt="Blomman.se presentation" class="img-fluid">
             </div>
         </div>
-        <main class="container" id="productcontainer">
-            <div class="row px-1" id="productrow">
+        <main class="container">
+            <div class="row p-1" id="productrow">
             </div>
         </main>
         <!-- Content End -->
 
         <!-- Footer Start -->
-        <footer class="footer mt-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="footer-widget my-5">
-                            <h5 class="mt-2 mb-1">Besöksadress</h5> 
-                            <div class="footer-widget-content">
-                                <ul>
-                                    <li class="title">BLOMMAN</li>
-                                    <li>Tulegatan 41</li>
-                                    <li>113 53 Stockholm</li>
-                                    <li><a href="mailto:adress@butik.se" class="contact-link">Hej@blomman.se</a></li>
-                                    <li><a href="tel:0121234" class="contact-link">08-400 67 892</a></li>
-                                </ul>
-                            </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row px-2 mt-4 mb-4 border-top">
+                    <div class="col-12 px-0">
+                        <div class="footer-widget my-4">
+                        <h4 class="mt-2 mb-1">Besöksadress</h4> 
+                        <div class="footer-widget-content pt-2">
+                            <ul>
+                                <li><h1 class="title m-0">Blomman</h1></li>
+                                <li>Tulegatan 41</li>
+                                <li>113 53 Stockholm</li>
+                                <li><a href="mailto:adress@butik.se" class="contact-link">hej@blomman.se</a></li>
+                                <li><a href="tel:0121234" class="contact-link">08-400 67 892</a></li>
+                            </ul>
+                        </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="footer-widget my-5">
-                        <h5 class="mt-2 mb-1">Öppettider</h5>
-                        <div class="footer-widget-content">
-                            <div class="open-time">
-                                <ul class="opening-time">
+                    <div class="col-12 px-0">
+                        <div class="footer-widget my-4">
+                        <h4 class="mt-2 mb-1">Öppettider</h4>
+                        <div class="footer-widget-content pt-2 no-gutters">
+                            <div class="open-time col-8">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Måndag:</th>
+                                            <td class="openingtime">10:00 - 19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Tisdag:</th>
+                                            <td class="openingtime">10:00 - 19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Onsdag:</th>
+                                            <td class="openingtime">10:00 - 19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Torsdag:</th>
+                                            <td class="openingtime">10:00 - 19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Fredag:</th>
+                                            <td class="openingtime">10:00 - 19:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Lördag:</th>
+                                            <td class="openingtime">10:00 - 17:00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="openingtime">Söndag:</th>
+                                            <td class="openingtime">10:00 - 15:00</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <!-- <ul class="opening-time">
                                     <li><span><strong class="days">Måndag:</strong> 10:00 - 19:00</span></li>
                                     <li><span><strong class="days">Tisdag:</strong> 10:00 - 19:00</span></li>
                                     <li><span><strong class="days">Onsdag:</strong> 10:00 - 19:00</span></li>
@@ -96,15 +129,15 @@
                                     <li><span><strong class="days">Fredag:</strong>  10:00 - 19:00</span></li>
                                     <li><span><strong class="days">Lördag:</strong> 10:00 - 17:00</span></li>
                                     <li><span><strong class="days">Söndag:</strong> 10:00 - 15:00</span></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     </div>
-                    <div class="col-md-2">
-                        <div class="footer-widget my-5">
-                            <h5 class="mt-2 mb-1">Villkor</h5>
-                            <div class="footer-widget-content">
+                    <div class="col-12 px-0">
+                        <div class="footer-widget my-4">
+                            <h4 class="mt-2 mb-1">Villkor</h4>
+                            <div class="footer-widget-content pt-2">
                                 <ul>
                                 <li><a href="#">Köpvillkor</a></li>
                                 <li><a href="#">Användarvillkor</a></li>
@@ -113,23 +146,28 @@
                             </div>
                         </div>
                     </div>
-                        <div class="col-md-2">
-                            <div class="footer-widget my-5">
-                                <h5 class="mt-2 mb-1">Följ oss:</h5>
-                                <div class="footer-widget-content">
-                                    <div class="images-gallery">
-                                        <ul class="d-flex">
-                                            <li><a href="#"><img src="./img/002-facebook_grey.png" class="someimg" id="imgfb" alt="Facebook"/></a></li>
-                                            <li><a href="#"><img src="./img/003-instagram_grey.png" class="someimg" id="imgig" alt="Instagram"/></a></li>
-                                            <li><a href="#"><img src="./img/005-twitter_grey.png" class="someimg" id="imgtwi" alt="Twitter"/></a></li>
-                                        </ul>
-                                    </div>
+                    <div class="col-12 px-0">
+                        <div class="footer-widget my-4">
+                            <h4 class="mt-2 mb-1">Följ oss:</h4>
+                            <div class="footer-widget-content pt-3">
+                                <div class="container m-0 p-0">
+                                    <div class="row no-gutters d-flex justify-content-start">
+                                        <div class="col-3"><a href="#"><img src="./img/002-facebook_grey.png" class="img-fluid" id="imgfb" alt="Facebook"/></a></div>
+                                        <div class="col-3"><a href="#"><img src="./img/003-instagram_grey.png" class="img-fluid" id="imgig" alt="Instagram"/></a></div>
+                                        <div class="col-3"><a href="#"><img src="./img/005-twitter_grey.png" class="img-fluid" id="imgtwi" alt="Twitter"/></a></div>
+                                    </div> 
+                                    <!-- <ul class="d-flex">
+                                        <li><a href="#"><img src="./img/002-facebook_grey.png" class="someimg" id="imgfb" alt="Facebook"/></a></li>
+                                        <li><a href="#"><img src="./img/003-instagram_grey.png" class="someimg" id="imgig" alt="Instagram"/></a></li>
+                                        <li><a href="#"><img src="./img/005-twitter_grey.png" class="someimg" id="imgtwi" alt="Twitter"/></a></li>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
         <!-- Footer End -->
 
     </body>

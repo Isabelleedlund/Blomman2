@@ -135,6 +135,7 @@ function createCart() {
     $('#cart').popover('dispose');
 
     // create cart header/title
+
     let cartTitleContainer = $("<div>")
         .attr("id", "myCartTitle")
         .on("click", function () {
@@ -152,6 +153,7 @@ function createCart() {
 
     let cartCloseButtonSpan = $("<span>")
         .attr("aria-hidden", "true")
+        .addClass("align-top")
         .html("&times;");
 
     cartCloseButtonSpan.appendTo(cartCloseButton);

@@ -30,59 +30,47 @@ h5 {
   font-size: 1rem; }
 
 .navbar .logo-container img {
-  height: 90px; }
+  height: 85px; }
 
-.navbar .popover .popover-header #myCartTitle span {
+.popover .popover-header {
+  background-color: #FFE06F; }
+  .popover .popover-header span {
+    color: #443636; }
+  .popover .popover-header #cartclosebutton span {
+    font-size: 1.3rem; }
+
+.popover .popover-body #toCheckoutButton {
+  color: #443636;
+  background-color: #FFE06F; }
+
+footer .title {
+  color: #443636;
+  font-weight: 900;
   font-size: 1.2rem; }
 
-.navbar .popover .popover-header #myCartTitle #cartclosebutton {
-  font-size: 1.5rem; }
+footer h4 {
+  color: #2FC8B4; }
 
-.navbar .popover .popover-body #toCheckoutButton {
-  color: #FFF;
-  background-color: #2FC8B4; }
+footer a {
+  color: #696969;
+  text-decoration: underline; }
 
-footer {
-  border-top: 1px solid lightgrey; }
-  footer .title {
-    color: #2FC8B4;
-    font-weight: 700;
-    font-size: 4vmin; }
-  footer a {
-    color: #696969;
-    font-size: 3vmin; }
-    footer a:hover {
-      color: #2FC8B4; }
-  footer ul {
-    padding: 0;
-    margin: 0; }
-    footer ul li {
-      font-family: "Lato", sans-serif;
-      list-style: none;
-      color: #696969;
-      font-size: 3vmin; }
-      footer ul li span {
-        font-size: 2.5vmin; }
-      footer ul li a {
-        font-size: 2.1vmin; }
-  footer .days {
-    color: #2FC8B4;
-    font-weight: bold;
-    font-size: 3vmin; }
-  footer .time {
-    text-align: center; }
-  footer .images-gallery ul {
-    padding-left: 0; }
-    footer .images-gallery ul li {
-      font-family: "Lato", sans-serif;
-      list-style: none;
-      float: left;
-      margin: 0 3% 2% 0;
-      position: relative; }
-      footer .images-gallery ul li:nth-child(3n) {
-        margin: 0 0 1%; }
-      footer .images-gallery ul li .someimg {
-        width: 75%; }
+footer ul {
+  padding: 0;
+  margin: 0; }
+  footer ul li {
+    font-family: "Lato", sans-serif;
+    list-style: none;
+    color: #696969; }
+
+footer th.openingtime, footer td.openingtime {
+  padding: 0; }
+
+footer table th, footer table td {
+  font-family: "Lato", sans-serif; }
+
+footer #imgfb, footer #imgtwi, footer #imgig {
+  height: 50px; }
 
 .checkoutheader {
   text-align: center;

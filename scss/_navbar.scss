@@ -1,26 +1,25 @@
 .navbar {
     .logo-container {
         img {
-            height: 90px;
+            height: 85px;
         }
     }
+}
 
-    .popover {
-        .popover-header {
-            #myCartTitle {
-                span {
-                    font-size: 1.2rem;
-            }
-            #cartclosebutton {
-                font-size: 1.5rem;
-            }
-            }
+.popover {
+    .popover-header {
+        background-color: $main-color2;
+        span {
+            color: $font-title-color;
         }
-        .popover-body {
-            #toCheckoutButton {
-                color: #FFF;
-                background-color: $main-color;
-            }
+        #cartclosebutton span {
+            font-size: 1.3rem;
+        }
+    }
+    .popover-body {
+        #toCheckoutButton {
+            color: $font-title-color;
+            background-color: $main-color2;
         }
     }
 }
