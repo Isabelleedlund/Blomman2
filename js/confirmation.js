@@ -16,7 +16,7 @@ console.log(buyOrder);
 
 });
 
-function changeFooterIcon() {
+function changeFooterIcon() { 
     
     // Footer Start \\
 
