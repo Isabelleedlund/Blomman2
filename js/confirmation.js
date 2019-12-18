@@ -1,20 +1,24 @@
-let cart= JSON.parse(localStorage.getItem("cart")) || [];
-
 $(document).ready(function() { 
 
-    changeFooterIcon()
-
-min = 10000;
-
-buyOrder = $.map(product => ({title: product.title, pricePerUnit: product.pricePerUnit}));
-console.log(buyOrder);
-
-        buyOrder = Math.floor(Math.random() * 10000) + min;
-        localStorage.setItem(buyOrder, JSON.stringify(cart));
-    
-    $("#on").text(buyOrder);
+        changeFooterIcon();
+        loadOrderNumber()
 
 });
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+min = 10000;
+max = 99999;
+
+let buyOrder = Math.floor(Math.random() * (max - min + 1) + min);
+
+function loadOrderNumber() {
+
+    localStorage.setItem(buyOrder, JSON.stringify(cart));
+
+    $("#on").text(buyOrder);
+};
+
 
 function changeFooterIcon() { 
     
@@ -47,4 +51,4 @@ function changeFooterIcon() {
             $(this).attr('src','../img/005-twitter_grey.png')
     });
     // Footer End \\
-}
+};
