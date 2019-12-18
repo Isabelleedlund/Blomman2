@@ -1,3 +1,5 @@
+// Kommentar till Nina
+
 $(document).ready(function() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
