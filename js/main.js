@@ -186,7 +186,7 @@ function createCart() {
             .attr("id", "cartMainContainer");
 
         let cartItemContainer = $("<div>")
-            .addClass("container py-1 px-2")
+            .addClass("container py-1 px-0")
             .attr("id", "cartItemContainer");
 
         // cart body > cart items list
@@ -314,15 +314,15 @@ function createCart() {
         // cart body > cart "Total price" display
 
         let cartTotalPriceContainer = $("<div>")
-        .addClass("container py-1 px-2")
+        .addClass("container p-0")
         .attr("id", "cartTotalPriceContainer");
 
         let cartTotalPriceRow = $("<div>")
-            .addClass("row")
+            .addClass("row m-0 p-0 border-bottom")
             .attr("id", "cartTotalPriceRow");
 
         let cartTotalPriceCol = $("<div>")
-            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
+            .addClass("col-12 d-flex justify-content-center")
             .attr("id", "cartTotalPriceCol");
 
         let totalPrice = 0;
@@ -347,15 +347,15 @@ function createCart() {
 
         // cart body > cart "Place order" button
         let cartToCheckoutButtonContainer = $("<div>")
-            .addClass("container py-1 px-2")
+            .addClass("container py-1 px-0")
             .attr("id", "cartToCheckoutButtonContainer");
 
         let cartToCheckoutButtonRow = $("<div>")
-            .addClass("row border-top")
+            .addClass("row m-0 p-0 py-1")
             .attr("id", "cartToCheckoutButtonRow");
 
         let cartToCheckoutButtonCol = $("<div>")
-            .addClass("col-12")
+            .addClass("col-12 d-flex justify-content-center")
             .attr("id", "cartToCheckoutButtonCol");
 
         let toCheckoutButton = $("<button>")
