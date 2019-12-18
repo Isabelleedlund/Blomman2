@@ -13,6 +13,9 @@ p, span, label {
 .currency-smaller-text {
   font-size: 0.9rem;
   padding-left: 4px; }
+  @media (min-width: 576px) {
+    .currency-smaller-text {
+      font-size: 1rem; } }
 
 h1 {
   font-size: 2.5rem; }
@@ -28,6 +31,12 @@ h4 {
 
 h5 {
   font-size: 1rem; }
+  @media (min-width: 360px) {
+    h5 {
+      font-size: 1.25rem; } }
+  @media (min-width: 992px) {
+    h5 {
+      font-size: 1.4rem; } }
 
 .navbar .logo-container img {
   height: 85px; }
@@ -38,6 +47,9 @@ h5 {
     color: #443636; }
   .popover .popover-header #cartclosebutton span {
     font-size: 1.3rem; }
+
+.popover .popover-body #cartItemQuantityContainer #button-circle {
+  background-color: #FFE06F; }
 
 .popover .popover-body #toCheckoutButton {
   color: #443636;
@@ -54,6 +66,12 @@ footer h4 {
 footer a {
   color: #696969;
   text-decoration: underline; }
+  @media (min-width: 992px) {
+    footer a {
+      text-decoration: none; }
+      footer a:hover {
+        color: #009A84;
+        text-decoration: none; } }
 
 footer ul {
   padding: 0;
@@ -156,32 +174,38 @@ body {
   background-color: #FFFFFF; }
   body #myjumbotron {
     background-color: #FFFFFF; }
-  body .card-title {
+    @media (min-width: 1200px) {
+      body #myjumbotron #myJumbotronImgContainer {
+        width: 1026px; } }
+  body .card .card-title {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto; }
-  body .card-footer {
+  body .card .card-footer {
     background-color: #FFFFFF; }
-    body .card-footer #descriptionbutton {
+    body .card .card-footer #descriptionbutton {
       background-color: #2FC8B4;
       color: #696969;
       border-color: #2FC8B4;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-    body .card-footer #descriptionbutton:hover {
+    body .card .card-footer #descriptionbutton:hover {
       background-color: #009A84; }
-    body .card-footer #descriptionbutton:active {
+    body .card .card-footer #descriptionbutton:active {
       background-color: #67C5B9; }
-  body .productDescr {
+  body .card .productDescr {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
     font-size: 0.95rem; }
-  body #addtocart {
+  body .card #addtocart {
     background-color: #2FC8B4;
     color: #696969; }
-  body #addtocart:hover {
+  body .card #addtocart:hover {
     background-color: #009A84; }
-  body #addtocart:active {
+  body .card #addtocart:active {
     background-color: #67C5B9; }
+  @media (min-width: 576px) {
+    body .card button {
+      font-size: .95rem; } }
