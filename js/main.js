@@ -57,20 +57,20 @@ function printProducts() {
         // Generate content based on the products
   
         let cardDiv = $("<div>")
-                            .addClass("product-card mx-0 mt-2 px-1 col-6 col-md-4 col-lg-3")
+                            .addClass("product-card mx-0 mt-2 mt-md-3 px-1 px-md-2 col-6 col-md-4 col-lg-3")
                             .attr("id", "carddiv");
             
         let productCard = $("<div>")
                             .addClass("card h-100 d-flex flex-column")
                             .appendTo(cardDiv);
 
-        let cardTitle = $("<h4>")
-                            .addClass("card-title text-center py-2 px-1 m-0")
+        let cardTitle = $("<h5>")
+                            .addClass("card-title text-center py-2 px-1 m-0 py-md-3")
                             .html(product.title)
                             .appendTo(productCard);
 
         let imgDiv = $("<div>")
-                            .addClass("card-body p-2")
+                            .addClass("card-body p-2 pb-md-3")
                             .attr("id", "imgdiv")
                             .appendTo(productCard);
 
@@ -81,7 +81,7 @@ function printProducts() {
                             .appendTo(imgDiv);
 
         let cardFooter = $("<div>")
-                            .addClass("card-footer px-2 py-2 d-flex justify-content-between")
+                            .addClass("card-footer px-2 py-2 px-sm-3 pt-sm-2 pb-sm-1 d-flex justify-content-between")
                             .attr("id", "cardfooter")
                             .appendTo(productCard);
 
@@ -100,7 +100,7 @@ function printProducts() {
         let dialogButton = $("<button>")
                             .attr("type", "button")
                             .attr("id", "descriptionbutton")
-                            .addClass("btn btn-sm px-1 py-0")
+                            .addClass("btn btn-sm px-1 py-0 px-sm-2 py-sm-1")
                             .html("Läs mer")
                             .appendTo(cardFooter)
                         // when clicked productDescr will be visible    
@@ -110,7 +110,7 @@ function printProducts() {
 
         let addToCartButton = $("<button>")
                                     .attr("type", "button")
-                                    .addClass("btn btn-sm rounded-0 mt-1")
+                                    .addClass("btn btn-sm rounded-0 mt-1 py-sm-2")
                                     .attr("id", "addtocart")
                                     .html("Lägg i kundvagn")
                                     .on("click", { added: product }, addToCart)
@@ -168,7 +168,8 @@ function createCart() {
         
         // create empty cart with a message
         $('#cart').popover( { 
-            placement: 'left', 
+            placement: 'left',
+            template: '<div class="popover" role="tooltip"><h3 class="popover-header"></h3><div class="popover-body"></div></div>',
             container: 'body',
             boundary: 'viewport',
             html: true,
@@ -186,13 +187,13 @@ function createCart() {
             .attr("id", "cartMainContainer");
 
         let cartItemContainer = $("<div>")
-            .addClass("container pl-0 pr-0 pt-2 pb-2")
+            .addClass("container py-1 px-0 ")
             .attr("id", "cartItemContainer");
 
         // cart body > cart items list
         $.each(cart, function( index, value ) {
             let cartItem = $("<div>")
-                .addClass("row pt-2 pb-3 border-bottom")
+                .addClass("row no-gutters mx-0 px-0 my-1 py-1 py-sm-3 px-sm-3 border-bottom")
                 .attr("id", "cartItem");
 
             let cartItemImgContainer = $("<div>")
@@ -202,20 +203,21 @@ function createCart() {
             // cart Item Data
 
             let cartItemData = $("<div>")
-                .addClass("row no-gutters")
+                .addClass("row no-gutters pl-md-2")
                 .attr("id", "cartItemData");
 
             let cartItemQuantityContainer = $("<div>")
-                .addClass("col-12 d-flex flex-nowrap align-items-center")
+                .addClass("col-12 pt-1 d-flex flex-nowrap align-items-center justify-content-start")
                 .attr("id", "cartItemQuantityContainer");
 
             let cartItemTitleAndPrice = $("<div>")
-                .addClass("col-12 pb-2")
+                .addClass("col-12 pt-1 pb-2")
                 .html(value.title + "<br />" + value.pricePerUnit * value.quantity + " SEK");
 
             let cartItemDecrease = $("<button>")
-                .addClass("btn btn-light rounded-pill p-1 m-2")
+                .addClass("btn btn-sm mr-1")
                 .attr("type", "button")
+                .attr("id", "button-circle")
                 .text("-")
                 .on("click", { added: this }, function (event) {
                     
@@ -243,12 +245,13 @@ function createCart() {
                 });
 
             let cartItemQuantity = $("<span>")
-                .addClass("pl-0 pr-0 ml-2 mr-2")
+                .addClass("px-0 mx-1")
                 .html(value.quantity);
 
             let cartItemIncrease = $("<button>")
-                .addClass("btn btn-light rounded-pill p-1 m-2")
+                .addClass("btn btn-sm ml-1")
                 .attr("type", "button")
+                .attr("id", "button-circle")
                 .text("+")
                 .on("click", { added: this }, function (event) {
                     console.log("You want to increase", event.data.added, event.data.added.quantity );
@@ -271,7 +274,7 @@ function createCart() {
             // Trash in cart, with function to trash and save the result in LS.
             let cartItemTrash = $("<button>")
                 .html("<i class='fas fa-trash-alt'></i>")
-                .addClass("btn p-0 ml-2 mr-2")
+                .addClass("btn p-0 ml-4 mr-4")
                 .attr("type", "button")
                 .on("click", function () { 
                     cart.splice( index , 1 );
@@ -314,15 +317,15 @@ function createCart() {
         // cart body > cart "Total price" display
 
         let cartTotalPriceContainer = $("<div>")
-        .addClass("container pl-0 pr-0")
+        .addClass("container p-0")
         .attr("id", "cartTotalPriceContainer");
 
         let cartTotalPriceRow = $("<div>")
-            .addClass("row border-bottom")
+            .addClass("row no-gutters m-0 p-0 border-bottom")
             .attr("id", "cartTotalPriceRow");
 
         let cartTotalPriceCol = $("<div>")
-            .addClass("col-12 d-flex justify-content-center p-1 pt-0")
+            .addClass("col-12 d-flex justify-content-center")
             .attr("id", "cartTotalPriceCol");
 
         let totalPrice = 0;
@@ -336,7 +339,7 @@ function createCart() {
 
         let cartTotalPriceData = $("<p>")
             .attr("id", "cartTotalPriceData")
-            .addClass("h5 text-danger")
+            .addClass("h5 text-dark")
             .append(totalPrice + " SEK");
 
         cartTotalPriceData.appendTo(cartTotalPriceCol);
@@ -347,15 +350,15 @@ function createCart() {
 
         // cart body > cart "Place order" button
         let cartToCheckoutButtonContainer = $("<div>")
-            .addClass("container pl-0 pr-0")
+            .addClass("container py-1 px-0")
             .attr("id", "cartToCheckoutButtonContainer");
 
         let cartToCheckoutButtonRow = $("<div>")
-            .addClass("row")
+            .addClass("row no-gutters m-0 p-0 py-1")
             .attr("id", "cartToCheckoutButtonRow");
 
         let cartToCheckoutButtonCol = $("<div>")
-            .addClass("col-12 d-flex justify-content-center p-1 mt-2 pb-1")
+            .addClass("col-12 d-flex justify-content-center")
             .attr("id", "cartToCheckoutButtonCol");
 
         let toCheckoutButton = $("<button>")
@@ -373,7 +376,8 @@ function createCart() {
         // enable cart Popover
         $('#cart')
             .popover( { 
-                placement: 'left', 
+                placement: 'left',
+                template: '<div class="popover" role="tooltip"><h3 class="popover-header"></h3><div class="popover-body p-0"></div></div>', 
                 html: true, 
                 container: 'body',
                 boundary: 'viewport',

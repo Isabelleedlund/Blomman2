@@ -1,7 +1,7 @@
 // FOOTER \\
 
 footer {
-        .title { // BLOMMA
+        .title { // BLOMMAN
             color: $font-title-color;
             font-weight: 900;
             font-size: 1.2rem;
@@ -13,10 +13,13 @@ footer {
         a {
             color: $font-color;
             text-decoration: underline;
-            // for later on for desktop screen:
-            // &:hover{
-            // color: $hover;
-            // } 
+                @media (min-width: 992px) {
+                    text-decoration: none; 
+                    &:hover {
+                        color: $hover;
+                        text-decoration: none;
+                        }
+                }
         }
         ul {
         padding: 0;
@@ -37,32 +40,5 @@ footer {
         }
         #imgfb, #imgtwi, #imgig {
             height: 50px;
-        }
-        // .days{
-        //     color: $font-title-color;
-        //     font-weight: 600;
-
-        // }
-        // .time {
-        //     text-align: center;
-        // }
-        // .images-gallery {
-        //     ul {
-        //         padding-left: 0;
-        //         li {
-        //             font-family: $sfont-stack;
-        //             list-style: none;
-        //             float: left;
-        //             margin: 0 3% 2% 0;
-        //             position: relative;
-        //                 &:nth-child(3n) {
-        //                     margin: 0 0 1%;
-        //                 }
-        //             .someimg {
-        //             width: 75%;
-        //             }
-        //     }
-        //     }
-        // }
-    
+        }    
 }

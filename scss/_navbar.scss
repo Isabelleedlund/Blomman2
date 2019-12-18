@@ -17,6 +17,12 @@
         }
     }
     .popover-body {
+        #cartItemQuantityContainer {
+            
+            #button-circle {
+                background-color: $main-color2;
+            }
+        }
         #toCheckoutButton {
             color: $font-title-color;
             background-color: $main-color2;
