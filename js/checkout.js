@@ -218,7 +218,7 @@ function changeFooterIcon() {
     $("#submitCForm").on("click", submitForm());
 
     $("#showCustomerDetails").on("click", function(){
-        $("#customerDetails").toggle("slow");
+        $("#customerDetails").toggle();
     });
     $("#showTermsAndC").on("click", function(){
         $("#termsAndConditions").toggle();   
