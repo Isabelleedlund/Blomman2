@@ -137,7 +137,7 @@ $(document).ready(function() {
 
     };
 
-    function printTotal() {
+    function printTotal() { 
 
         cart = JSON.parse(localStorage.getItem("cart")) || [];
 
