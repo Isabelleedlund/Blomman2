@@ -1,3 +1,5 @@
+// Kommentar till Nina
+
 $(document).ready(function() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -137,7 +139,7 @@ $(document).ready(function() {
 
     };
 
-    function printTotal() {
+    function printTotal() { 
 
         cart = JSON.parse(localStorage.getItem("cart")) || [];
 
