@@ -41,6 +41,9 @@ h5 {
 .navbar .logo-container img {
   height: 85px; }
 
+.navbar .badge {
+  background-color: #2FC8B4; }
+
 .popover .popover-header {
   background-color: #FFE06F; }
   .popover .popover-header span {

@@ -37,25 +37,23 @@ products.push(product1, product2, product3, product4, product5, product6, produc
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Runs the following when HTML document is loaded:
-
 $(document).ready(function() {
 
     printProducts();
 
+    showBadge();
+
     createCart();
 
     changeFooterIcon();
-
 });
 
 // Products catalog
-
 function printProducts() {
     
     $.each(products, function(i, product) {
         
         // Generate content based on the products
-  
         let cardDiv = $("<div>")
                             .addClass("product-card mx-0 mt-2 mt-md-3 px-1 px-md-2 col-6 col-md-4 col-lg-3")
                             .attr("id", "carddiv");
@@ -118,10 +116,24 @@ function printProducts() {
 
         $("#productrow").append(cardDiv);
 
-    });
-    
-}
+    });   
+};
 
+// Badge
+function showBadge() {
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
+      // get sum of quantity products in cart
+      let prodTotal = cart.reduce(function(prev, cur) {
+        return prev + cur.quantity;
+      }, 0);
+
+    if (cart.length === 0) {
+        $(".badge").collapse();
+    }
+    else {
+        $(".badge").html(prodTotal).addClass("show");
+    }
+};
 
 // Cart
 function createCart() {
@@ -129,13 +141,12 @@ function createCart() {
     console.log("createCart() starts");
 
     // update the actual value of cart from LS cart if there is something
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // reset cart
     $('#cart').popover('dispose');
 
     // create cart header/title
-
     let cartTitleContainer = $("<div>")
         .attr("id", "myCartTitle")
         .on("click", function () {
@@ -163,9 +174,7 @@ function createCart() {
 
     // check whether the cart coming from LS is empty or not
     if (cart.length === 0) {
-        
-        // console.log(cart, "LS cart is empty");
-        
+                
         // create empty cart with a message
         $('#cart').popover( { 
             placement: 'left',
@@ -176,12 +185,9 @@ function createCart() {
             title: cartTitleContainer,
             content: "Din varukorg är tom."
         });
-
     } 
     else {
-        
-        // console.log(cart, "cart is not empty");    
-        
+                
         // create cart body      
         let cartMainContainer = $("<div>")
             .attr("id", "cartMainContainer");
@@ -201,7 +207,6 @@ function createCart() {
                 .attr("id", "cartItemImgContainer");
 
             // cart Item Data
-
             let cartItemData = $("<div>")
                 .addClass("row no-gutters pl-md-2")
                 .attr("id", "cartItemData");
@@ -224,7 +229,6 @@ function createCart() {
                     console.log("You want to decrease", event.data.added, event.data.added.quantity );
                     
                     // console.log(cart);
-
                     if (event.data.added.quantity > 1) {
 
                         $.each(cart, function(index, product) {
@@ -236,12 +240,12 @@ function createCart() {
 
                         localStorage.setItem("cart", JSON.stringify(cart));
                         createCart();
+                        showBadge();
                         $("#cart").popover('show');
 
                     } else {
                         console.log("you cant decrease from one!");
                     }
-
                 });
 
             let cartItemQuantity = $("<span>")
@@ -257,7 +261,6 @@ function createCart() {
                     console.log("You want to increase", event.data.added, event.data.added.quantity );
                     
                     // console.log(cart);
-
                     $.each(cart, function(index, product) {
                         if (product.id === event.data.added.id) {
                             product.quantity++;
@@ -282,9 +285,8 @@ function createCart() {
                     $(this).parents("#cartItem").remove();
                     
                     createCart();
-
+                    showBadge();
                     $("#cart").popover('show');
-
                 });
 
             cartItemQuantityContainer.append(cartItemDecrease);
@@ -315,7 +317,6 @@ function createCart() {
         });
 
         // cart body > cart "Total price" display
-
         let cartTotalPriceContainer = $("<div>")
         .addClass("container p-0")
         .attr("id", "cartTotalPriceContainer");
@@ -365,7 +366,7 @@ function createCart() {
             .attr("type", "button")
             .attr("id", "toCheckoutButton")
             .addClass("btn")
-            .on("click", function () { location.href = "html/checkout.html" } )
+            .on("click", function() {location.href = "html/checkout.html" })
             .html("TILL KASSAN");
 
         toCheckoutButton.appendTo(cartToCheckoutButtonCol);
@@ -384,20 +385,15 @@ function createCart() {
                 title: cartTitleContainer,
                 content: cartMainContainer
             });
-         }
-
-        console.log("createCart() ends");
-   
-
-}
+    }
+    showBadge();
+    console.log("createCart() ends");
+};
 
 // When adding to cart
-
 function addToCart(event) {
-
-    // sync with cart LS (necessary?)
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
+    console.log(event);
+    
     if (cart.length == 0) {
         // if there is nothing in the cart        
         console.log("there was nothing in the cart, lets add this product: ", event.data.added.title);
@@ -418,28 +414,22 @@ function addToCart(event) {
                 product.price = product.pricePerUnit * product.quantity;
                 foundProduct = true;
             }
-
         });
 
         // add of a loop over the order array to add total price?
-
         if (!foundProduct) {
                 console.log("new product! we simply add it");
                 cart.push(event.data.added);
         }
 
-        localStorage.setItem("cart", JSON.stringify(cart));
-        
+        localStorage.setItem("cart", JSON.stringify(cart));  
     }
 
     createCart();
-    
-    
-
-}
+    showBadge();
+};
 
 function changeFooterIcon() {
-    
     // Footer Start \\
 
     // Change Facebook Icon color when hover over img. 
@@ -469,4 +459,4 @@ function changeFooterIcon() {
             $(this).attr('src','img/005-twitter_grey.png')
     });
     // Footer End \\
-}
+};
