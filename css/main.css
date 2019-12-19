@@ -97,46 +97,15 @@ footer #imgfb, footer #imgtwi, footer #imgig {
   text-align: center;
   background-color: #2FC8B4; }
 
-#orderctn .orderhead {
-  font-size: 4vmin; }
-
-#orderctn #orderrow {
-  align-items: center; }
-  #orderctn #orderrow .prodtitle {
-    font-size: 3.5vmin; }
-  #orderctn #orderrow .pprice {
-    margin: 0 auto;
-    font-size: 2.5vmin;
-    padding-left: 2vmin;
-    padding-right: 0%; }
-  #orderctn #orderrow .input-group {
-    flex-wrap: nowrap;
-    align-items: center;
-    padding-left: 2.5vmin;
-    padding-right: 2.5vmin; }
-    #orderctn #orderrow .input-group .input-group-field {
-      width: 3vmin;
-      height: min-content;
-      font-size: 2vmin;
-      padding-left: 0.4vmin;
-      margin: 0 auto; }
-    #orderctn #orderrow .input-group .input-group-field::-webkit-inner-spin-button,
-    #orderctn #orderrow .input-group .input-group-field::-webkit-outer-spin-button {
-      -webkit-appearance: none; }
+#orderctn #orderrow .input-group .input-group-field::-webkit-inner-spin-button,
+#orderctn #orderrow .input-group .input-group-field::-webkit-outer-spin-button {
+  -webkit-appearance: none; }
 
 #orderctn .btn-small {
   background-color: #2FC8B4;
   border-radius: 50%;
-  font-size: 2vmin;
-  margin-top: 0;
-  margin-bottom: 0;
   border: 1px solid #696969;
-  padding: 0.8vmin;
   color: #696969; }
-
-#orderctn #delbtn {
-  margin: 0;
-  padding-left: 0; }
 
 .accordion .accordionButton {
   width: 100%;
