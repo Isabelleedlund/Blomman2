@@ -62,9 +62,14 @@
     .accordionButton {
         width: 100%;
         border-radius: 0;
+        border: 1px solid $hover;
         font-family: $font-stack;
         color: $font-color;
         font-weight: 600;
+    }
+
+    .accordionButton:hover{
+        background-color: $hover;
     }
 
     img.paycard {
