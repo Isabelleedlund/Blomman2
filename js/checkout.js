@@ -7,21 +7,26 @@ $(document).ready(function() {
         $("#orderRow").remove();
 
         let orderRow = $("<div>")
-            .addClass("row")
+            .addClass("row orderRow-smaller-text")
             .attr("id", "orderRow")
             .appendTo(orderctn);
 
         $.each(cart, function(i, product) {
             // Append to prodRow
             let prodRow = $("<div>")
-                .addClass("col-12 d-flex no-gutters")
+                .addClass("col-12 px-0")
                 .attr("id", "prodRow")
                 .appendTo(orderRow);
 
+            let prodRowRow = $("<div>")
+            .addClass("row d-flex no-gutters py-2 align-items-center justify-content-center justify-content-md-between")
+            .attr("id", "prodRowRow")
+            .appendTo(prodRow);
+
             let imgContainer = $("<div>")
-                .addClass("col-3")
+                .addClass("col-2 pl-1 pl-md-0")
                 .attr("id", "imgContainer")
-                .appendTo(prodRow);
+                .appendTo(prodRowRow);
 
             // Append to above div imgContainer 
             let orderImg = $("<img>")
@@ -30,34 +35,34 @@ $(document).ready(function() {
                 .appendTo(imgContainer);
             
             let prodTitle = $("<span>")
-                .addClass("col-2")
+                .addClass("col-2 px-md-3 should-hyphenate")
                 .html(product.title)
-                .appendTo(prodRow);
+                .appendTo(prodRowRow);
 
             let quantityContainer = $("<div>")
-                .addClass("col-2")
-                .appendTo(prodRow);
+                .addClass("col-3 col-md-2 d-flex align-items-center px-1")
+                .appendTo(prodRowRow);
 
             let prodPrice = $("<span>")
-                .addClass("col-2")
+                .addClass("col-2 pl-2")
                 .attr("id", "prodPrice")
-                .html(product.pricePerUnit + " SEK")
-                .appendTo(prodRow);
+                .html(product.pricePerUnit + "<p class='currency-smaller-text-checkout'>SEK</p>")
+                .appendTo(prodRowRow);
 
             let totalPrice = $("<span>")
                 .addClass("col-2")
                 .attr("id", "totalPrice")
-                .html(product.quantity * product.pricePerUnit + " SEK")
-                .appendTo(prodRow);
+                .html(product.quantity * product.pricePerUnit + "<p class='currency-smaller-text-checkout'>SEK</p>")
+                .appendTo(prodRowRow);
 
             let deleteSpan = $("<span>")        
                 .addClass("col-1")
                 .attr("id", "deleteSpan")
-                .appendTo(prodRow);
+                .appendTo(prodRowRow);
 
             // Append to quantityContainer
             let minusButton = $("<button>")
-                .addClass("btn btn-primary")
+                .addClass("btn btn-sm btn-primary")
                 .attr("type", "button")
                 .attr("id", "minusButton")
                 .html("<i class='fa fa-minus'></i>")
@@ -82,12 +87,13 @@ $(document).ready(function() {
                 .appendTo(quantityContainer);
             
             let quantitySpan = $("<span>")
+                .addClass("px-1 px-md-3")
                 .attr("id", "quantitySpan")
                 .html(product.quantity)
                 .appendTo(quantityContainer);
 
             let plusButton = $("<button>")
-                .addClass("btn btn-primary")
+                .addClass("btn btn-sm btn-primary")
                 .attr("type", "button")
                 .attr("id", "plusButton")
                 .html("<i class='fa fa-plus'></i>")
@@ -111,7 +117,7 @@ $(document).ready(function() {
 
                 // Append to deleteSpan                            
             let deleteButton = $("<button>")
-                .addClass("btn")
+                .addClass("btn btn-sm pr-2")
                 .attr("type", "button")
                 .attr("id", "deleteButton")
                 .html("<i class='fas fa-trash-alt'></i>")
@@ -137,11 +143,11 @@ $(document).ready(function() {
             sumTotal = sumTotal + product.price;
         });
 
-        $("#sumTotal").html(sumTotal + " SEK");
+        $("#sumTotal").html(sumTotal + "<p class='currency-smaller-text-checkout'>SEK</p>");
 
         let vatTotal = sumTotal * 0.25;
 
-        $("#vatTotal").html(vatTotal + " SEK");
+        $("#vatTotal").html(vatTotal + "<p class='currency-smaller-text-checkout'>SEK</p>");
 
         console.log(sumTotal);
     };
