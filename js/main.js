@@ -277,8 +277,9 @@ function createCart() {
             // Trash in cart, with function to trash and save the result in LS.
             let cartItemTrash = $("<button>")
                 .html("<i class='fas fa-trash-alt'></i>")
-                .addClass("btn p-0 ml-4 mr-4")
+                .addClass("btn ml-4 mr-4")
                 .attr("type", "button")
+                .attr("id", "cartProdDelButton")
                 .on("click", function () { 
                     cart.splice( index , 1 );
                     localStorage.setItem("cart", JSON.stringify(cart));                    

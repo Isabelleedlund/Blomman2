@@ -70,14 +70,32 @@ h5 {
     font-size: 1.3rem; }
 
 .popover .popover-body #cartItemQuantityContainer #button-circle {
-  background-color: #78BDC0; }
+  background-color: #78BDC0;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: #443636;
+  border-radius: 50%;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem; }
+
+.popover .popover-body #cartItemQuantityContainer #cartProdDelButton {
+  background-color: #78BDC0;
+  font-size: 0.7rem;
+  color: #443636;
+  border-radius: 50%;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem; }
 
 .popover .popover-body #toCheckoutButton {
   color: #443636;
   background-color: #78BDC0; }
 
 footer .title {
-  color: #443636;
+  color: #009A84;
   font-weight: 900;
   font-size: 1.2rem; }
 
@@ -114,7 +132,33 @@ footer #imgfb, footer #imgtwi, footer #imgig {
 h1.checkoutheader {
   text-align: center;
   background-color: #2FC8B4;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: #443636; }
+
+#prodHeader {
+  padding-left: 0;
+  padding-right: 0; }
+
+#quantHeader {
+  padding-left: 0.5rem;
+  padding-right: 0; }
+  @media (min-width: 768px) {
+    #quantHeader {
+      padding-left: 2rem; } }
+  @media (min-width: 1024px) {
+    #quantHeader {
+      padding-left: 3.1rem; } }
+  @media (min-width: 1200px) {
+    #quantHeader {
+      padding-left: 3.5rem; } }
+
+#priceHeader {
+  padding-left: 0;
+  padding-right: 0; }
+
+#totHeader {
+  padding-left: 0;
+  padding-right: 0; }
 
 .should-hyphenate {
   overflow: hidden;
@@ -123,39 +167,103 @@ h1.checkoutheader {
   -ms-hyphens: auto;
   hyphens: auto; }
 
+@media (min-width: 768px) {
+  #prodPrice {
+    padding-left: 1.1rem; } }
+
+#minusButton, #plusButton, #deleteButton {
+  font-size: 0.7rem;
+  color: #443636;
+  background-color: #2FC8B4;
+  border-radius: 50%;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem; }
+
+#sum #vatTotal, #sum #sumTotal {
+  padding-left: 2rem; }
+
+#sum p {
+  font-size: 0.9rem; }
+
+#deleteButton {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem; }
+
 .accordion .accordionButton {
   width: 100%;
   border-radius: 0;
+  background-color: #2FC8B4;
   border: 1px solid #009A84;
   font-family: "Montserrat", sans-serif;
-  color: #696969;
+  color: #443636;
   font-weight: 600; }
 
 .accordion .accordionButton:hover {
   background-color: #009A84; }
 
-.accordion img.paycard {
-  width: 20%;
-  height: 40%; }
+.accordion form #customerDetails {
+  padding: 1rem; }
+  .accordion form #customerDetails label {
+    font-size: 0.95rem; }
+  .accordion form #customerDetails .form-group input {
+    font-size: 0.9rem; }
+  .accordion form #customerDetails .form-group #customerZip::-webkit-inner-spin-button,
+  .accordion form #customerDetails .form-group #customerZip::-webkit-outer-spin-button {
+    -webkit-appearance: none; }
+  @media (min-width: 768px) {
+    .accordion form #customerDetails {
+      padding: 2rem; } }
+  @media (min-width: 1400px) {
+    .accordion form #customerDetails {
+      padding: 5rem; } }
 
-.accordion form #customerZip::-webkit-inner-spin-button,
-.accordion form #customerZip::-webkit-outer-spin-button {
-  -webkit-appearance: none; }
+@media (min-width: 1024px) {
+  .accordion form #paymentMethod .radio {
+    padding-left: 5rem;
+    padding-right: 0; } }
+
+.accordion form #paymentMethod label {
+  font-size: 0.8rem; }
+  .accordion form #paymentMethod label input {
+    margin-right: 0.5rem; }
+
+.accordion form #paymentMethod #payCardDiv {
+  padding-right: 0; }
+  .accordion form #paymentMethod #payCardDiv img.paycard {
+    width: 30%;
+    height: 40%;
+    padding-left: 0;
+    padding-right: 0; }
+  @media (min-width: 768px) {
+    .accordion form #paymentMethod #payCardDiv {
+      padding-right: 5rem; } }
+  @media (min-width: 1024px) {
+    .accordion form #paymentMethod #payCardDiv {
+      padding-left: 0;
+      padding-right: 6rem; } }
+  @media (min-width: 1400px) {
+    .accordion form #paymentMethod #payCardDiv {
+      padding-right: 10rem; } }
+
+.accordion form #paymentMethod a {
+  font-size: 0.8rem; }
 
 .accordion form #termsoforder {
   text-align: center; }
   .accordion form #termsoforder p {
-    font: "Lato", sans-serif; }
-  .accordion form #termsoforder #confirmationbutton {
-    background-color: #2FC8B4; }
-  .accordion form #termsoforder #confirmationbutton:hover {
+    font: "Lato", sans-serif;
+    font-size: 0.9rem; }
+  .accordion form #termsoforder a {
+    display: block; }
+  .accordion form #termsoforder #submitFormButton {
+    background-color: #2FC8B4;
+    color: #443636; }
+  .accordion form #termsoforder #submitFormButton:hover {
     background-color: #009A84; }
-
-.accordion form #submitFormButton {
-  background-color: #2FC8B4; }
-
-.accordion form #submitFormButton:hover {
-  background-color: #009A84; }
 
 #on {
   font-size: 1.8rem;

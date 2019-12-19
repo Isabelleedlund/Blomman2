@@ -44,7 +44,7 @@ $(document).ready(function() {
                 .appendTo(prodRowRow);
 
             let prodPrice = $("<span>")
-                .addClass("col-2 pl-2")
+                .addClass("col-2")
                 .attr("id", "prodPrice")
                 .html(product.pricePerUnit + "<p class='currency-smaller-text-checkout'>SEK</p>")
                 .appendTo(prodRowRow);
@@ -62,7 +62,7 @@ $(document).ready(function() {
 
             // Append to quantityContainer
             let minusButton = $("<button>")
-                .addClass("btn btn-sm btn-primary")
+                .addClass("btn btn-sm")
                 .attr("type", "button")
                 .attr("id", "minusButton")
                 .html("<i class='fa fa-minus'></i>")
@@ -93,7 +93,7 @@ $(document).ready(function() {
                 .appendTo(quantityContainer);
 
             let plusButton = $("<button>")
-                .addClass("btn btn-sm btn-primary")
+                .addClass("btn btn-sm")
                 .attr("type", "button")
                 .attr("id", "plusButton")
                 .html("<i class='fa fa-plus'></i>")
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
                 // Append to deleteSpan                            
             let deleteButton = $("<button>")
-                .addClass("btn btn-sm pr-2")
+                .addClass("btn btn-sm")
                 .attr("type", "button")
                 .attr("id", "deleteButton")
                 .html("<i class='fas fa-trash-alt'></i>")
@@ -173,19 +173,6 @@ $(document).ready(function() {
                 }, false); 
         });
     };
-
-    // function changeFooterIcon() {
-    //     // Footer Start \\
-
-    //     // Change Facebook Icon color when hover over img. 
-    //     $('#imgfb').hover(
-    //         function(){
-    //             $(this).attr('src','../img/002-facebook_color.png')
-    //         },
-    //         function(){
-    //             $(this).attr('src','../img/002-facebook_grey.png')
-    //         });
-    //     };
 
     function changeFooterIcon() {
         // Footer Start \\

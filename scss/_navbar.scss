@@ -24,6 +24,25 @@
             
             #button-circle {
                 background-color: $main-color2;
+                font-size: 0.7rem;
+                line-height: 1.3;
+                color: $font-title-color;
+                border-radius: 50%;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                padding-top: 0.1rem;
+                padding-bottom: 0.1rem;
+            }
+        
+            #cartProdDelButton {
+                background-color: $main-color2;
+                font-size: 0.7rem;
+                color: $font-title-color;
+                border-radius: 50%;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
+                padding-top: 0.1rem;
+                padding-bottom: 0.1rem
             }
         }
         #toCheckoutButton {
