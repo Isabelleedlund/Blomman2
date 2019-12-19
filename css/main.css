@@ -17,6 +17,24 @@ p, span, label {
     .currency-smaller-text {
       font-size: 1rem; } }
 
+.currency-smaller-text-checkout {
+  font-size: 0.75rem;
+  display: inline-block;
+  padding-left: 2px;
+  margin: 0px; }
+  @media (min-width: 576px) {
+    .currency-smaller-text-checkout {
+      font-size: 1rem; } }
+
+.orderRow-smaller-text span, .orderRow-smaller-text p, .orderRow-smaller-text label {
+  font-size: 0.85rem; }
+  @media (min-width: 576px) {
+    .orderRow-smaller-text span, .orderRow-smaller-text p, .orderRow-smaller-text label {
+      font-size: 1.2rem; } }
+
+#sum span, #sum p, #sum label {
+  font-size: 1rem; }
+
 h1 {
   font-size: 2.5rem; }
 
@@ -93,19 +111,17 @@ footer table th, footer table td {
 footer #imgfb, footer #imgtwi, footer #imgig {
   height: 50px; }
 
-.checkoutheader {
+h1.checkoutheader {
   text-align: center;
-  background-color: #2FC8B4; }
-
-#orderctn #orderrow .input-group .input-group-field::-webkit-inner-spin-button,
-#orderctn #orderrow .input-group .input-group-field::-webkit-outer-spin-button {
-  -webkit-appearance: none; }
-
-#orderctn .btn-small {
   background-color: #2FC8B4;
-  border-radius: 50%;
-  border: 1px solid #696969;
-  color: #696969; }
+  font-size: 1.5rem; }
+
+.should-hyphenate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
 
 .accordion .accordionButton {
   width: 100%;
