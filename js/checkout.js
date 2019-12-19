@@ -1,10 +1,7 @@
-// Kommentar till Nina
-
 $(document).ready(function() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     function printOrder(){
-
         cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         $("#orderRow").remove();
@@ -15,9 +12,7 @@ $(document).ready(function() {
             .appendTo(orderctn);
 
         $.each(cart, function(i, product) {
-
             // Append to prodRow
-
             let prodRow = $("<div>")
                 .addClass("col-12 d-flex no-gutters")
                 .attr("id", "prodRow")
@@ -29,7 +24,6 @@ $(document).ready(function() {
                 .appendTo(prodRow);
 
             // Append to above div imgContainer 
-
             let orderImg = $("<img>")
                 .attr("src", "../" + product.img)
                 .addClass("img-fluid")
@@ -61,9 +55,7 @@ $(document).ready(function() {
                 .attr("id", "deleteSpan")
                 .appendTo(prodRow);
 
-
-            // Append to qualityContainer
-
+            // Append to quantityContainer
             let minusButton = $("<button>")
                 .addClass("btn btn-primary")
                 .attr("type", "button")
@@ -117,8 +109,7 @@ $(document).ready(function() {
                 })
                 .appendTo(quantityContainer);
 
-                // Append to deleteSpan
-                            
+                // Append to deleteSpan                            
             let deleteButton = $("<button>")
                 .addClass("btn")
                 .attr("type", "button")
@@ -132,15 +123,12 @@ $(document).ready(function() {
                     printOrder();
                 })
                 .appendTo(deleteSpan);
-
             });
 
             printTotal();
-
     };
 
     function printTotal() { 
-
         cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         let sumTotal = 0;
@@ -156,8 +144,7 @@ $(document).ready(function() {
         $("#vatTotal").html(vatTotal + " SEK");
 
         console.log(sumTotal);
-
-    }
+    };
 
 function submitForm() {
     'use strict';
@@ -224,7 +211,7 @@ function changeFooterIcon() {
                 $(this).attr('src','../img/005-twitter_grey.png')
         });
         // Footer End \\
-    }
+    };
  
     printOrder();
     
