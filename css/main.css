@@ -45,18 +45,18 @@ h5 {
   background-color: #2FC8B4; }
 
 .popover .popover-header {
-  background-color: #FFE06F; }
+  background-color: #78BDC0; }
   .popover .popover-header span {
     color: #443636; }
   .popover .popover-header #cartclosebutton span {
     font-size: 1.3rem; }
 
 .popover .popover-body #cartItemQuantityContainer #button-circle {
-  background-color: #FFE06F; }
+  background-color: #78BDC0; }
 
 .popover .popover-body #toCheckoutButton {
   color: #443636;
-  background-color: #FFE06F; }
+  background-color: #78BDC0; }
 
 footer .title {
   color: #443636;
