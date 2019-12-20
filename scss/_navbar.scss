@@ -6,7 +6,12 @@
     }
     .badge {
         background-color: $main-color;
+        
     }
+}
+
+.btn-link:hover {
+    text-decoration: none;
 }
 
 .popover {

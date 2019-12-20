@@ -30,7 +30,7 @@ p, span, label {
   font-size: 0.85rem; }
   @media (min-width: 576px) {
     .orderRow-smaller-text span, .orderRow-smaller-text p, .orderRow-smaller-text label {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
 
 #sum span, #sum p, #sum label {
   font-size: 1rem; }
@@ -61,6 +61,9 @@ h5 {
 
 .navbar .badge {
   background-color: #2FC8B4; }
+
+.btn-link:hover {
+  text-decoration: none; }
 
 .popover .popover-header {
   background-color: #78BDC0; }
