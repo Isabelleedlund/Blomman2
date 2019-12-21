@@ -62,7 +62,7 @@ h5 {
 .navbar .badge {
   background-color: #2FC8B4; }
 
-.btn-link:hover {
+.btn-link:hover, .btn-link:active {
   text-decoration: none; }
 
 .popover .popover-header {
